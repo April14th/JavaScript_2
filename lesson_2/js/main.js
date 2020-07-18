@@ -31,6 +31,7 @@ class ProductList {
         for (let product of this.allProducts) {
             sumOfAllProducts += this.allProducts[product.id - 1].price;
         }
+        //console.log(sumOfAllProducts);
     }
 }
 
@@ -53,20 +54,20 @@ class ProductItem {
 }
 
 class Basket {
-    constructor(product) {
+    constructor() {
         this.productItems = [];
+        this.basketBtn = document.querySelector('.btn-cart');
+        this.initBasket();
+        this.basketContainer = document.querySelector('.basket');
         this.showOrHideBasket();
     }
 
     showOrHideBasket() {
-        const basketBtn = document.querySelector('.btn-cart');
-        basketBtn.addEventListener('click', () => {
-            let tableTop = this.renderBasket();
-            basketBtn.insertAdjacentHTML('afterend', tableTop);
-            if (tableTop != undefined && document.querySelector('.basket').classList[1] == 'hidden') {
-                document.querySelector('.basket').classList.remove('hidden');
+        this.basketBtn.addEventListener('click', () => {
+            if (this.basketContainer.classList[1] == 'hidden') {
+                this.basketContainer.classList.remove('hidden');
             } else {
-                document.querySelector('.basket').classList.add('hidden')
+                this.basketContainer.classList.add('hidden');
             }
         });
     }
@@ -83,6 +84,11 @@ class Basket {
                 <td colspan="2">Итого:&nbsp;<span class="overall-price">0</span><span>&nbsp;RUB</span></td>
             </tr>
         </table>`
+    }
+
+    initBasket() {
+        let tableTop = this.renderBasket();
+        this.basketBtn.insertAdjacentHTML('afterend', tableTop);
     }
 
     addProductItemInBasket() {
