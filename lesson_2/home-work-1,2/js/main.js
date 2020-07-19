@@ -29,7 +29,7 @@ class ProductList {
     getSumOfProductList() {
         let sumOfAllProducts = 0;
         for (let product of this.allProducts) {
-            sumOfAllProducts += this.allProducts[product.id - 1].price;
+            sumOfAllProducts += product.price;
         }
         //console.log(sumOfAllProducts);
     }
