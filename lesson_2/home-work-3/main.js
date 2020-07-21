@@ -5,6 +5,7 @@ class Hamburger {
         this.toppingsList = [];
         this.getSize();
         this.getStuffing();
+        this.getToppings();
         this.calculateСharacteristicOfHamburger();
     }
 
@@ -13,7 +14,6 @@ class Hamburger {
         sizeButtons.forEach(function (sizeButton) {
             sizeButton.addEventListener('click', function (event) {
                 hamburger.size = event.srcElement.dataset.size;
-
             });
         });
     }
@@ -31,13 +31,19 @@ class Hamburger {
         const calcBtn = document.querySelector('.calc-btn');
         this.calculatePrice(calcBtn);
         this.calculateCalories(calcBtn);
+        this.initOrder(calcBtn);
     }
 
     calculatePrice(button) {
         button.addEventListener('click', function () {
             let priceFromSize = +document.querySelector('input[name="size"]:checked').dataset.price;
             let priceFromStuffing = +document.querySelector('input[name="stuffing"]:checked').dataset.price;
-            hamburger.priceOfHamburger = priceFromSize + priceFromStuffing;
+            let pricesFromToppings = document.querySelectorAll('input[name="topping"]:checked');
+            let sumPricesFromToppings = 0;
+            pricesFromToppings.forEach(function (priceFromTopping) {
+                sumPricesFromToppings += +priceFromTopping.dataset.price;
+            });
+            hamburger.priceOfHamburger = priceFromSize + priceFromStuffing + sumPricesFromToppings;
         });
     };
 
@@ -45,7 +51,12 @@ class Hamburger {
         button.addEventListener('click', function () {
             let caloriesFromSize = +document.querySelector('input[name="size"]:checked').dataset.calorific;
             let caloriesFromStuffing = +document.querySelector('input[name="stuffing"]:checked').dataset.calorific;
-            hamburger.calorificOfHamburger = caloriesFromSize + caloriesFromStuffing;
+            let caloriesFromToppings = document.querySelectorAll('input[name="topping"]:checked');
+            let sumCaloriesFromToppings = 0;
+            caloriesFromToppings.forEach(function (caloriesFromTopping) {
+                sumCaloriesFromToppings += +caloriesFromTopping.dataset.calorific;
+            });
+            hamburger.calorificOfHamburger = caloriesFromSize + caloriesFromStuffing + sumCaloriesFromToppings;
         });
     };
 
@@ -73,25 +84,23 @@ class Hamburger {
         });
     }
 
+    renderOrder() {
+        return `<div class="order">
+                    <h4 class="order-title">Вы заказали:</h4>
+                    <span class="order-item">Гамбургер: ${hamburger.size}, ${hamburger.stuffing}</span>
+                    <span class="order-item">Дополнительные добавки: ${hamburger.toppingsList.length ? hamburger.toppingsList.join(', ') : 'отсутствуют' }</span>
+                    <span class="order-item">Цена: ${hamburger.priceOfHamburger} RUB</span>
+                    <span class="order-item">Количесво каллорий: ${hamburger.calorificOfHamburger} кКал</span>
+            </div>`
+    }
 
-    // getToppings(topping) {
-    //     const toppingButtons = document.querySelectorAll('.topping');
-    //     toppingButtons.forEach(function(toppingButton) {
-    //         topping = toppingButton.getAttribute('data-topping');
-    //         hamburger.toppingsList.push(topping);
-    //     });
-    // };
-
-    // addTopping(topping) {    // Добавить добавку }
-    // removeTopping(topping) { // Убрать добавку }
-    // getToppings(topping) {   // Получить список добавок }
-    // getSize() {              // Узнать размер гамбургера }
-    // getStuffing() {          // Узнать начинку гамбургера }
-    // calculatePrice() {       // Узнать цену }
-    // calculateCalories() {    // Узнать калорийность }
+    initOrder(button) {
+        button.addEventListener('click', function() {
+            document.getElementById('order-container').innerHTML = hamburger.renderOrder();
+        });
+    }
 }
 
-const hamburger = new Hamburger();
-hamburger.getToppings();
-
-
+const defaultSize = document.querySelector('input[name="size"]:checked').dataset.size;
+const defaultStuffing = document.querySelector('input[name="stuffing"]:checked').dataset.stuffing;
+const hamburger = new Hamburger(defaultSize, defaultStuffing);

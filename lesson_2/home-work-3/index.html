@@ -10,7 +10,7 @@
     <div class="menu">
         <h4 class="title">Выберите размер гамбургера:</h4>
         <label class="text">
-            <input class="size" type="radio" name="size" data-size="Маленький" data-price="50" data-calorific="20">
+            <input class="size" type="radio" name="size" data-size="Маленький" data-price="50" data-calorific="20" checked>
              Маленький (50 рублей, 20 калорий)
         </label>
         <label class="text">
@@ -21,7 +21,7 @@
     <div class="menu">
         <h4 class="title">Выберите начинку гамбургера:</h4>
         <label class="text">
-            <input class="stuffing" type="radio" name="stuffing" data-stuffing="С сыром" data-price="10" data-calorific="20">
+            <input class="stuffing" type="radio" name="stuffing" data-stuffing="С сыром" data-price="10" data-calorific="20" checked>
              С сыром (+10 рублей, +20 калорий)
         </label>
         <label class="text">
@@ -45,6 +45,7 @@
             </label>
     </div>
     <button class="calc-btn">Подсчитать</button>
+    <div id="order-container"></div>
     <script src="main.js"></script>
 </body>
 </html>
