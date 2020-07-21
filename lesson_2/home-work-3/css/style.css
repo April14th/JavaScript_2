@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.menu {
+    margin: 0 20px
+}
+
+.title {
+    font-size: 18px;
+}
+
+.text {
+    display: block;
+}
+
+.calc-btn {
+    width: 120px;
+    height: 40px;
+    margin: 40px 0 0 20px;
+    cursor: pointer;
+}
