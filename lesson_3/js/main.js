@@ -31,8 +31,7 @@ class ProductList {
     }
 
     getSumOfProducts() {
-        let sumOfAllProducts = this.allProducts.reduce((sum, item) => sum += item.price, 0);
-        console.log(sumOfAllProducts);
+        return this.allProducts.reduce((sum, item) => sum += item.price, 0);
     }
 
     // getSumOfProducts() {
@@ -64,15 +63,16 @@ class ProductItem {
 class Basket {
     constructor() {
         this.productItems = [];
-        this.basketItems = [];
+        this.renderedBasketItems = [];
         this.basketBtn = document.querySelector('.btn-cart');
         this.initBasketContainer();
         this.basketContainer = document.querySelector('.basket');
         this.showOrHideBasket();
         this.addProductItemInBasket()
             .then(data => {
-                this.productItems = [data];
+                this.productItems = data;
                 this.renderBasketItem();
+                this.renderSumOfPriceBasketItem();
             });
     }
 
@@ -106,11 +106,16 @@ class Basket {
     }
 
     renderBasketItem() {
-        for (let product of this.productItems) {
+        const tableTop = document.querySelector('.table-top');
+        for (let product of this.productItems.contents) {
             const item = new BasketItem(product);
-            this.basketItems.push(item);
-            basketContainer.insertAdjacentHTML("beforeend", item.render());
+            this.renderedBasketItems.push(item);
+            tableTop.insertAdjacentHTML("afterend", item.render());
         }
+    }
+
+    renderSumOfPriceBasketItem() {
+        document.querySelector('.overall-price').textContent = this.productItems.amount;
     }
 
     addProductItemInBasket() {
@@ -131,19 +136,19 @@ class Basket {
 }
 
 class BasketItem {
-
+    constructor(product) {
+        this.id = product.id_product;
+        this.title = product.product_name;
+        this.price = product.price;
+        this.count = product.quantity;
+    }
     render() {
         return `<tr class="table-item">
-        <td>${basket.productItems}</td>
-        <td>Наименование товара</td>
-        <td>Количество</td>
-        <td>Цена</td>
+        <td>${this.id}</td>
+        <td>${this.title}</td>
+        <td>${this.count}</td>
+        <td>${this.price}</td>
     </tr>`
-    }
-
-    init() {
-        let tableItem = this.renderBasketItem();
-        this.document.querySelector('.table-top').insertAdjacentHTML('afterend', tableItem);
     }
 }
 
