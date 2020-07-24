@@ -1,20 +1,24 @@
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+
 class ProductList {
     constructor(container = '.products') {
         this.container = container;
         this.goods = [];
         this.allProducts = []; //массив товаров с версткой
-        this._fetchProducts();
-        this.render(); //вывод товаров на страницу
-        this.getSumOfProductList();
+        this._getProducts()
+            .then(data => {
+                this.goods = [...data];
+                this.render();
+                this.getSumOfProducts();
+            });
     }
 
-    _fetchProducts() {
-        this.goods = [
-            { id: 1, title: 'Notebook', picture: 'notebook.jpg', price: 2000 },
-            { id: 2, title: 'Mouse', picture: 'mouse.jpg', price: 20 },
-            { id: 3, title: 'Keyboard', picture: 'keyboard.jpg', price: 200 },
-            { id: 4, title: 'Gamepad', picture: 'gamepad.jpg', price: 50 },
-        ];
+    _getProducts() {
+        return fetch(`${API}/catalogData.json`)
+            .then(result => result.json())
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     render() {
@@ -26,27 +30,31 @@ class ProductList {
         }
     }
 
-    getSumOfProductList() {
-        let sumOfAllProducts = 0;
-        for (let product of this.allProducts) {
-            sumOfAllProducts += product.price;
-        }
-        //console.log(sumOfAllProducts);
+    getSumOfProducts() {
+        let sumOfAllProducts = this.allProducts.reduce((sum, item) => sum += item.price, 0);
+        console.log(sumOfAllProducts);
     }
+
+    // getSumOfProducts() {
+    //     let sumOfAllProducts = 0;
+    //     for (let product of this.allProducts) {
+    //         sumOfAllProducts += product.price;
+    //     }
+    // }
 }
 
 class ProductItem {
-    constructor(product) {
-        this.id = product.id;
-        this.title = product.title;
-        this.picture = product.picture;
+    constructor(product, picture = 'https://placehold.it/200x150') {
+        this.id = product.id_product;
+        this.title = product.product_name;
+        this.picture = picture;
         this.price = product.price;
     }
 
     render() {
-        return `<div class="product-item">
+        return `<div class="product-item" data-id="${this.id}">
                 <h3>${this.title}</h3>
-                <img src="img/${this.picture}" alt="picture" width="204.8" height="156.3">
+                <img src="${this.picture}" alt="picture" width="200" height="150">
                 <p>${this.price} RUB</p>
                 <button class="buy-btn">Купить</button>
             </div>`
@@ -56,10 +64,16 @@ class ProductItem {
 class Basket {
     constructor() {
         this.productItems = [];
+        this.basketItems = [];
         this.basketBtn = document.querySelector('.btn-cart');
-        this.initBasket();
+        this.initBasketContainer();
         this.basketContainer = document.querySelector('.basket');
         this.showOrHideBasket();
+        this.addProductItemInBasket()
+            .then(data => {
+                this.productItems = [data];
+                this.renderBasketItem();
+            });
     }
 
     showOrHideBasket() {
@@ -72,7 +86,7 @@ class Basket {
         });
     }
 
-    renderBasket() {
+    renderBasketContainer() {
         return `<table class="basket hidden">
             <tr class="table-top">
                 <td>ID</td>
@@ -86,24 +100,50 @@ class Basket {
         </table>`
     }
 
-    initBasket() {
-        let tableTop = this.renderBasket();
+    initBasketContainer() {
+        let tableTop = this.renderBasketContainer();
         this.basketBtn.insertAdjacentHTML('afterend', tableTop);
     }
 
-    addProductItemInBasket() {
+    renderBasketItem() {
+        for (let product of this.productItems) {
+            const item = new BasketItem(product);
+            this.basketItems.push(item);
+            basketContainer.insertAdjacentHTML("beforeend", item.render());
+        }
+    }
 
+    addProductItemInBasket() {
+        return fetch(`${API}/getBasket.json`)
+            .then(result => result.json())
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     deleteProductItemFromBasket() {
+
+    }
+
+    changeProductItemInBasket() {
 
     }
 }
 
 class BasketItem {
 
-    renderBasketItem() {
+    render() {
+        return `<tr class="table-item">
+        <td>${basket.productItems}</td>
+        <td>Наименование товара</td>
+        <td>Количество</td>
+        <td>Цена</td>
+    </tr>`
+    }
 
+    init() {
+        let tableItem = this.renderBasketItem();
+        this.document.querySelector('.table-top').insertAdjacentHTML('afterend', tableItem);
     }
 }
 
