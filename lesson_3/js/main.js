@@ -73,7 +73,6 @@ class Basket {
                 this.productItems = data;
                 this.renderBasketItem();
                 this.addProductItemInBasket();
-                this.renderSumOfPriceBasketItem();
             });
     }
 
@@ -113,10 +112,7 @@ class Basket {
             this.renderedBasketItems.push(basketItem);
             tableTop.insertAdjacentHTML("afterend", basketItem.render());
         }
-    }
-
-    renderSumOfPriceBasketItem() {
-        document.querySelector('.overall-price').textContent = this.productItems.amount;
+        document.querySelector('.overall-price').textContent = basket.productItems.amount;
     }
 
     getProductItemInBasket() {
@@ -127,20 +123,28 @@ class Basket {
             });
     }
 
+    getSumOfBasketProducts() {
+        let resultPrice = 0;
+        for (let product of basket.productItems.contents) {
+            let totalPrice = product.price * product.quantity;
+            document.querySelector(`.table-item-price[data-id="${product.id_product}"]`).textContent = totalPrice;
+            resultPrice += totalPrice;
+            document.querySelector('.overall-price').textContent = resultPrice;
+        }
+    }
+
     addProductItemInBasket() {
         document.querySelectorAll('.buy-btn').forEach(function(buyButton) {
             buyButton.addEventListener('click', function(event) {
                 let buttonId = +event.target.parentNode.dataset.id;
-                basket.renderedBasketItems.forEach(function(item) {
-                    if (item.id == buttonId) {
-                        item.count++;
-                        for (el of document.querySelectorAll(`.table-item`)) {
-                            if (el.id == buttonId) {
-                                el.count = item.count;
-                            } 
-                        }
+                for (let product of basket.productItems.contents) {
+                    if (product.id_product == buttonId) {
+                        product.quantity++;
+                        basket.productItems.countGoods++;
+                        basket.getSumOfBasketProducts();
                     }
-                });
+                    document.querySelector(`.table-item-count[data-id="${product.id_product}"]`).textContent = product.quantity;
+                }
             });
         });
     }
@@ -163,11 +167,11 @@ class BasketItem {
     }
 
     render() {
-        return `<tr class="table-item" data-id="${this.id}">
-        <td>${this.id}</td>
-        <td>${this.title}</td>
-        <td>${this.count}</td>
-        <td>${this.price}</td>
+        return `<tr class="table-item">
+        <td class="table-item-id" data-id="${this.id}">${this.id}</td>
+        <td class="table-item-title" data-id="${this.id}">${this.title}</td>
+        <td class="table-item-count" data-id="${this.id}">${this.count}</td>
+        <td class="table-item-price" data-id="${this.id}">${this.price}</td>
     </tr>`
     }
 }
