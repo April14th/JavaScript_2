@@ -68,10 +68,11 @@ class Basket {
         this.initBasketContainer();
         this.basketContainer = document.querySelector('.basket');
         this.showOrHideBasket();
-        this.addProductItemInBasket()
+        this.getProductItemInBasket()
             .then(data => {
                 this.productItems = data;
                 this.renderBasketItem();
+                this.addProductItemInBasket();
                 this.renderSumOfPriceBasketItem();
             });
     }
@@ -108,9 +109,9 @@ class Basket {
     renderBasketItem() {
         const tableTop = document.querySelector('.table-top');
         for (let product of this.productItems.contents) {
-            const item = new BasketItem(product);
-            this.renderedBasketItems.push(item);
-            tableTop.insertAdjacentHTML("afterend", item.render());
+            const basketItem = new BasketItem(product);
+            this.renderedBasketItems.push(basketItem);
+            tableTop.insertAdjacentHTML("afterend", basketItem.render());
         }
     }
 
@@ -118,12 +119,30 @@ class Basket {
         document.querySelector('.overall-price').textContent = this.productItems.amount;
     }
 
-    addProductItemInBasket() {
+    getProductItemInBasket() {
         return fetch(`${API}/getBasket.json`)
             .then(result => result.json())
             .catch(error => {
                 console.log(error);
             });
+    }
+
+    addProductItemInBasket() {
+        document.querySelectorAll('.buy-btn').forEach(function(buyButton) {
+            buyButton.addEventListener('click', function(event) {
+                let buttonId = +event.target.parentNode.dataset.id;
+                basket.renderedBasketItems.forEach(function(item) {
+                    if (item.id == buttonId) {
+                        item.count++;
+                        for (el of document.querySelectorAll(`.table-item`)) {
+                            if (el.id == buttonId) {
+                                el.count = item.count;
+                            } 
+                        }
+                    }
+                });
+            });
+        });
     }
 
     deleteProductItemFromBasket() {
@@ -142,8 +161,9 @@ class BasketItem {
         this.price = product.price;
         this.count = product.quantity;
     }
+
     render() {
-        return `<tr class="table-item">
+        return `<tr class="table-item" data-id="${this.id}">
         <td>${this.id}</td>
         <td>${this.title}</td>
         <td>${this.count}</td>
