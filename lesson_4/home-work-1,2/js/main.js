@@ -1,6 +1,7 @@
 'use strict';
 
-let text = `One: 'Hi Mary.' Two: 'Oh, hi.'
+let text = `One: 'Hi Mary.'
+Two: 'Oh, hi.'
 One: 'How are you doing?'
 Two: 'I'm doing alright. How about you?'
 One: 'Not too bad. The weather is great isn't it?'
@@ -17,4 +18,4 @@ One: 'That's great. Well, you better get going. You don't want to be late.'
 Two: 'I'll see you next time.'
 One: 'Sure. Bye.'`
 
-console.log(text);
+console.log(text.replace(/(^one:\s|^two:\s)(')(.+)('$)/img,'$1"$3"'));
