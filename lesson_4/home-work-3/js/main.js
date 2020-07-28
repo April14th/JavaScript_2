@@ -16,10 +16,10 @@ function validateName() {
 }
 
 function validatePhone() {
-    if (inputPhone.value.match(/^[a-zа-я]{1,}$/i) == null) {
+    if (inputPhone.value.match(/^\+7\([/d]{3}\)$/ig) == null) {
         inputPhone.classList.add('error');
     } else {
-        console.log(inputPhone.value.match(/[a-zа-я]{1,}/ig));
+        console.log(inputPhone.value.match(/^\+7\([/d]{3})$/ig));
         inputPhone.classList.remove('error');
     }
 }
