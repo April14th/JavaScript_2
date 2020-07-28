@@ -16,10 +16,19 @@ function validateName() {
 }
 
 function validatePhone() {
-    if (inputPhone.value.match(/^\+7\([/d]{3}\)$/ig) == null) {
+    if (inputPhone.value.match(/^\+7\([\d]{3}\)[\d]{3}-[\d]{4}$/ig) == null) {
         inputPhone.classList.add('error');
     } else {
-        console.log(inputPhone.value.match(/^\+7\([/d]{3})$/ig));
+        console.log(inputPhone.value.match(/^\+7\([\d]{3}\)[\d]{3}-[\d]{4}$/ig));
+        inputPhone.classList.remove('error');
+    }
+}
+
+function validateEmail() {
+    if (inputPhone.value.match(/^\+7\([\d]{3}\)[\d]{3}-[\d]{4}$/ig) == null) {
+        inputPhone.classList.add('error');
+    } else {
+        console.log(inputPhone.value.match(/^\+7\([\d]{3}\)[\d]{3}-[\d]{4}$/ig));
         inputPhone.classList.remove('error');
     }
 }
@@ -28,4 +37,5 @@ sendBtn.addEventListener('click', function(event) {
     event.preventDefault();
     validateName();
     validatePhone();
+    validateEmail();
 })
