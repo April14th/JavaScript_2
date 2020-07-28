@@ -12,10 +12,11 @@ body {
     padding: 20px;
     border: 2px solid #9b9b9b;
     border-radius: 8px;
+    position: relative;
 }
 
 .input {
-    margin: 5px 0 12px 0;
+    margin: 5px 0 15px 0;
     line-height: 24px;
     font-size: 14px;
     border-radius: 3px;
@@ -23,7 +24,7 @@ body {
 }
 
 .textarea {
-    margin: 5px 0 30px 0;
+    margin: 5px 0 35px 0;
     font-size: 15px;
     border-radius: 3px;
     resize: none;
@@ -50,5 +51,48 @@ body {
 }
 
 .error {
-    border: 1px solid red;
+    border: 2px solid red;
+}
+
+.errors {
+    position: absolute;
+    background-color: #d7efef;
+    width: 200px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.errors:before {
+    content: "";
+    border: 12px solid transparent;
+    border-bottom: 10px solid #d7efef;;
+    position: absolute;
+    top: -20px;
+    left: 8px;
+}
+
+.message_name {
+    top: 82px;
+    right: 21px;
+}
+
+.message_phone {
+    top: 150px;
+    right: 21px;
+}
+
+.message_email {
+    top: 218px;
+    right: 21px;
+}
+
+.message_textarea {
+    top: 446px;
+    right: 21px;
+}
+
+.hidden {
+    display: none;
 }
