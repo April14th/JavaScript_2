@@ -7,7 +7,8 @@ const app = new Vue({
         products: [],
         imgCatalog: 'https://placehold.it/200x150',
         filtered: [],
-        searchLine: undefined
+        searchLine: undefined,
+        isVisibleCart: false
     },
 
     methods: {

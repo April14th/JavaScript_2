@@ -94,10 +94,6 @@ img {
     width: 300px;
 }
 
-.invisible{
-    display: none;
-}
-
 .cart-block:before{
     content: '';
     width: 0;
