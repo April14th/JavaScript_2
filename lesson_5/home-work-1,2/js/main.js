@@ -26,6 +26,7 @@ const app = new Vue({
         },
 
         filterGoods(searchLine){
+            event.preventDefault();
             const regexp = new RegExp(searchLine, 'i');
             this.filtered = this.products.filter(product => regexp.test(product.product_name));
             this.products.forEach(el => {
