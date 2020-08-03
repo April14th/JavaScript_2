@@ -47,8 +47,8 @@ button:focus{
     padding: 40px 80px;
     justify-content: space-between;
 }
-p {
-    margin: 0 0 5px 0;
+.cart-block-empty {
+    margin: 0;
 }
 .product-item{
     display: flex;

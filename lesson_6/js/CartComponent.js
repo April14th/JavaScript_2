@@ -2,8 +2,8 @@ Vue.component('cart', {
     props: ['cartItems', 'img', 'visibility'],
     template: `
         <div class="cart-block" v-show="visibility">
-            <cart-item v-for="item of cartItems" :key="item.id_product" :img="img" :cart-item="item">
-            </cart-item>
+            <cart-item v-for="item of cartItems" :key="item.id_product" :img="img" :cart-item="item"></cart-item>
+            <p class="cart-block-empty" v-if="!cartItems.length">Cart is empty</p>
         </div>
     `
 });
@@ -26,4 +26,4 @@ Vue.component('cart-item', {
                     </div>
                 </div>
     `
-})
+});
