@@ -1,7 +1,12 @@
 Vue.component('search-form', {
-    props: ['user-search'],
+    props: ['value'],
+    methods: {
+      updateValue: function (value) {
+        this.$emit("input", value);
+      }
+    },
     template: `<form action="#" class="search-form" @submit.prevent="$emit('filter')">
-                <input type="text" class="search-field" v-model="userSearch">
+                <input type="text" class="search-field" :value="value" @input="updateValue($event.target.value)">
                 <button type="submit" class="btn-search">
                     <i class="fas fa-search"></i>
                 </button>
