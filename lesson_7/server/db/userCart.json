@@ -4,45 +4,38 @@
     "contents": [
         {
             "id_product": 123,
+            "product_img": "img/notebook.jpg",
             "product_name": "Ноутбук",
             "price": 45600,
-            "quantity": 14
+            "quantity": 24
         },
         {
             "id_product": 456,
+            "product_img": "img/mouse.jpg",
             "product_name": "Мышка",
             "price": 1000,
-            "quantity": 2
+            "quantity": 6
         },
         {
-            "quantity": 6,
+            "quantity": 13,
             "id_product": 457,
+            "product_img": "img/gamepad.jpg",
             "product_name": "Gamepad",
             "price": 3000
         },
         {
-            "quantity": 16,
+            "quantity": 20,
             "id_product": 124,
+            "product_img": "img/keyboard.jpg",
             "product_name": "Keyboard",
             "price": 1600
         },
         {
-            "quantity": 1,
-            "id_product": 124,
-            "product_name": "Keyboard",
-            "price": 1600
-        },
-        {
-            "quantity": 1,
-            "id_product": 457,
-            "product_name": "Gamepad",
-            "price": 3000
-        },
-        {
-            "quantity": 1,
-            "id_product": 123,
-            "product_name": "Ноутбук",
-            "price": 45600
+            "quantity": 3,
+            "id_product": 789,
+            "product_img": "img/phone.jpg",
+            "product_name": "Phone",
+            "price": 15000
         }
     ]
 }
