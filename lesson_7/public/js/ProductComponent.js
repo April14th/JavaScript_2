@@ -4,7 +4,8 @@ Vue.component('products', {
            catalogUrl: '/catalogData.json',
            filtered: [],
            products: [],
-           imgProduct: 'https://placehold.it/200x150'
+           imgProduct: 'img/'
+        //    <img src="../public/img/{{product.product_img}}" alt="picture" width="204.8" height="156.3">
        }
    },
     mounted(){
@@ -24,7 +25,7 @@ Vue.component('products', {
     },
    template: `<div class="products">
                 <product v-for="item of filtered" 
-                :key="item.id_product" 
+                :key="item.id_product"
                 :img="imgProduct"
                 :product="item"
                 @add-product="$parent.$refs.cart.addProduct"></product>
