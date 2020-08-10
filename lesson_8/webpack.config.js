@@ -3,5 +3,9 @@ module.exports = {
     output: {
         filename: './build.js',
         path:'./dist'
+    },
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
     }
 }
