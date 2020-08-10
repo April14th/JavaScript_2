@@ -1,3 +1,7 @@
+import './ProductComponent.js';
+import './CartComponent.js';
+import './FilterComp.js';
+import './ErrorComp.js';
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const app = new Vue({
@@ -47,11 +51,13 @@ const app = new Vue({
     },
     mounted(){
 
-
     }
 
 });
 
+export default {
+    API: API
+}
 
 // class List {
 //     constructor(url, container){

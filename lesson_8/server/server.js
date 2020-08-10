@@ -5,6 +5,7 @@ const cart = require('./cartRouter');//обработчик всех запро�
 
 app.use(express.json());
 app.use('/', express.static('public'));
+app.use('/', express.static('dist'));
 app.use('/api/cart', cart);
 
 
