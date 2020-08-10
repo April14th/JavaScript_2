@@ -55,10 +55,6 @@ const app = new Vue({
 
 });
 
-export default {
-    API: API
-}
-
 // class List {
 //     constructor(url, container){
 //         this.container = container;

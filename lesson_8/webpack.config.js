@@ -2,7 +2,7 @@ module.exports = {
     entry: './public/js/main.js',
     output: {
         filename: './build.js',
-        path:'./dist'
+        path: __dirname + "/dist"
     },
     watch: true,
     watchOptions: {
