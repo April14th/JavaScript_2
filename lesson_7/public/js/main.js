@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         userSearch: '',
     },
+    
     methods: {
         getJson(url){
             return fetch(url)
@@ -14,6 +15,7 @@ const app = new Vue({
                     this.$refs.error.text = error;
                 })
         },
+
         postJson(url, data){
             return fetch(url, {
                 method: 'POST',
@@ -28,6 +30,7 @@ const app = new Vue({
                     this.$refs.error.text = error;
                 })
         },
+
         putJson(url, data){
             return fetch(url, {
                 method: 'PUT',
@@ -43,13 +46,20 @@ const app = new Vue({
                 })
         },
 
-
+        deleteJson(url){
+            return fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(result => result.json())
+                .catch(error => {
+                    // console.log(error);
+                    this.$refs.error.setError(error);
+                })
+        }
     },
-    mounted(){
-
-
-    }
-
 });
 
 
