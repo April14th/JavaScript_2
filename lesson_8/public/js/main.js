@@ -2,7 +2,6 @@ import './ProductComponent.js';
 import './CartComponent.js';
 import './FilterComp.js';
 import './ErrorComp.js';
-const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const app = new Vue({
     el: '#app',
@@ -18,6 +17,7 @@ const app = new Vue({
                     this.$refs.error.text = error;
                 })
         },
+
         postJson(url, data){
             return fetch(url, {
                 method: 'POST',
@@ -32,6 +32,7 @@ const app = new Vue({
                     this.$refs.error.text = error;
                 })
         },
+
         putJson(url, data){
             return fetch(url, {
                 method: 'PUT',
@@ -47,12 +48,20 @@ const app = new Vue({
                 })
         },
 
-
+        deleteJson(url){
+            return fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(result => result.json())
+                .catch(error => {
+                    // console.log(error);
+                    this.$refs.error.setError(error);
+                })
+        }
     },
-    mounted(){
-
-    }
-
 });
 
 // class List {

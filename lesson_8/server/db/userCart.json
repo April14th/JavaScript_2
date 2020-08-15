@@ -1,41 +1,5 @@
 {
     "amount": 46600,
     "countGoods": 2,
-    "contents": [
-        {
-            "id_product": 123,
-            "product_img": "img/notebook.jpg",
-            "product_name": "Ноутбук",
-            "price": 45600,
-            "quantity": 28
-        },
-        {
-            "id_product": 456,
-            "product_img": "img/mouse.jpg",
-            "product_name": "Мышка",
-            "price": 1000,
-            "quantity": 18
-        },
-        {
-            "quantity": 23,
-            "id_product": 457,
-            "product_img": "img/gamepad.jpg",
-            "product_name": "Gamepad",
-            "price": 3000
-        },
-        {
-            "quantity": 23,
-            "id_product": 124,
-            "product_img": "img/keyboard.jpg",
-            "product_name": "Keyboard",
-            "price": 1600
-        },
-        {
-            "quantity": 3,
-            "id_product": 789,
-            "product_img": "img/phone.jpg",
-            "product_name": "Phone",
-            "price": 15000
-        }
-    ]
+    "contents": []
 }
