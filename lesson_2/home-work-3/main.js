@@ -13,7 +13,7 @@ class Hamburger {
         const sizeButtons = document.querySelectorAll('.size');
         sizeButtons.forEach(function (sizeButton) {
             sizeButton.addEventListener('click', function (event) {
-                hamburger.size = event.srcElement.dataset.size;
+                hamburger.size = event.target.dataset.size;
             });
         });
     }
@@ -22,7 +22,7 @@ class Hamburger {
         const stuffingButtons = document.querySelectorAll('.stuffing');
         stuffingButtons.forEach(function (stuffingButton) {
             stuffingButton.addEventListener('click', function (event) {
-                hamburger.stuffing = event.srcElement.dataset.stuffing;
+                hamburger.stuffing = event.target.dataset.stuffing;
             });
         });
     }
