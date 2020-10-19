@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ДЗ_2</title>
+</head>
+<body>
+    <div class="menu">
+        <h4 class="title">Выберите размер гамбургера:</h4>
+        <label class="text">
+            <input class="size" type="radio" name="size" data-size="Маленький" data-price="50" data-calorific="20" checked>
+             Маленький (50 рублей, 20 калорий)
+        </label>
+        <label class="text">
+            <input class="size" type="radio" name="size" data-size="Большой" data-price="100" data-calorific="40">
+             Большой (100 рублей, 40 калорий)
+        </label>
+    </div>
+    <div class="menu">
+        <h4 class="title">Выберите начинку гамбургера:</h4>
+        <label class="text">
+            <input class="stuffing" type="radio" name="stuffing" data-stuffing="С сыром" data-price="10" data-calorific="20" checked>
+             С сыром (+10 рублей, +20 калорий)
+        </label>
+        <label class="text">
+            <input class="stuffing" type="radio" name="stuffing" data-stuffing="С салатом" data-price="20" data-calorific="5">
+             С салатом (+20 рублей, +5 калорий)
+        </label>
+        <label class="text">
+            <input class="stuffing" type="radio" name="stuffing" data-stuffing="С картофелем" data-price="15" data-calorific="10">
+             С картофелем (+15 рублей, +10 калорий)
+        </label>
+    </div>
+    <div class="menu">
+        <h4 class="title">Дополнительные опции:</h4>
+        <label class="text">
+            <input class="topping" type="checkbox" name="topping" data-topping="Приправа" data-price="15" data-calorific="0">
+             Посыпать приправой (+15 рублей, +0 калорий)
+            </label>
+        <label class="text">
+            <input class="topping" type="checkbox" name="topping" data-topping="Майонез" data-price="20" data-calorific="5">
+             Полить майонезом (+20 рублей, +5 калорий)
+            </label>
+    </div>
+    <button class="calc-btn">Подсчитать</button>
+    <div id="order-container"></div>
+    <script src="js/main2.js"></script>
+</body>
+</html>

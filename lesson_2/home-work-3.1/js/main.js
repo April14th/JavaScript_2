@@ -22,9 +22,15 @@ class Hamburger {
 
     getSize() {
         const sizeButtons = document.querySelectorAll('.size');
+        const fff = document.querySelectorAll('.text');
+        console.log(fff);
         sizeButtons.forEach(function (sizeButton) {
             sizeButton.addEventListener('click', function (event) {
-                hamburger.size = event.target.dataset.size;
+                for (let item of hamburger.jsonObj.size) {
+                    if (event.target.dataset.size == item.name) {
+                        hamburger.size = item.name
+                    }
+                }
             });
         });
     }
