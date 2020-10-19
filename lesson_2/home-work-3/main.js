@@ -3,10 +3,24 @@ class Hamburger {
         this.size = size;
         this.stuffing = stuffing;
         this.toppingsList = [];
+        this.url = 'https://raw.githubusercontent.com/April14th/JavaScript_2/lesson_2/lesson_2/home-work-3/JSON/hamburger.json';
+        this.json = null;
+        this.init();
         this.getSize();
         this.getStuffing();
         this.getToppings();
         this.calculateСharacteristicOfHamburger();
+    }
+
+    init() {
+        this.get(this.url)
+            .then(arr => {
+                    this.json = arr;  
+                })
+    }
+
+    get(url) {
+        return fetch(url).then(d => d.json());
     }
 
     getSize() {
