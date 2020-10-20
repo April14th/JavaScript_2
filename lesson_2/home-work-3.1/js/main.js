@@ -1,19 +1,19 @@
 class Hamburger {
-    constructor(size, stuffing) {
-        this.size = size;
-        this.stuffing = stuffing;
+    constructor() {
+        this.size = null;
+        this.stuffing = null;
         this.toppingsList = [];
-        this.url = 'https://raw.githubusercontent.com/April14th/JavaScript_2/lesson_2/lesson_2/home-work-3/JSON/hamburger.json';
+        this.url = 'https://raw.githubusercontent.com/April14th/JavaScript_2/lesson_2/lesson_2/home-work-3.1/JSON/hamburger.json';
         this.jsonObj = null;
-        this.init();
+        this.initDefault();
         this.getSize();
         this.getStuffing();
         this.getToppings();
         this.calculateСharacteristicOfHamburger();
     }
 
-    init() {
-        this.get(this.url).then(obj => { this.jsonObj = obj })
+    initDefault() {
+        this.get(this.url).then(obj => { this.jsonObj = obj, this.size = obj.size[0].name, this.stuffing = obj.stuffing[0].name });
     }
 
     get(url) {
@@ -22,12 +22,10 @@ class Hamburger {
 
     getSize() {
         const sizeButtons = document.querySelectorAll('.size');
-        const fff = document.querySelectorAll('.text');
-        console.log(fff);
         sizeButtons.forEach(function (sizeButton) {
             sizeButton.addEventListener('click', function (event) {
                 for (let item of hamburger.jsonObj.size) {
-                    if (event.target.dataset.size == item.name) {
+                    if (event.target.value == item.name) {
                         hamburger.size = item.name
                     }
                 }
@@ -39,7 +37,11 @@ class Hamburger {
         const stuffingButtons = document.querySelectorAll('.stuffing');
         stuffingButtons.forEach(function (stuffingButton) {
             stuffingButton.addEventListener('click', function (event) {
-                hamburger.stuffing = event.target.dataset.stuffing;
+                for (let item of hamburger.jsonObj.stuffing) {
+                    if (event.target.value == item.name) {
+                        hamburger.stuffing = item.name
+                    }
+                }
             });
         });
     }
@@ -53,49 +55,107 @@ class Hamburger {
 
     calculatePrice(button) {
         button.addEventListener('click', function () {
-            let priceFromSize = +document.querySelector('input[name="size"]:checked').dataset.price;
-            let priceFromStuffing = +document.querySelector('input[name="stuffing"]:checked').dataset.price;
-            let pricesFromToppings = document.querySelectorAll('input[name="topping"]:checked');
-            let sumPricesFromToppings = 0;
-            pricesFromToppings.forEach(function (priceFromTopping) {
-                sumPricesFromToppings += +priceFromTopping.dataset.price;
-            });
+            let priceFromSize = hamburger.calculatePriceOfSize();
+            let priceFromStuffing = hamburger.calculatePriceOfStuffing();
+            let sumPricesFromToppings = hamburger.calculatePriceOfToppings();
             hamburger.priceOfHamburger = priceFromSize + priceFromStuffing + sumPricesFromToppings;
-        });
+        })
     };
+
+    calculatePriceOfSize() {
+        for (let item of hamburger.jsonObj.size) {
+            if (hamburger.size == item.name) {
+                let priceFromSize = item.price;
+                return priceFromSize;
+            }
+        }
+    }
+
+    calculatePriceOfStuffing() {
+        for (let item of hamburger.jsonObj.stuffing) {
+            if (hamburger.stuffing == item.name) {
+                let priceFromStuffing = item.price;
+                return priceFromStuffing;
+            }
+        }
+    }
+
+    calculatePriceOfToppings() {
+        let sumPricesFromToppings = 0;
+        hamburger.toppingsList.forEach(function (topping) {
+            for (let item of hamburger.jsonObj.topping) {
+                if (topping == item.name) {
+                    sumPricesFromToppings += item.price;
+                }
+            }
+        });
+        return sumPricesFromToppings;
+    }
 
     calculateCalories(button) {
         button.addEventListener('click', function () {
-            let caloriesFromSize = +document.querySelector('input[name="size"]:checked').dataset.calorific;
-            let caloriesFromStuffing = +document.querySelector('input[name="stuffing"]:checked').dataset.calorific;
-            let caloriesFromToppings = document.querySelectorAll('input[name="topping"]:checked');
-            let sumCaloriesFromToppings = 0;
-            caloriesFromToppings.forEach(function (caloriesFromTopping) {
-                sumCaloriesFromToppings += +caloriesFromTopping.dataset.calorific;
-            });
+            let caloriesFromSize = hamburger.calculateCaloriesOfSize();
+            let caloriesFromStuffing = hamburger.calculateCaloriesOfStuffing();
+            let sumCaloriesFromToppings = hamburger.calculateCaloriesOfToppings();
             hamburger.calorificOfHamburger = caloriesFromSize + caloriesFromStuffing + sumCaloriesFromToppings;
         });
     };
 
-    addTopping(topping, event) {
-        topping = event.srcElement.dataset.topping;
-        hamburger.toppingsList.push(topping);
+    calculateCaloriesOfSize() {
+        for (let item of hamburger.jsonObj.size) {
+            if (hamburger.size == item.name) {
+                let caloriesFromSize = item.calorific;
+                return caloriesFromSize;
+            }
+        }
     }
 
-    removeTopping(topping, event) {
-        topping = event.srcElement.dataset.topping;
-        let indexTopping = hamburger.toppingsList.indexOf(topping);
-        hamburger.toppingsList.splice(indexTopping, 1);
+    calculateCaloriesOfStuffing() {
+        for (let item of hamburger.jsonObj.stuffing) {
+            if (hamburger.stuffing == item.name) {
+                let caloriesFromStuffing = item.calorific;
+                return caloriesFromStuffing;
+            }
+        }
     }
 
-    getToppings(topping) {
+    calculateCaloriesOfToppings() {
+        let sumCaloriesFromToppings = 0;
+        hamburger.toppingsList.forEach(function (topping) {
+            for (let item of hamburger.jsonObj.topping) {
+                if (topping == item.name) {
+                    sumCaloriesFromToppings += item.calorific;
+                }
+            }
+        });
+        return sumCaloriesFromToppings;
+    }
+
+    addTopping(event) {
+        for (let item of hamburger.jsonObj.topping) {
+            if (event.target.value == item.name) {
+                hamburger.toppingsList.push(item.name)
+            }
+        }
+    }
+
+    removeTopping(event) {
+        for (let item of hamburger.jsonObj.topping) {
+            if (event.target.value == item.name) {
+                let indexTopping = hamburger.toppingsList.indexOf(item.name);
+                hamburger.toppingsList.splice(indexTopping, 1);
+            }
+        }
+    }
+
+    getToppings() {
         const toppingButtons = document.querySelectorAll('.topping')
         toppingButtons.forEach(function (toppingButton) {
             toppingButton.addEventListener('click', function (event) {
                 if (toppingButton.checked) {
-                    hamburger.addTopping(topping, event);
+                    hamburger.addTopping(event);
                 } else if (toppingButton) {
-                    hamburger.removeTopping(topping, event);
+                    hamburger.removeTopping(event);
                 };
             });
         });
@@ -118,6 +178,4 @@ class Hamburger {
     }
 }
 
-const defaultSize = document.querySelector('input[name="size"]:checked').dataset.size;
-const defaultStuffing = document.querySelector('input[name="stuffing"]:checked').dataset.stuffing;
-const hamburger = new Hamburger(defaultSize, defaultStuffing);
+const hamburger = new Hamburger();
