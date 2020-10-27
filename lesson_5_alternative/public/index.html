@@ -63,9 +63,9 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for Item..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control" placeholder="Search for Item..." v-model="filter" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                        <button class="btn btn-outline-secondary" @click="filterCatalog" type="button"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
             </div>
@@ -79,13 +79,29 @@
     
     
                 <div class="headerCart pr-4" >
-                    <button id="basket-toggler"></button>
+                    <button id="basket-toggler" @click="show = !show"></button>
     
-                    <div class="headerCartWrap invisible" id="basket">
+                    <div class="headerCartWrap" id="basket" v-show="show">
                         <div class="headerCartWrapBlock"></div>
-                        <div class="headerCartWrapInAll" >
-                            <div id="basket-items" class="headerCartWrapInAll">
-    
+                        <div class="headerCartWrapInAll">
+                            <div id="basket-items" class="headerCartWrapInAll" v-for="item of basketItems">
+                                <div class="d-flex headerCartWrapIn mb-1 p-2">
+                                    <img :src="item.productImg" alt="" width="85" height="100">
+                                    <div>
+                                        <div>{{ item.productName }}</div>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                        <div class="headerCartWrapPrice">{{ item.amount }}
+                                            <span>x</span> ${{ item.productPrice }}
+                                        </div>
+                                    </div>
+                                    <button class="fas fa-times-circle" name="remove" @click="remove(item)"></button>
+                                </div>
                             </div>
     
                             <div class="headerCartWrapTotalPrice">
@@ -578,10 +594,10 @@
             </div>
             <div class="row" id="catalog">
                 <div class="feturedItems">
-                    <div class="feturedItem" v-for="item of catalogItems">
+                    <div class="feturedItem" v-for="item of filteredCatalogItems">
                         <div class="feturedImgWrap">
                             <div class="feturedBuy">
-                                <button name="add">
+                                <button @click="add(item)">
                                     <i class="fas fa-shopping-cart"></i> Add to Cart
                                 </button>
                             </div>
