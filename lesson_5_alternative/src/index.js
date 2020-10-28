@@ -7,7 +7,7 @@ const app = new Vue({
         basketItems: [],
         catalogUrl: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
         basketUrl: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json',
-        show: false,
+        showBasket: false,
     },
 
     methods: {
@@ -20,13 +20,12 @@ const app = new Vue({
             if (find) {
                 find.amount++;
             } else {
-                Object.assign(item, { amount: 1 })
-                this.basketItems.push(item);
+                this.basketItems.push(Object.assign({}, item, { amount: 1 }));
             }
         },
 
-        remove(item) {
-            let find = this.basketItems.find(el => el.productId == item.productId);
+        remove(id) {
+            let find = this.basketItems.find(el => el.productId == id);
             if (find.amount > 1) {
                 find.amount--;
             } else {
@@ -44,6 +43,6 @@ const app = new Vue({
             this.catalogItems = items;
             this.filteredCatalogItems = items;
         });
-        this.get(this.basketUrl).then(items => { this.basketItems = items.content });
+        this.get(this.basketUrl).then(basket => { this.basketItems = basket.content });
     },
 })
