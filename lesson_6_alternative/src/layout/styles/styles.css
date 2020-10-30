@@ -903,7 +903,7 @@ details[open] summary .fa-caret-up {
 
 @media (min-width: 1199.98px) {
   .feturedItem {
-    margin-top: 2rem; } }
+    margin: 30px 10px 0 10px; } }
 .feturedItem:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16); }
 .feturedItem .feturedImgWrap {
@@ -1490,6 +1490,10 @@ body {
   .antirow {
     margin: 50px 0 0 0;
     justify-content: space-between;
+  }
+
+  .antirow2 {
+    justify-content: center;
   }
 /*-------------------------------NEW ARRIVAL END-----------------------------*/
 
