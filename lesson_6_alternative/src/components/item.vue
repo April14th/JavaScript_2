@@ -58,12 +58,6 @@ export default {
 			type: String,
 			default: 'catalog'
 		}
-    },
-    
-    methods: {
-        test() {
-            console.log(this);
-        }
     }
 };
 </script>

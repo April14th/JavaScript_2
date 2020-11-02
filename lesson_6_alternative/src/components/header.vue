@@ -44,7 +44,7 @@
                         <a href="#" class="dropdown-item" type="button">Jackets/vests</a>
                     </div>
                 </div>
-                <search />
+                <search ref="searching" />
             </div>
     
             <div class="row headerAccountAndCart d-none  align-items-center
@@ -467,8 +467,7 @@ export default {
 
     data() {
         return {
-            showbasket: true,
-            filer: ''
+            showbasket: false,
         }
     }
 }
