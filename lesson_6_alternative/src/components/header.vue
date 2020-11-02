@@ -45,12 +45,6 @@
                     </div>
                 </div>
                 <search />
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for Item..." v-model="filter" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" @click="filterCatalog" type="button"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
             </div>
     
             <div class="row headerAccountAndCart d-none  align-items-center
@@ -62,41 +56,8 @@
     
     
                 <div class="headerCart pr-4" >
-                    <button id="basket-toggler" @click="showBasket = !showBasket"></button>
-                    <basket v-show="showBasket" />
-                    <!-- <div class="headerCartWrap" id="basket" v-show="showBasket">
-                        <div class="headerCartWrapBlock"></div>
-                        <div class="headerCartWrapInAll">
-                            <div id="basket-items" class="headerCartWrapInAll" v-for="item of basketItems" :key="item.productId">
-                                <div class="d-flex headerCartWrapIn mb-1 p-2">
-                                    <img :src="item.productImg" alt="" width="85" height="100">
-                                    <div>
-                                        <div>{{ item.productName }}</div>
-                                        <span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </span>
-                                        <div class="headerCartWrapPrice">{{ item.amount }}
-                                            <span>x</span> ${{ item.productPrice }}
-                                        </div>
-                                    </div>
-                                    <button class="fas fa-times-circle" @click="remove(item.productId)"></button>
-                                </div>
-                            </div>
-    
-                            <div class="headerCartWrapTotalPrice">
-                                <div>total</div>
-                                <div>${{ total }}</div>
-                            </div>
-    
-                            <button type="button" class="productsButtonIndex">Checkout</button>
-                            <button type="button" class="productsButtonIndex">Go to cart</button>
-                        </div>
-                    </div> -->
-    
+                    <button id="basket-toggler" @click="showbasket = !showbasket" type="button"></button>
+                    <basket ref="bask" v-show="showbasket" />
                 </div>
     
     
@@ -499,16 +460,17 @@
 
 <script>
 import basket from './basket.vue';
-
+import search from './search.vue';
 
 export default {
-    components: { basket },
+    components: { basket, search },
 
     data() {
         return {
-            showBasket: true
+            showbasket: true,
+            filer: ''
         }
-    },
+    }
 }
 </script>
 

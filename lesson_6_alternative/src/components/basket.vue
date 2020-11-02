@@ -3,7 +3,7 @@
         <div class="headerCartWrapBlock"></div>
         <div class="headerCartWrapInAll">
             <div id="basket-items" class="headerCartWrapInAll">
-                <item v-for="item of items" :key="item.productId" :item="item" :url="url" />
+                <item type="basket" v-for="item of items" :key="item.productId" :item="item" @delete="remove" />
 		    </div>
             <div class="headerCartWrapTotalPrice">
                 <div>total</div>
@@ -18,16 +18,10 @@
 
 <script>
 import item from './item.vue';
+import { get } from '../utils/requests.js';
 
 export default {
     components: { item },
-
-    props: {
-        showBasket: {
-            type: Boolean,
-            default: true
-        }
-    },
 
     data() {
         return {
@@ -37,13 +31,27 @@ export default {
     },
 
     methods: {
-        get(url) {
-            return fetch(url).then(d => d.json());
-        }
+        add(item) {
+            let find = this.items.find(el => el.productId == item.productId);
+            if (find) {
+                find.amount++;
+            } else {
+                this.items.push(Object.assign({}, item, { amount: 1 }));
+            }
+        },
+
+        remove(id) {
+            let find = this.items.find(el => el.productId == id);
+            if (find.amount > 1) {
+                find.amount--;
+            } else {
+                this.items.splice(this.items.indexOf(find), 1);
+            }
+        },
     },
     
     mounted() {
-        this.get(this.url).then(items => { this.items = items.content });
+        get(this.url).then(items => { this.items = items.content });
     },
 
     computed: {

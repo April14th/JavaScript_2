@@ -1,9 +1,10 @@
 <template>
-	<div>
-        <div v-if="url == 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json'" class="feturedItem">
+<div>
+	<template v-if="type == 'catalog'">
+		<div class="feturedItem">
             <div class="feturedImgWrap">
                  <div class="feturedBuy">
-                    <button>
+                    <button @click="$parent.$parent.$children[0].$refs.bask.add(item)">
                         <i class="fas fa-shopping-cart"></i> Add to Cart
                     </button>
                 </div>
@@ -19,7 +20,9 @@
                 </div>
             </div>
         </div>
-		<div v-else class="d-flex headerCartWrapIn mb-1 p-2">
+	</template>
+    <template v-if="type == 'basket'">
+		<div class="d-flex headerCartWrapIn mb-1 p-2">
             <img :src="item.productImg" alt="" width="85" height="100">
             <div>
                 <div>{{ item.productName }}</div>
@@ -34,9 +37,10 @@
                     <span>x</span> ${{ item.productPrice }}
                 </div>
             </div>
-            <button class="fas fa-times-circle"></button>
+            <button class="fas fa-times-circle" @click="$emit('delete', item.productId)"></button>
         </div>
-	</div>
+	</template>
+</div>
 </template>
 
 <script>
@@ -50,10 +54,17 @@ export default {
 			})
 		},
 
-		url: {
-			type: String
+		type: {
+			type: String,
+			default: 'catalog'
 		}
-	}
+    },
+    
+    methods: {
+        test() {
+            console.log(this);
+        }
+    }
 };
 </script>
 

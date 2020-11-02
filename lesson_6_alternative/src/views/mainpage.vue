@@ -211,12 +211,11 @@
 
 <script>
 import catalog from '../components/catalog.vue';
-import basket from '../components/basket.vue';
 import headerComp from '../components/header.vue';
 import footerComp from '../components/footer.vue';
 
 export default {
-    components: { catalog, basket, headerComp, footerComp }
+    components: { catalog, headerComp, footerComp }
 }
 </script>
 
