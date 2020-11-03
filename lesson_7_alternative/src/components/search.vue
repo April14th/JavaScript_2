@@ -16,7 +16,7 @@ export default {
             filter: '',
             items: [],
             filteredCatalogItems: [],
-            url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json'
+            url: '/api/catalog'
         }
     },
     
