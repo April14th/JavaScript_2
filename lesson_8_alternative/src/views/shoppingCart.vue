@@ -173,15 +173,13 @@
                 </div>
             </div>
         </div>
-        <footerComp />
 </div>
 </template>
 
 <script>
-import footerComp from '../components/footer.vue';
 
 export default {
-    components: { footerComp }
+
 }
 </script>
 

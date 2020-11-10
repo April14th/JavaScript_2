@@ -177,16 +177,14 @@
             </div>
         </div>
     </div>
-    <footerComp />
 </div>
 </template>
 
 <script>
 import catalog from '../components/catalog.vue';
-import footerComp from '../components/footer.vue';
 
 export default {
-    components: { catalog, footerComp }
+    components: { catalog }
 }
 </script>
 

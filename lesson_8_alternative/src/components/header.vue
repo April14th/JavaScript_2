@@ -9,7 +9,7 @@
                                         col-lg-2 offset-lg-0
                                         col-md-3 offset-md-4
                                         col-sm-4 offset-sm-4">
-                <a href="#" class="pr-2"><img src="../assets/imgs/logo.png" alt="logo"></a>
+                <router-link to="/" class="pr-2"><img src="../assets/imgs/logo.png" alt="logo"></router-link>
                 <router-link to="/" class="pr-3 pr-xl-3 pr-lg-0 pr-md-2 pr-sm-2 brand">bran<span>d</span></router-link>
             </div>
     

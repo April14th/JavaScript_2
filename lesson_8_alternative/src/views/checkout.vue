@@ -372,10 +372,7 @@
                 </div>
             </div>
         </details>
-
     </main>
-    <!-------------------------------FOOTER ST----------------------------->
-    <!-------------------------------SUBSCRIBE ST----------------------------->
 
     <div class="subscribeBg mt-5 pt-5 pb-5">
         <div class="container">
@@ -431,15 +428,12 @@
             </div>
         </div>
     </div>
-    <footerComp />
 </div>
 </template>
 
 <script>
-import footerComp from '../components/footer.vue';
-
 export default {
-    components: { footerComp }
+
 }
 </script>
 

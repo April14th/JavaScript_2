@@ -32,7 +32,7 @@
                         pl-sm-0 d-sm-flex">
                 <div class="footerColumn">
                     <h2>COMPANY</h2>
-                    <a href="#">Home</a>
+                    <router-link to="/">Home</router-link>
                     <a href="#">Shop</a>
                     <a href="#">About</a>
                     <a href="#">How It Works</a>
