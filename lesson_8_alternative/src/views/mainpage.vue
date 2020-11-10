@@ -1,18 +1,5 @@
 <template>
 <div>
-    <headerComp />
-    <div class="newArrivalsBg pb-5 pt-5">
-        <div class="px-md-0 container d-flex flex-column flex-sm-row justify-content-between align-items-center ">
-            <div class="newArrivals">New Arrivals</div>
-            <div class="newArrivalsPath mt-4 mt-sm-0">
-                <a href="#">home</a>
-                <a href="#">men</a>
-                <a href="#">new arrivals</a>
-            </div>
-        </div>
-    </div>
-    <!-------------------------------HEADER END----------------------------->
-    
     <div class="topBanner">
         <div class="container topBannerContent px-sm-0">
             <div class="bgText">
@@ -25,8 +12,6 @@
             </div>
         </div>
     </div>
-    
-    <!-------------------------------OFFER ST----------------------------->
     <main>
         <div class="container px-sm-0">
     
@@ -66,8 +51,6 @@
                 
             </div>
         </div>
-        <!-------------------------------OFFER END----------------------------->
-        <!-------------------------------FETURED ST----------------------------->
         <div class="container">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="#">
@@ -83,10 +66,6 @@
                     Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
                 </button>
             </div>
-    
-            <!-------------------------------FETURED END----------------------------->
-            <!-------------------------------OFFER FOR WOMEN ST----------------------------->
-    
             <div class="container mt-5">
                 <div class="row">
                     <div class="offerWomenLeft px-0 d-flex justify-content-center
@@ -142,14 +121,7 @@
                 </div>
             </div>
         </div>
-        <!-------------------------------OFFER FOR WOMEN END----------------------------->
-    
     </main>
-
-    <!-------------------------------FOOTER ST----------------------------->
-
-    <!-------------------------------SUBSCRIBE ST----------------------------->
-
     <div class="subscribeBg pt-5 pb-5 container-fluid">
         <div class="container px-0">
             <div class="row pb-5">
@@ -211,11 +183,10 @@
 
 <script>
 import catalog from '../components/catalog.vue';
-import headerComp from '../components/header.vue';
 import footerComp from '../components/footer.vue';
 
 export default {
-    components: { catalog, headerComp, footerComp }
+    components: { catalog, footerComp }
 }
 </script>
 

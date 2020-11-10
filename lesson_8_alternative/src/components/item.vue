@@ -4,7 +4,7 @@
 		<div class="feturedItem">
             <div class="feturedImgWrap">
                  <div class="feturedBuy">
-                    <button @click="$parent.$parent.$children[0].$refs.bask.add(item)">
+                    <button @click="$parent.$parent.$parent.$children[0].$refs.bask.add(item)">
                         <i class="fas fa-shopping-cart"></i> Add to Cart
                     </button>
                 </div>

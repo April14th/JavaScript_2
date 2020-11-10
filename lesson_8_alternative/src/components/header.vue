@@ -10,7 +10,7 @@
                                         col-md-3 offset-md-4
                                         col-sm-4 offset-sm-4">
                 <a href="#" class="pr-2"><img src="../assets/imgs/logo.png" alt="logo"></a>
-                <a href="#" class="pr-3 pr-xl-3 pr-lg-0 pr-md-2 pr-sm-2 brand">bran<span>d</span></a>
+                <router-link to="/" class="pr-3 pr-xl-3 pr-lg-0 pr-md-2 pr-sm-2 brand">bran<span>d</span></router-link>
             </div>
     
             <div class="d-flex align-items-center
@@ -157,7 +157,7 @@
 
     <nav class="nav container d-none d-md-flex justify-content-center mt-3"> 
         <div class="navAll">
-            <a class="nav-link" href="#">Home</a>
+            <router-link class="nav-link" to="/">Home</router-link>
             <div class="dropNav">
                 <div class="dropNavIn">
                     <div class="dropNavItem">home</div>
@@ -443,18 +443,28 @@
             </div>
         </div>
         <div class="navAll">
-            <a class="nav-link" href="singlePage.html" style="color: blue">Single Page</a>
+            <router-link class="nav-link" to="/singlePage" style="color: blue">Single Page</router-link>
         </div>
         <div class="navAll">
-            <a class="nav-link" href="shoppingCart.html" style="color: blue">Shopping Cart</a>
+            <router-link class="nav-link" to="/shoppingCart" style="color: blue">Shopping Cart</router-link>
         </div>
         <div class="navAll">
-            <a class="nav-link" href="checkout.html" style="color: blue">Checkout</a>
+            <router-link class="nav-link" to="/checkout" style="color: blue">Checkout</router-link>
         </div>
         <div class="navAll">
-            <a class="nav-link" href="Product.html" style="color: blue">Product</a>
+            <router-link class="nav-link" to="/product" style="color: blue">Product</router-link>
         </div>          
     </nav>
+    <div class="newArrivalsBg pb-5 pt-5">
+        <div class="px-md-0 container d-flex flex-column flex-sm-row justify-content-between align-items-center ">
+            <div class="newArrivals">New Arrivals</div>
+            <div class="newArrivalsPath mt-4 mt-sm-0">
+                <a href="#">home</a>
+                <a href="#">men</a>
+                <a href="#">new arrivals</a>
+            </div>
+        </div>
+    </div>
 </div>
 </template>
 
