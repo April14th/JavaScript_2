@@ -28,6 +28,11 @@ module.exports = {
             {
                 test: /\.vue$/i,
                 loader: 'vue-loader' 
+            },
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader']
             }
         ]
     },

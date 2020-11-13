@@ -26,6 +26,7 @@
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
+    "source-map-loader": "^1.1.2",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9"
   }

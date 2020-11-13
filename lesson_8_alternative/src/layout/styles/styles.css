@@ -613,6 +613,9 @@
   width: inherit; }
   .offer a:first-child {
     background: #ffffff;
+    position: absolute;
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem 1rem 1.2rem;
     text-decoration: none; }
     @media (max-width: 991.98px) {
       .offer a:first-child {
@@ -1495,6 +1498,3 @@ body {
   .antirow2 {
     justify-content: center;
   }
-/*-------------------------------NEW ARRIVAL END-----------------------------*/
-
-/*# sourceMappingURL=styles.css.map */
