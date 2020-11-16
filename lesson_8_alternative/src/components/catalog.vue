@@ -1,6 +1,6 @@
 <template>
     <div class="row antirow2" id="catalog">
-        <item type="catalog" v-for="item of $parent.$parent.$children[0].$refs.searching.filteredCatalogItems" :key="item.productId" :item="item" />
+        <item type="catalog" v-for="item of $store.state.filteredCatalogItems" :key="item.productId" :item="item" />
     </div>
 </template>
 
@@ -8,7 +8,11 @@
 import item from './item.vue';
 
 export default {
-    components: { item }
+    components: { item },
+
+    mounted() {
+        this.$store.dispatch('requestDataCatalog');
+    }
 }
 </script>
 

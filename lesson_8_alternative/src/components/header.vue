@@ -45,7 +45,7 @@
                         <a href="#" class="dropdown-item" type="button">Jackets/vests</a>
                     </div>
                 </div>
-                <search ref="searching" />
+                <search />
             </div>
     
             <div class="row headerAccountAndCart d-none  align-items-center
@@ -58,7 +58,7 @@
     
                 <div class="headerCart pr-4" >
                     <button id="basket-toggler" @click="showbasket = !showbasket" type="button"></button>
-                    <basket ref="bask" v-show="showbasket" />
+                    <basket type="headerBasket" ref="bask" v-show="showbasket" />
                 </div>
     
     

@@ -4,7 +4,7 @@
 		<div class="feturedItem">
             <div class="feturedImgWrap">
                  <div class="feturedBuy">
-                    <button @click="$parent.$parent.$parent.$children[0].$refs.bask.add(item)">
+                    <button @click="$store.commit('addToBasket', item)">
                         <i class="fas fa-shopping-cart"></i> Add to Cart
                     </button>
                 </div>
@@ -37,7 +37,33 @@
                     <span>x</span> ${{ item.productPrice }}
                 </div>
             </div>
-            <button class="fas fa-times-circle" @click="$emit('delete', item.productId)"></button>
+            <button class="fas fa-times-circle" @click="$store.commit('removeFromBasket', item.productId)"></button>
+        </div>
+	</template>
+    <template v-if="type == 'shoppingCartBasket'">
+        <div class="productDetailsProduct">
+            <div class="productDetailsDescription">
+                <img :src="item.productImg" alt="Product1">
+                <div class="productDescription">
+                    <div class="productDescriptionTitle">{{ item.productName }}</div>
+                    <div>
+                        <div class="productDescriptionFeature">Color: <span>Red</span></div>
+                        <div class="productDescriptionFeature">Size: <span>Xll</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="productDetailsRight">
+                <div class="productDetailsPrice">${{ item.productPrice }}</div>
+                <div class="productDetailsQuantity">
+                    <!-- {{ item.amount }} -->
+                    <form>
+                        <input ref="input" type="number" min="1" max="99" :value="item.amount">
+                    </form>
+                </div>
+                <div class="productDetailsShipping">Free</div>
+                <div class="productDetailsSubtotal">${{ item.productPrice * item.amount }}</div>
+                <div class="productDetailsAction"><i class="fas fa-times-circle" @click="$emit('delete', item.productId)"></i></div>
+            </div>
         </div>
 	</template>
 </div>
@@ -57,8 +83,12 @@ export default {
 		type: {
 			type: String,
 			default: 'catalog'
-		}
-    }
+        },
+
+        count: {
+            type: Function,
+        }
+    },
 };
 </script>
 

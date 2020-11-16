@@ -1,7 +1,8 @@
 <template>
 <div>
     <main>
-        <div class="productDetailsAll container" id="basket2">
+        <basket type="shoppingCartBasket" />
+        <!-- <div class="productDetailsAll container" id="basket2">
             <div class="productDetailsTitles">
                 <div class="productDetailsTitlesLeft">Product Details</div>
                 <div class="productDetailsTitlesRight">
@@ -88,7 +89,7 @@
                 <button>cLEAR SHOPPING CART</button>
                 <button>cONTINUE sHOPPING</button>
             </div>
-        </div>
+        </div> -->
         <div class="shipping container">
             <div class="shippingAdress">
                 <div class="shippingTitles">Shipping Adress</div>
@@ -177,9 +178,10 @@
 </template>
 
 <script>
+import basket from '../components/basket.vue';
 
 export default {
-
+    components: { basket }
 }
 </script>
 
