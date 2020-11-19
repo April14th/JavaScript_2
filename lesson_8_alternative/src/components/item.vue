@@ -55,14 +55,13 @@
             <div class="productDetailsRight">
                 <div class="productDetailsPrice">${{ item.productPrice }}</div>
                 <div class="productDetailsQuantity">
-                    <!-- {{ item.amount }} -->
                     <form>
-                        <input ref="input" type="number" min="1" max="99" :value="item.amount">
+                        <input ref="input" type="number" min="1" max="99" v-model="item.amount" @input="$store.commit('changeShoppingCartBasket', item)">
                     </form>
                 </div>
                 <div class="productDetailsShipping">Free</div>
                 <div class="productDetailsSubtotal">${{ item.productPrice * item.amount }}</div>
-                <div class="productDetailsAction"><i class="fas fa-times-circle" @click="$emit('delete', item.productId)"></i></div>
+                <div class="productDetailsAction"><i class="fas fa-times-circle" @click="$store.commit('removeFromShoppingCartBasket', item.productId)"></i></div>
             </div>
         </div>
 	</template>
@@ -88,8 +87,9 @@ export default {
         count: {
             type: Function,
         }
-    },
-};
+    }
+}
+
 </script>
 
 <style>

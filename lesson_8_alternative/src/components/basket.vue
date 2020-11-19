@@ -5,7 +5,7 @@
             <div class="headerCartWrapBlock"></div>
             <div class="headerCartWrapInAll">
                 <div id="basket-items" class="headerCartWrapInAll">
-                    <item type="basket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" @delete="remove" />
+                    <item type="basket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" />
                 </div>
                 <div class="headerCartWrapTotalPrice">
                     <div>total</div>
@@ -30,11 +30,10 @@
                 </div>
             </div>
             
-            <item type="shoppingCartBasket" v-for="item of $store.state.basketItems" 
-            :key="item.productId" :item="item" :totalPrice="totalPrice" @delete="totalRemove" @count="count" />
+            <item type="shoppingCartBasket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" />
 
             <div class="productDetailsButtons">
-                <button>cLEAR SHOPPING CART</button>
+                <button @click="clearShoppingCartBasket()">cLEAR SHOPPING CART</button>
                 <button>cONTINUE sHOPPING</button>
             </div>
         </div>
@@ -57,14 +56,15 @@ export default {
     },
 
     methods: {
-        totalRemove(id) {
-            let find = this.items.find(el => el.productId == id);
-                del(`${this.url}/${id}`)
-                    .then(s => {
-                        if (s) {
-                            this.items.splice(this.items.indexOf(find), 1);
-                        }
-                    })
+        clearShoppingCartBasket() {
+            for (let item of this.$store.state.basketItems) {
+                if (item) {
+                    this.$store.commit('clearShoppingCartBasket', 1) 
+                }
+            }
+            // this.$store.state.basketItems.forEach(async (basketItem) => {
+            //     await this.$store.dispatch('totalRemoveFromBasket', basketItem.productId)
+            // });
         }
     },
 
@@ -72,15 +72,11 @@ export default {
         this.$store.dispatch('requestDataBasket');
     },
 
-    // computed: {
-    //     totalPrice() {
-    //         let sum = 0;
-    //         this.items.forEach(function (item) {
-    //             sum += item.productPrice * item.amount
-    //         });
-    //         return sum ? sum : 0;
-    //     }
-    // },
+    computed: {
+        totalPrice() {
+            return this.$store.getters.totalPrice;
+        }
+    }
 }
 </script>
 

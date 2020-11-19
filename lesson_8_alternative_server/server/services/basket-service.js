@@ -10,13 +10,21 @@ module.exports = {
 
     change(basket, id, amount) {
         let find = _search(basket.content, id)
-        find.amount += amount;
+        if (amount == 1 || amount == -1) {
+            find.amount += amount;
+        } else {
+            find.amount = amount
+        }
         return basket;
     },
 
     delete(basket, id) {
-        let find = _search(basket.content, id)
-        basket.content.splice(basket.content.indexOf(find), 1);
-        return basket;
+        if (id != 1) {
+            let find = _search(basket.content, id)
+            basket.content.splice(basket.content.indexOf(find), 1);
+        } else { 
+            basket.content.splice(0, basket.content.length);
+        }
+        return basket;    
     }
 }
