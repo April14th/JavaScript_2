@@ -159,7 +159,7 @@
                             </div>
                             <div class="productFeatures d-flex justify-content-between">
                                 <div class="">&#36;52</div>
-                                <div class="">&#36;400</div>
+                                <div class="">&#36;200</div>
                             </div>
                         </div>
                     </div>
@@ -173,19 +173,19 @@
                             </select>
                         </form>
                         <form class="py-3">
-                            <label class="px-2 ml-3 mb-0" for="sortBy">Show</label>
-                            <select class="" id="sortBy">
-                                <option selected>09</option>
-                                <option value="1">18</option>
-                                <option value="2">36</option>
+                            <label class="px-2 ml-3 mb-0" for="sortBy2">Show</label>
+                            <select class="" id="sortBy2">
+                                <option selected>06</option>
+                                <option value="1">12</option>
+                                <option value="2">24</option>
                                 <option value="3">All</option>
                             </select>
                         </form>
                     </div>
 
                     <!-------------------------------FETURED ST----------------------------->
-
-                    <div class="row row-cols-3" id="catalog"></div>
+                    <catalog type="productCatalog" />
+                    <!-- <div class="row row-cols-3" id="catalog"></div> -->
 
                     <div class="d-flex flex-column align-items-center justify-content-around mt-5 flex-sm-row justify-content-sm-between">
                         <nav aria-label="Page navigation example">
@@ -316,8 +316,10 @@
 </template>
 
 <script>
-export default {
+import catalog from '../components/catalog.vue';
 
+export default {
+    components: { catalog }
 }
 </script>
 

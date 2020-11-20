@@ -131,8 +131,7 @@
   .form-control::placeholder {
     color: #a4a4a4;
     font-size: 14px;
-    font-weight: 300;
-    line-height: 32px; }
+    font-weight: 300; }
 
 .btn-outline-secondary {
   color: #a4a4a4;
@@ -276,6 +275,7 @@
     position: absolute;
     left: -52px;
     width: 288px;
+    z-index: 5;
  }
     @media (max-width: 650px) {
       .headerCart .headerCartWrap {
@@ -1018,8 +1018,7 @@ details[open] summary .fa-caret-up {
   font-size: 16px;
   font-weight: bold;
   line-height: 26px;
-  padding: 0.5rem 3rem;
-  width: 100%; }
+  padding: 0.5rem 3rem; }
   @media (max-width: 768px) {
     .productsButton, .productsButtonIndex {
       font-size: 20px; } }
@@ -1166,7 +1165,8 @@ details[open] summary .fa-caret-up {
 .productDetailsButtons {
   display: flex;
   justify-content: space-between; }
-  .productDetailsButtons button {
+  .productDetailsButtons button,
+  .productDetailsButtons a {
     color: #4a4a4a;
     font-size: 14px;
     font-weight: 700;
@@ -1176,7 +1176,9 @@ details[open] summary .fa-caret-up {
     background-color: #ffffff;
     padding: 20px 40px;
     margin-top: 50px; }
-    .productDetailsButtons button:hover {
+    .productDetailsButtons button:hover,
+    .productDetailsButtons a:hover {
+      text-decoration: none;
       background-color: #f16d7f;
       color: #ffffff;
       cursor: pointer; }
@@ -1264,9 +1266,8 @@ details[open] summary .fa-caret-up {
   display: flex;
   flex-direction: column;
   background-color: #f5f3f3;
-  width: 360px;
   align-items: flex-end; }
-  .proceedToCheckout > div button {
+  .proceedToCheckout > div a {
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
@@ -1276,29 +1277,22 @@ details[open] summary .fa-caret-up {
     background-color: #f16d7f;
     border: none;
     outline: none;
-    margin: 40px; }
-    .proceedToCheckout > div button:hover {
+    margin: 40px;
+    text-align: center;
+    line-height: 50px; }
+    .proceedToCheckout > div a:hover {
       background-color: #cccccc;
       color: #f16d7f;
-      cursor: pointer; }
-
-.subTotal {
-  color: #4a4a4a;
-  font-size: 11px;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-top: 40px;
-  padding-right: 40px; }
-  .subTotal span {
-    padding-left: 20px; }
+      cursor: pointer;
+      text-decoration: none; }
 
 .grandTotal {
   color: #222222;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 15px;
-  padding-right: 40px; }
+  margin-top: 20px;
+  margin-right: 40px; }
   .grandTotal span {
     color: #f16d7f;
     padding-left: 15px; }

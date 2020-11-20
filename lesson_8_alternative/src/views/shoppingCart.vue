@@ -27,9 +27,8 @@
             </div>
             <div class="proceedToCheckout">
                 <div>
-                    <div class="subTotal">sub total <span>&#36;900</span></div>
-                    <div class="grandTotal">grand total <span>&#36;900</span></div>
-                    <button>proceed to checkout</button>
+                    <div class="grandTotal">grand total <span>${{ grandPrice }}</span></div>
+                    <router-link to="/checkout">proceed to checkout</router-link>
                 </div>
             </div>
         </div>
@@ -93,7 +92,13 @@
 import basket from '../components/basket.vue';
 
 export default {
-    components: { basket }
+    components: { basket },
+
+    computed: {
+        grandPrice() {
+            return this.$store.getters.grandPrice;
+        }
+    }
 }
 </script>
 

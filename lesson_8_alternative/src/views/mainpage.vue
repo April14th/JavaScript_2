@@ -62,7 +62,7 @@
                     <div class="feturedHeadBottom">Shop for items based on what we featured in this week</div>
                 </a>
             </div>
-            <catalog />
+            <catalog type="mainCatalog" />
             <div class="container px-0 d-flex justify-content-around">
                 <button type="button" class="btn btn-outline-secondary feturedButton">
                     Browse All Product<i class="fas fa-long-arrow-alt-right"></i>

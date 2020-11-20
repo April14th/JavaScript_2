@@ -90,7 +90,7 @@ export default new Vuex.Store({
     },
 
     getters: {
-        totalPrice: state => {
+        grandPrice: state => {
             let sum = 0;
             state.basketItems.forEach(function (basketItem) {
                 sum += basketItem.productPrice * basketItem.amount

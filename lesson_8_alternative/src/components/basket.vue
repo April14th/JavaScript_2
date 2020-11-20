@@ -9,7 +9,7 @@
                 </div>
                 <div class="headerCartWrapTotalPrice">
                     <div>total</div>
-                    <div>${{ totalPrice }}</div>
+                    <div>${{ grandPrice }}</div>
                 </div>
         
                 <button type="button" class="productsButtonIndex">Checkout</button>
@@ -34,7 +34,7 @@
 
             <div class="productDetailsButtons">
                 <button @click="clearShoppingCartBasket()">cLEAR SHOPPING CART</button>
-                <button>cONTINUE sHOPPING</button>
+                <router-link to="/">cONTINUE sHOPPING</router-link>
             </div>
         </div>
     </template>
@@ -57,14 +57,14 @@ export default {
 
     methods: {
         clearShoppingCartBasket() {
-            for (let item of this.$store.state.basketItems) {
-                if (item) {
-                    this.$store.commit('clearShoppingCartBasket', 1) 
-                }
-            }
-            // this.$store.state.basketItems.forEach(async (basketItem) => {
-            //     await this.$store.dispatch('totalRemoveFromBasket', basketItem.productId)
-            // });
+            // for (let item of this.$store.state.basketItems) {
+            //     if (item) {
+            //         this.$store.commit('clearShoppingCartBasket', 1) 
+            //     }
+            // }
+            this.$store.state.basketItems.forEach(basketItem => {
+                this.$store.commit('clearShoppingCartBasket', 1)
+            });
         }
     },
 
@@ -73,8 +73,8 @@ export default {
     },
 
     computed: {
-        totalPrice() {
-            return this.$store.getters.totalPrice;
+        grandPrice() {
+            return this.$store.getters.grandPrice;
         }
     }
 }
