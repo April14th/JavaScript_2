@@ -5,6 +5,11 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     devtool: 'eval',
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
     output: {
         filename: 'js/bundle.js',
         publicPath: '/'
