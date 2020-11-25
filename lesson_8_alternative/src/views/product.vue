@@ -111,35 +111,35 @@
                                     col-sm-6
                                     col-md-4 pl-md-3
                                     pl-lg-0 mt-lg-0">
-                            <div class="productFeaturesTitle">Size</div>
+                            <div class="productFeaturesTitle" @click="fff(selectedSizeOfProducts)">Size</div>
 
                             <form class="productSizes row col-12 no-gutters pt-2">
                                 <div class="col-3 productFeatures">
-                                    <input type="checkbox" id="xxs" name="xxs">
+                                    <input type="checkbox" id="xxs" name="xxs" value="XXS" v-model="selectedSizeOfProducts">
                                     <label for="xxs">xxs</label>
                                 </div>
                                 <div class="col-3 productFeatures pl-lg-2">
-                                    <input type="checkbox" id="xs" name="xs">
+                                    <input type="checkbox" id="xs" name="xs" value="XS" v-model="selectedSizeOfProducts">
                                     <label for="xs">xs</label>
                                 </div>
                                 <div class="col-3 productFeatures pl-lg-2">
-                                    <input type="checkbox" id="s" name="s">
+                                    <input type="checkbox" id="s" name="s" value="S" v-model="selectedSizeOfProducts">
                                     <label for="s">s</label>
                                 </div>
                                 <div class="col-3 productFeatures">
-                                    <input type="checkbox" id="m" name="m">
+                                    <input type="checkbox" id="m" name="m" value="M" v-model="selectedSizeOfProducts">
                                     <label for="m">m</label>
                                 </div>
                                 <div class="col-3 productFeatures">
-                                    <input type="checkbox" id="l" name="l">
+                                    <input type="checkbox" id="l" name="l" value="L" v-model="selectedSizeOfProducts">
                                     <label for="l">l</label>
                                 </div>
                                 <div class="col-3 productFeatures pl-lg-2">
-                                    <input type="checkbox" id="xl" name="xl">
+                                    <input type="checkbox" id="xl" name="xl" value="XL" v-model="selectedSizeOfProducts">
                                     <label for="xl">xl</label>
                                 </div>
                                 <div class="col-3 productFeatures ml-lg-2">
-                                    <input type="checkbox" id="xxl" name="xxl">
+                                    <input type="checkbox" id="xxl" name="xxl" value="XXL" v-model="selectedSizeOfProducts">
                                     <label for="xxl">xxl</label>
                                 </div>
                             </form>
@@ -153,7 +153,7 @@
                                 <form>
                                     <div class="form-group productFeaturesTitle mb-0">
                                         <label for="formControlRange">Price</label>
-                                        <input type="range" class="form-control-range" id="formControlRange">
+                                        <input type="range" min="52" max="200" class="form-control-range" id="formControlRange" v-model="selectedPriceOfProducts">
                                     </div>
                                 </form>
                             </div>
@@ -167,25 +167,23 @@
                     <div class="mt-4 sortBy d-flex justify-content-around justify-content-md-start">
                         <form class="py-3">
                             <label class="px-2 ml-3 mb-0" for="sortBy">Sort By</label>
-                            <select class="" id="sortBy">
-                                <option selected>Name</option>
-                                <option value="1">Price</option>
+                            <select v-model="selectedSortingTypeOfProducts" class="" id="sortBy">
+                                <option>Price</option>
+                                <option>Name</option>
                             </select>
                         </form>
                         <form class="py-3">
                             <label class="px-2 ml-3 mb-0" for="sortBy2">Show</label>
-                            <select class="" id="sortBy2">
-                                <option selected>06</option>
-                                <option value="1">12</option>
-                                <option value="2">24</option>
-                                <option value="3">All</option>
+                            <select v-model="selectedNumberOfProducts" class="" id="sortBy2">
+                                <option>06</option>
+                                <option>12</option>
+                                <option>24</option>
+                                <option>All</option>
                             </select>
                         </form>
                     </div>
 
-                    <!-------------------------------FETURED ST----------------------------->
                     <catalog type="productCatalog" />
-                    <!-- <div class="row row-cols-3" id="catalog"></div> -->
 
                     <div class="d-flex flex-column align-items-center justify-content-around mt-5 flex-sm-row justify-content-sm-between">
                         <nav aria-label="Page navigation example">
@@ -319,7 +317,22 @@
 import catalog from '../components/catalog.vue';
 
 export default {
-    components: { catalog }
+    components: { catalog },
+
+    data() {
+        return {
+            selectedSizeOfProducts: [],
+            selectedSortingTypeOfProducts: 'Price',
+            selectedNumberOfProducts: '06',
+            selectedPriceOfProducts: 100
+        }
+    },
+
+    methods: {
+        fff(i) {
+            console.log(i);
+        }
+    }
 }
 </script>
 
