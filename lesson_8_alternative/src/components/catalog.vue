@@ -35,20 +35,12 @@ export default {
             return this.$store.state.filteredCatalogItems.filter(item => item.productPrice <= +this.$parent.selectedPriceOfProducts)
         },
 
-        filterQuantityProductCatalog() {
-            if (this.$parent.selectedNumberOfProducts === '06' || this.$parent.selectedNumberOfProducts === '12' || this.$parent.selectedNumberOfProducts === '24') {
-                return this.filterPriceProductCatalog.filter(item => this.filterPriceProductCatalog.indexOf(item) < +this.$parent.selectedNumberOfProducts);
-            } else {
-                return this.filterPriceProductCatalog;
-            }
-        },
-
         filterSizeProductCatalog() {
             if (this.$parent.selectedSizeOfProducts.length !== 0) {
                 let arr = [];
                 let filteredItems = [];
                 for (let size of this.$parent.selectedSizeOfProducts) {
-                    arr = this.filterQuantityProductCatalog.filter(product => product.productSizes.includes(size));
+                    arr = this.filterPriceProductCatalog.filter(product => product.productSizes.includes(size));
                     if (filteredItems.length == 0) {
                         filteredItems = arr.slice();
                     } else {
@@ -61,17 +53,25 @@ export default {
                 }
                 return filteredItems;
             } else {
-                return this.filterQuantityProductCatalog;
+                return this.filterPriceProductCatalog;
             }   
+        },
+
+        filterQuantityProductCatalog() {
+            if (this.$parent.selectedNumberOfProducts === '06' || this.$parent.selectedNumberOfProducts === '12' || this.$parent.selectedNumberOfProducts === '24') {
+                return this.filterSizeProductCatalog.filter(item => this.filterSizeProductCatalog.indexOf(item) < +this.$parent.selectedNumberOfProducts);
+            } else {
+                return this.filterSizeProductCatalog;
+            }
         },
 
         sortTypeOfProducts() {
             if (this.$parent.selectedSortingTypeOfProducts === 'Price') {
-                return this.filterSizeProductCatalog.sort(function (a, b) {
+                return this.filterQuantityProductCatalog.sort(function (a, b) {
                     return a.productPrice - b.productPrice;
                 })
             } else if (this.$parent.selectedSortingTypeOfProducts === 'Name') {
-                return this.filterSizeProductCatalog.sort(function (a, b) {
+                return this.filterQuantityProductCatalog.sort(function (a, b) {
                     if (a.productName > b.productName) {
                         return 1;
                     } else if (a.productName < b.productName) {
