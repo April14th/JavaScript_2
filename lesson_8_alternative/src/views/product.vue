@@ -111,7 +111,7 @@
                                     col-sm-6
                                     col-md-4 pl-md-3
                                     pl-lg-0 mt-lg-0">
-                            <div class="productFeaturesTitle" @click="fff(selectedSizeOfProducts)">Size</div>
+                            <div class="productFeaturesTitle">Size</div>
 
                             <form class="productSizes row col-12 no-gutters pt-2">
                                 <div class="col-3 productFeatures">
@@ -325,12 +325,6 @@ export default {
             selectedSortingTypeOfProducts: 'Price',
             selectedNumberOfProducts: '06',
             selectedPriceOfProducts: 100
-        }
-    },
-
-    methods: {
-        fff(i) {
-            console.log(i);
         }
     }
 }

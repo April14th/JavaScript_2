@@ -57,11 +57,6 @@ export default {
 
     methods: {
         clearShoppingCartBasket() {
-            // for (let item of this.$store.state.basketItems) {
-            //     if (item) {
-            //         this.$store.commit('clearShoppingCartBasket', 1) 
-            //     }
-            // }
             this.$store.state.basketItems.forEach(basketItem => {
                 this.$store.commit('clearShoppingCartBasket', 1)
             });

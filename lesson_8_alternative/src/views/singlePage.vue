@@ -80,7 +80,7 @@
             </div>
             <div class="container px-0">
                 <div class="alsoTitle d-flex justify-content-center">you may like also</div>
-                <div class="row" id="catalog"></div>
+                <catalog type="singlePageCatalog" />
             </div>
         </div>
     </main>
@@ -140,8 +140,10 @@
 </template>
 
 <script>
-export default {
+import catalog from '../components/catalog.vue';
 
+export default {
+    components: { catalog }
 }
 </script>
 

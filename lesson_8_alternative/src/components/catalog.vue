@@ -7,7 +7,12 @@
     </template>
     <template v-if="type == 'productCatalog'">
         <div class="row antirow2" id="catalog">
-            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item"  @click="qqq" />
+            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" />
+        </div>
+    </template>
+    <template v-if="type == 'singlePageCatalog'">
+        <div class="row antirow2" id="catalog">
+            <item type="catalog" v-for="item of getRandomProducts" :key="item.productId" :item="item" />
         </div>
     </template>
 </div>
@@ -79,6 +84,34 @@ export default {
                     } else {
                         return 0;
                     }
+                })
+            }
+        },
+
+        getRandomProducts() {
+            let keys = Object.keys(this.$store.state.filteredCatalogItems);
+            let keysNum = keys.map(num => +num);
+            let keysContainer = [];
+            // for (let num of keysNum) {
+            //     let randomKey = Math.floor(Math.random() * (keysNum[keysNum.length-1] - keysNum[0] + 1)) + keysNum[0];
+            //     if ( keysContainer.length != 4 && !keysContainer.includes(randomKey) ) {
+            //         keysContainer.push(randomKey);
+            //     }
+            // }
+            if (this.$store.state.filteredCatalogItems != 0) {
+                while (keysContainer.length < 4) {
+                    let randomKey = Math.floor(Math.random() * (keysNum[keysNum.length-1] - keysNum[0] + 1)) + keysNum[0];
+                    if (!keysContainer.includes(randomKey)) {
+                        keysContainer.push(randomKey)
+                    }
+                }
+                console.log(keysContainer);
+                let randomProducts = [];
+                for (let i = 0; i < keysContainer.length; i++) {
+                    randomProducts.push(this.$store.state.filteredCatalogItems[keysContainer[i]]);
+                }
+                return randomProducts.sort(function (a, b) {
+                    return a.productPrice - b.productPrice;
                 })
             }
         }
