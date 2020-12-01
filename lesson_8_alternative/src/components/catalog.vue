@@ -7,7 +7,7 @@
     </template>
     <template v-if="type == 'productCatalog'">
         <div class="row antirow2" id="catalog">
-            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" @load="changePage" />
+            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" @load="renderPagesProductCatalog" />
         </div>
     </template>
     <template v-if="type == 'singlePageCatalog'">
@@ -88,16 +88,16 @@ export default {
             }
         },
 
-        changePage() {
+        renderPagesProductCatalog() {
             if (this.$store.state.filteredCatalogItems != 0) {
-                let count = 2;
-                let productsfilteredArrLength = this.filterSizeProductCatalog.length;
-                let productsArrLength = +this.$parent.selectedNumberOfProducts;
-                let ppp = productsArrLength / productsfilteredArrLength;
-                for (let i = 1; i <= Math.ceil(ppp); i++) {
-                    if (ppp < 1 && !this.$parent.pageNumbers.includes(count)) {
-                        this.$parent.pageNumbers.push(count++);
-                    } else if (ppp >= 1 && this.$parent.pageNumbers.length > 1) {
+                let pageNumber = 2;
+                let productsFilteredLength = this.filterSizeProductCatalog.length;
+                let selectedNumberOfProducts = +this.$parent.selectedNumberOfProducts;
+                let count = selectedNumberOfProducts / productsFilteredLength;
+                for (let i = 1; i <= Math.ceil(count); i++) {
+                    if (count < 1 && !this.$parent.pageNumbers.includes(pageNumber)) {
+                        this.$parent.pageNumbers.push(pageNumber++);
+                    } else if (count >= 1 && this.$parent.pageNumbers.length > 1) {
                         this.$parent.pageNumbers.pop();
                     }
                 }
@@ -109,12 +109,6 @@ export default {
             let keys = Object.keys(this.$store.state.filteredCatalogItems);
             let keysNum = keys.map(num => +num);
             let keysContainer = [];
-            // for (let num of keysNum) {
-            //     let randomKey = Math.floor(Math.random() * (keysNum[keysNum.length-1] - keysNum[0] + 1)) + keysNum[0];
-            //     if ( keysContainer.length != 4 && !keysContainer.includes(randomKey) ) {
-            //         keysContainer.push(randomKey);
-            //     }
-            // }
             if (this.$store.state.filteredCatalogItems != 0) {
                 while (keysContainer.length < 4) {
                     let randomKey = Math.floor(Math.random() * (keysNum[keysNum.length-1] - keysNum[0] + 1)) + keysNum[0];
