@@ -193,14 +193,14 @@
                                         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item" v-for="pageNumber of pageNumbers" :key="pageNumber"><a class="page-link" href="#">{{ pageNumber }}</a></li>
+                                <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                                 <li class="page-item"><a class="page-link" href="#">5</a></li>
                                 <li class="page-item"><a class="page-link" href="#">6</a></li>
                                 <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                <li class="page-item"><a class="page-link" href="#">20</a></li>
+                                <li class="page-item"><a class="page-link" href="#">20</a></li> -->
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Next">
                                         <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
@@ -324,9 +324,26 @@ export default {
             selectedSizeOfProducts: [],
             selectedSortingTypeOfProducts: 'Price',
             selectedNumberOfProducts: '06',
-            selectedPriceOfProducts: 100
+            selectedPriceOfProducts: 100,
+            pageNumbers: [1]
         }
-    }
+    },
+
+    // mounted: {
+    //     count() {
+    //         count = 1;
+    //         // do {
+    //         //     this.pageNumbers.push(count += 1);
+    //         // } while (this.selectedNumberOfProducts == '12' || this.selectedNumberOfProducts == '24');
+    //         this.$children.sortTypeOfProducts
+    //         productsArrLength = this.$store.state.filteredCatalogItems.length;
+    //         for (let i = 0; i < $store.state.filteredCatalogItems.length; i++) {
+    //             if (this.selectedNumberOfProducts == '12' || this.selectedNumberOfProducts == '24') {
+    //                 this.pageNumbers.push(count += 1);
+    //             }
+    //         }
+    //     }
+    // }
 }
 </script>
 

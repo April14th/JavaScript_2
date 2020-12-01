@@ -7,7 +7,7 @@
     </template>
     <template v-if="type == 'productCatalog'">
         <div class="row antirow2" id="catalog">
-            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" />
+            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" @load="changePage" />
         </div>
     </template>
     <template v-if="type == 'singlePageCatalog'">
@@ -88,6 +88,23 @@ export default {
             }
         },
 
+        changePage() {
+            if (this.$store.state.filteredCatalogItems != 0) {
+                let count = 2;
+                let productsfilteredArrLength = this.filterSizeProductCatalog.length;
+                let productsArrLength = +this.$parent.selectedNumberOfProducts;
+                let ppp = productsArrLength / productsfilteredArrLength;
+                for (let i = 1; i <= Math.ceil(ppp); i++) {
+                    if (ppp < 1 && !this.$parent.pageNumbers.includes(count)) {
+                        this.$parent.pageNumbers.push(count++);
+                    } else if (ppp >= 1 && this.$parent.pageNumbers.length > 1) {
+                        this.$parent.pageNumbers.pop();
+                    }
+                }
+                return this.$parent.pageNumbers;
+            }
+        },
+
         getRandomProducts() {
             let keys = Object.keys(this.$store.state.filteredCatalogItems);
             let keysNum = keys.map(num => +num);
@@ -105,7 +122,6 @@ export default {
                         keysContainer.push(randomKey)
                     }
                 }
-                console.log(keysContainer);
                 let randomProducts = [];
                 for (let i = 0; i < keysContainer.length; i++) {
                     randomProducts.push(this.$store.state.filteredCatalogItems[keysContainer[i]]);
