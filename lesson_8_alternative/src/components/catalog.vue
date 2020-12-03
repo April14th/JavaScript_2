@@ -90,15 +90,18 @@ export default {
 
         renderPagesProductCatalog() {
             if (this.$store.state.filteredCatalogItems != 0) {
-                let pageNumber = 2;
                 let productsFilteredLength = this.filterSizeProductCatalog.length;
-                let selectedNumberOfProducts = +this.$parent.selectedNumberOfProducts;
-                let count = selectedNumberOfProducts / productsFilteredLength;
+                let selectedNumberOfProducts = isNaN(this.$parent.selectedNumberOfProducts) ? this.filterSizeProductCatalog.length : +this.$parent.selectedNumberOfProducts;
+                let count = (productsFilteredLength / selectedNumberOfProducts == 1) ? 2 : productsFilteredLength / selectedNumberOfProducts;
                 for (let i = 1; i <= Math.ceil(count); i++) {
-                    if (count < 1 && !this.$parent.pageNumbers.includes(pageNumber)) {
-                        this.$parent.pageNumbers.push(pageNumber++);
-                    } else if (count >= 1 && this.$parent.pageNumbers.length > 1) {
-                        this.$parent.pageNumbers.pop();
+                    for (let num of this.$parent.pageNumbers) {
+                        if (num <= Math.ceil(count) && !this.$parent.pageNumbers.includes(i)) {
+                            this.$parent.pageNumbers.push(i);
+                        } else if (num > Math.ceil(count) && this.$parent.pageNumbers.length > 1 || productsFilteredLength == selectedNumberOfProducts && this.$parent.pageNumbers.length > 1) {
+                            this.$parent.pageNumbers.pop();
+                        } else if (num == Math.ceil(count) && this.$parent.pageNumbers.length > 1 && selectedNumberOfProducts == 24) {
+                            this.$parent.pageNumbers.pop();
+                        }
                     }
                 }
                 return this.$parent.pageNumbers;

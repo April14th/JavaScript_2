@@ -54,5 +54,89 @@
         "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_7"
+    },
+    {
+        "productName":"MANGO PEOPLE T-SHIRT",
+        "productPrice":52,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL"],
+        "productId":"prod_8"
+    },
+    {
+        "productName":"BANANA PEOPLE T-SHIRT",
+        "productPrice":58,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_9"
+    },
+    {
+        "productName":"STRAWBERRY PEOPLE T-SHIRT",
+        "productPrice":60,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem3.jpg",
+        "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_10"
+    },
+    {
+        "productName":"ORANGE PEOPLE T-SHIRT",
+        "productPrice":65,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem4.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_11"
+    },
+    {
+        "productName":"PUMKIN PEOPLE T-SHIRT",
+        "productPrice":70,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem5.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_12"
+    },
+    {
+        "productName":"PINEAPPLE PEOPLE T-SHIRT",
+        "productPrice":95,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem6.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_13"
+    },
+    {
+        "productName":"CUCUMBER PEOPLE T-SHIRT",
+        "productPrice":130,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_14"
+    },
+    {
+        "productName":"TOMATO PEOPLE T-SHIRT",
+        "productPrice":200,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_15"
+    },
+    {
+        "productName":"PINEAPPLE PEOPLE T-SHIRT",
+        "productPrice":95,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem6.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_16"
+    },
+    {
+        "productName":"CUCUMBER PEOPLE T-SHIRT",
+        "productPrice":130,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_17"
+    },
+    {
+        "productName":"TOMATO PEOPLE T-SHIRT",
+        "productPrice":200,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_18"
+    },
+    {
+        "productName":"CUCUMBER PEOPLE T-SHIRT",
+        "productPrice":130,
+        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "productId":"prod_19"
     }
 ]
