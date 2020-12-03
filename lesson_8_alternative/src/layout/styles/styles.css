@@ -994,21 +994,23 @@ details[open] summary .fa-caret-up {
 .pagination {
   border-radius: 3px;
   border: 1px solid #ebebeb;
-  background-color: #ffffff;
   margin: 0 !important; }
-  .pagination .page-link {
+  .pagination .page-btn {
     color: #c4c4c4;
+    background-color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     line-height: 26px;
     border: none;
+    outline: none;
     padding: .545rem .489rem; }
     @media (max-width: 768px) {
-      .pagination .page-link {
+      .pagination .page-btn {
         font-size: 20px; } }
-    .pagination .page-link:hover {
-      color: #f16d7f;
-      background-color: #ffffff; }
+    .pagination .page-btn:hover {
+      color: #f16d7f; }
+    .pagination .pageBtnActive {
+      color: #f16d7f; }
 
 .productsButton, .productsButtonIndex {
   border-radius: 3px;

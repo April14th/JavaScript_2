@@ -7,7 +7,7 @@
     </template>
     <template v-if="type == 'productCatalog'">
         <div class="row antirow2" id="catalog">
-            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" @load="renderPagesProductCatalog" />
+            <item type="catalog" v-for="item of sortTypeOfProducts" :key="item.productId" :item="item" :renderPagesProductCatalog="renderPagesProductCatalog" />
         </div>
     </template>
     <template v-if="type == 'singlePageCatalog'">
@@ -92,20 +92,25 @@ export default {
             if (this.$store.state.filteredCatalogItems != 0) {
                 let productsFilteredLength = this.filterSizeProductCatalog.length;
                 let selectedNumberOfProducts = isNaN(this.$parent.selectedNumberOfProducts) ? this.filterSizeProductCatalog.length : +this.$parent.selectedNumberOfProducts;
-                let count = (productsFilteredLength / selectedNumberOfProducts == 1) ? 2 : productsFilteredLength / selectedNumberOfProducts;
-                for (let i = 1; i <= Math.ceil(count); i++) {
-                    for (let num of this.$parent.pageNumbers) {
-                        if (num <= Math.ceil(count) && !this.$parent.pageNumbers.includes(i)) {
-                            this.$parent.pageNumbers.push(i);
-                        } else if (num > Math.ceil(count) && this.$parent.pageNumbers.length > 1 || productsFilteredLength == selectedNumberOfProducts && this.$parent.pageNumbers.length > 1) {
-                            this.$parent.pageNumbers.pop();
-                        } else if (num == Math.ceil(count) && this.$parent.pageNumbers.length > 1 && selectedNumberOfProducts == 24) {
-                            this.$parent.pageNumbers.pop();
+                let count =  productsFilteredLength / selectedNumberOfProducts;
+                for (let i = 0; i <= Math.ceil(count); i++) {
+                    for (let num of this.$parent.pagination.pageNumbers) {
+                        if (num <= Math.ceil(count) && !this.$parent.pagination.pageNumbers.includes(i) && i != 0) {
+                            this.$parent.pagination.pageNumbers.push(i);
+                        } else if (num > Math.ceil(count) && this.$parent.pagination.pageNumbers.length > 1 || this.$parent.selectedNumberOfProducts === 'All' && this.$parent.pagination.pageNumbers.length > 1) {
+                            this.$parent.pagination.pageNumbers.pop();
+                        } else if (num == Math.ceil(count) && this.$parent.pagination.pageNumbers.length > 1 && selectedNumberOfProducts == 24) {
+                            this.$parent.pagination.pageNumbers.pop();
                         }
                     }
                 }
-                return this.$parent.pageNumbers;
+                return this.$parent.pagination.pageNumbers;
             }
+        },
+
+        changePagesProductCatalog() {
+            
+            console.log("ggggggggg");
         },
 
         getRandomProducts() {

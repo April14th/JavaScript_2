@@ -189,15 +189,15 @@
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
+                                    <button class="page-btn" aria-label="Previous">
                                         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
-                                    </a>
+                                    </button>
                                 </li>
-                                <li class="page-item" v-for="pageNumber of pageNumbers" :key="pageNumber"><a class="page-link" href="#">{{ pageNumber }}</a></li>
+                                <li class="page-item" v-for="pageNumber of pagination.pageNumbers" :key="pageNumber"><button class="page-btn" :class="{ pageBtnActive: pageIsActive }">{{ pageNumber }}</button></li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
+                                    <button class="page-btn" aria-label="Next">
                                         <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
-                                    </a>
+                                    </button>
                                 </li>
                             </ul>
                         </nav>
@@ -318,25 +318,13 @@ export default {
             selectedSortingTypeOfProducts: 'Price',
             selectedNumberOfProducts: '06',
             selectedPriceOfProducts: 100,
-            pageNumbers: [1]
-        }
-    },
+            pagination: {
+                pageNumbers: [1],
+                pageIsActive: true
+            }
 
-    // mounted: {
-    //     count() {
-    //         count = 1;
-    //         // do {
-    //         //     this.pageNumbers.push(count += 1);
-    //         // } while (this.selectedNumberOfProducts == '12' || this.selectedNumberOfProducts == '24');
-    //         this.$children.sortTypeOfProducts
-    //         productsArrLength = this.$store.state.filteredCatalogItems.length;
-    //         for (let i = 0; i < $store.state.filteredCatalogItems.length; i++) {
-    //             if (this.selectedNumberOfProducts == '12' || this.selectedNumberOfProducts == '24') {
-    //                 this.pageNumbers.push(count += 1);
-    //             }
-    //         }
-    //     }
-    // }
+        }
+    }
 }
 </script>
 

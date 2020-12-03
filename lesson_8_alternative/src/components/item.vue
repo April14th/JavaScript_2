@@ -82,6 +82,10 @@ export default {
 		type: {
 			type: String,
 			default: 'catalog'
+        },
+
+        renderPagesProductCatalog: {
+            type: Function
         }
     }
 }
