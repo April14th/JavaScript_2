@@ -325,7 +325,7 @@ export default {
             pagination: [
                 {
                     pageNumber: 1,
-                    pageIsActive: false
+                    pageIsActive: true
                 }
             ]
         }
@@ -333,12 +333,29 @@ export default {
 
     mounted() {
         this.$store.dispatch('requestDataCatalog');
-        this.pagination[0].pageIsActive = true;
     },
 
     computed: {
+        sortTypeOfProducts() {
+            if (this.selectedSortingTypeOfProducts === 'Price') {
+                return this.$store.state.filteredCatalogItems.sort(function (a, b) {
+                    return a.productPrice - b.productPrice;
+                })
+            } else if (this.selectedSortingTypeOfProducts === 'Name') {
+                return this.$store.state.filteredCatalogItems.sort(function (a, b) {
+                    if (a.productName > b.productName) {
+                        return 1;
+                    } else if (a.productName < b.productName) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                })
+            }
+        },
+
         filterPriceProductCatalog() {
-            return this.$store.state.filteredCatalogItems.filter(item => item.productPrice <= +this.selectedPriceOfProducts)
+            return this.sortTypeOfProducts.filter(item => item.productPrice <= +this.selectedPriceOfProducts)
         },
 
         filterSizeProductCatalog() {
@@ -371,22 +388,15 @@ export default {
             }
         },
 
-        sortTypeOfProducts() {
-            if (this.selectedSortingTypeOfProducts === 'Price') {
-                return this.filterQuantityProductCatalog.sort(function (a, b) {
-                    return a.productPrice - b.productPrice;
-                })
-            } else if (this.selectedSortingTypeOfProducts === 'Name') {
-                return this.filterQuantityProductCatalog.sort(function (a, b) {
-                    if (a.productName > b.productName) {
-                        return 1;
-                    } else if (a.productName < b.productName) {
-                        return -1;
-                    } else {
-                        return 0;
-                    }
-                })
+        filterPaginationActivePageProducts(numberActivePage) {
+            for (let item of this.pagination) {
+                if (item.pageIsActive == true) {
+                    numberActivePage = item.pageNumber;
+                }
             }
+            return this.filterSizeProductCatalog.filter( item => 
+                this.filterSizeProductCatalog.indexOf(item) <= (+this.selectedNumberOfProducts * numberActivePage)-1 && 
+                this.filterSizeProductCatalog.indexOf(item) > (+this.selectedNumberOfProducts * (numberActivePage-1))-1);
         },
 
         renderPagesProductCatalog() {
@@ -414,7 +424,7 @@ export default {
                 }
                 return this.pagination;
             }
-        },
+        }
     },
 
     methods: {
