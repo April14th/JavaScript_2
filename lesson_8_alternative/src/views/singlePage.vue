@@ -143,7 +143,36 @@
 import catalog from '../components/catalog.vue';
 
 export default {
-    components: { catalog }
+    components: { catalog },
+
+    mounted() {
+        this.$store.dispatch('requestDataCatalog');
+    },
+
+    computed: {
+        getRandomProducts() {
+            let keys = Object.keys(this.$store.state.filteredCatalogItems);
+            let keysNum = keys.map(num => +num);
+            let keysContainer = [];
+            if (this.$store.state.filteredCatalogItems != 0) {
+                while (keysContainer.length < 4) {
+                    let randomKey = Math.floor(Math.random() * (keysNum[keysNum.length-1] - keysNum[0] + 1)) + keysNum[0];
+                    if (!keysContainer.includes(randomKey)) {
+                        keysContainer.push(randomKey)
+                    }
+                }
+                let randomProducts = [];
+                for (let i = 0; i < keysContainer.length; i++) {
+                    randomProducts.push(this.$store.state.filteredCatalogItems[keysContainer[i]]);
+                }
+                return randomProducts.sort(function (a, b) {
+                    return a.productPrice - b.productPrice;
+                })
+            }
+        }
+    }
+
+    
 }
 </script>
 

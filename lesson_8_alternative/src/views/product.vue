@@ -183,7 +183,7 @@
                         </form>
                     </div>
 
-                    <catalog type="productCatalog" />
+                    <catalog type="productCatalog" :renderPagesProductCatalog="renderPagesProductCatalog" />
 
                     <div class="d-flex flex-column align-items-center justify-content-around mt-5 flex-sm-row justify-content-sm-between">
                         <nav aria-label="Page navigation example">
@@ -193,7 +193,11 @@
                                         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
                                     </button>
                                 </li>
-                                <li class="page-item" v-for="pageNumber of pagination.pageNumbers" :key="pageNumber"><button class="page-btn" :class="{ pageBtnActive: pageIsActive }">{{ pageNumber }}</button></li>
+                                <li class="page-item" v-for="item of pagination" :key="item.pageNumber">
+                                    <button class="page-btn" :class="{ pageBtnActive: item.pageIsActive }" @click="changePagesProductCatalog(item.pageNumber)">
+                                        {{ item.pageNumber }}
+                                    </button>
+                                </li>
                                 <li class="page-item">
                                     <button class="page-btn" aria-label="Next">
                                         <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
@@ -318,11 +322,110 @@ export default {
             selectedSortingTypeOfProducts: 'Price',
             selectedNumberOfProducts: '06',
             selectedPriceOfProducts: 100,
-            pagination: {
-                pageNumbers: [1],
-                pageIsActive: true
-            }
+            pagination: [
+                {
+                    pageNumber: 1,
+                    pageIsActive: false
+                }
+            ]
+        }
+    },
 
+    mounted() {
+        this.$store.dispatch('requestDataCatalog');
+        this.pagination[0].pageIsActive = true;
+    },
+
+    computed: {
+        filterPriceProductCatalog() {
+            return this.$store.state.filteredCatalogItems.filter(item => item.productPrice <= +this.selectedPriceOfProducts)
+        },
+
+        filterSizeProductCatalog() {
+            if (this.selectedSizeOfProducts.length !== 0) {
+                let arr = [];
+                let filteredItems = [];
+                for (let size of this.selectedSizeOfProducts) {
+                    arr = this.filterPriceProductCatalog.filter(product => product.productSizes.includes(size));
+                    if (filteredItems.length == 0) {
+                        filteredItems = arr.slice();
+                    } else {
+                        for (let product of arr) {
+                            if (!filteredItems.includes(product)) {
+                                filteredItems.push(product);
+                            }
+                        }
+                    }
+                }
+                return filteredItems;
+            } else {
+                return this.filterPriceProductCatalog;
+            }   
+        },
+
+        filterQuantityProductCatalog() {
+            if (this.selectedNumberOfProducts === '06' || this.selectedNumberOfProducts === '12' || this.selectedNumberOfProducts === '24') {
+                return this.filterSizeProductCatalog.filter(item => this.filterSizeProductCatalog.indexOf(item) < +this.selectedNumberOfProducts);
+            } else {
+                return this.filterSizeProductCatalog;
+            }
+        },
+
+        sortTypeOfProducts() {
+            if (this.selectedSortingTypeOfProducts === 'Price') {
+                return this.filterQuantityProductCatalog.sort(function (a, b) {
+                    return a.productPrice - b.productPrice;
+                })
+            } else if (this.selectedSortingTypeOfProducts === 'Name') {
+                return this.filterQuantityProductCatalog.sort(function (a, b) {
+                    if (a.productName > b.productName) {
+                        return 1;
+                    } else if (a.productName < b.productName) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                })
+            }
+        },
+
+        renderPagesProductCatalog() {
+            if (this.$store.state.filteredCatalogItems != 0) {
+                let productsFilteredLength = this.filterSizeProductCatalog.length;
+                let selectedNumberOfProducts = isNaN(this.selectedNumberOfProducts) ? this.filterSizeProductCatalog.length : +this.selectedNumberOfProducts;
+                let count =  productsFilteredLength / selectedNumberOfProducts;
+                class PaginationPage {
+                    constructor(pageNumber, pageIsActive) {
+                        this.pageNumber = pageNumber,
+                        this.pageIsActive = pageIsActive
+                    }
+                }
+                for (let i = 0; i <= Math.ceil(count); i++) {
+                    for (let item of this.pagination) {
+                        let newPaginationItem = new PaginationPage(i, false);
+                        if (item.pageNumber <= Math.ceil(count) && !this.pagination.some(obj => obj.pageNumber == newPaginationItem.pageNumber) && newPaginationItem.pageNumber != 0) {
+                            this.pagination.push(newPaginationItem);
+                        } else if (item.pageNumber > Math.ceil(count) && this.pagination.length > 1 || this.selectedNumberOfProducts === 'All' && this.pagination.length > 1) {
+                            this.pagination.pop();
+                        } else if (item.pageNumber == Math.ceil(count) && this.pagination.length > 1 && selectedNumberOfProducts == 24) {
+                            this.pagination.pop();
+                        }
+                    }
+                }
+                return this.pagination;
+            }
+        },
+    },
+
+    methods: {
+        changePagesProductCatalog(num) {
+            for (let item of this.pagination) {
+                if (item.pageNumber == num) {
+                    item.pageIsActive = true;
+                } else {
+                    item.pageIsActive = false;
+                }
+            }
         }
     }
 }
