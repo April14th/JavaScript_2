@@ -325,7 +325,7 @@ export default {
             pagination: [
                 {
                     pageNumber: 1,
-                    pageIsActive: true
+                    pageIsActive: false
                 }
             ]
         }
@@ -380,23 +380,32 @@ export default {
             }   
         },
 
-        filterQuantityProductCatalog() {
-            if (this.selectedNumberOfProducts === '06' || this.selectedNumberOfProducts === '12' || this.selectedNumberOfProducts === '24') {
-                return this.filterSizeProductCatalog.filter(item => this.filterSizeProductCatalog.indexOf(item) < +this.selectedNumberOfProducts);
-            } else {
-                return this.filterSizeProductCatalog;
-            }
-        },
-
-        filterPaginationActivePageProducts(numberActivePage) {
+        filterQuantityProductCatalog(numberActivePage) {
             for (let item of this.pagination) {
                 if (item.pageIsActive == true) {
                     numberActivePage = item.pageNumber;
                 }
             }
-            return this.filterSizeProductCatalog.filter( item => 
-                this.filterSizeProductCatalog.indexOf(item) <= (+this.selectedNumberOfProducts * numberActivePage)-1 && 
-                this.filterSizeProductCatalog.indexOf(item) > (+this.selectedNumberOfProducts * (numberActivePage-1))-1);
+            switch (this.selectedNumberOfProducts) {
+                case '06':
+                case '12':
+                case '24':
+                    if (numberActivePage > 1) {
+                        return this.filterSizeProductCatalog.filter(item => 
+                            this.filterSizeProductCatalog.indexOf(item) <= (+this.selectedNumberOfProducts * numberActivePage)-1 && 
+                            this.filterSizeProductCatalog.indexOf(item) > (+this.selectedNumberOfProducts * (numberActivePage-1))-1);
+                    } else {
+                        return this.filterSizeProductCatalog.filter(item => this.filterSizeProductCatalog.indexOf(item) < +this.selectedNumberOfProducts);
+                    }
+                    break;
+                default:
+                    return this.filterSizeProductCatalog;
+            }
+            // if (this.selectedNumberOfProducts === '06' || this.selectedNumberOfProducts === '12' || this.selectedNumberOfProducts === '24') {
+            //     return this.filterSizeProductCatalog.filter(item => this.filterSizeProductCatalog.indexOf(item) < +this.selectedNumberOfProducts);
+            // } else {
+            //     return this.filterSizeProductCatalog;
+            // }
         },
 
         renderPagesProductCatalog() {
@@ -420,6 +429,13 @@ export default {
                         } else if (item.pageNumber == Math.ceil(count) && this.pagination.length > 1 && selectedNumberOfProducts == 24) {
                             this.pagination.pop();
                         }
+                    }
+                }
+                for (let item of this.pagination) {
+                    if (item.pageNumber == 1) {
+                        item.pageIsActive = true;
+                    } else {
+                        item.pageIsActive = false;
                     }
                 }
                 return this.pagination;
