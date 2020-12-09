@@ -189,7 +189,7 @@
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 <li class="page-item">
-                                    <button class="page-btn" aria-label="Previous">
+                                    <button class="page-btn" aria-label="Previous" value="previous" @click="changePagesProductCatalog($event.currentTarget.value)">
                                         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
                                     </button>
                                 </li>
@@ -199,7 +199,7 @@
                                     </button>
                                 </li>
                                 <li class="page-item">
-                                    <button class="page-btn" aria-label="Next">
+                                    <button class="page-btn" aria-label="Next" value="next" @click="changePagesProductCatalog($event.currentTarget.value)">
                                         <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
                                     </button>
                                 </li>
@@ -445,11 +445,39 @@ export default {
 
     methods: {
         changePagesProductCatalog(num) {
-            for (let item of this.pagination) {
-                if (item.pageNumber == num) {
-                    item.pageIsActive = true;
-                } else {
-                    item.pageIsActive = false;
+            if (typeof num === 'number') {
+                for (let item of this.pagination) {
+                    if (item.pageNumber == num) {
+                        item.pageIsActive = true;
+                    } else {
+                        item.pageIsActive = false;
+                    }
+                }
+            } else if (num === 'previous') {
+                for (let item of this.pagination) {
+                    if (item.pageIsActive == true) {
+                        item.pageIsActive = false;
+                        let index = this.pagination.indexOf(item);
+                        if (index == 0) {
+                            this.pagination[this.pagination.length - 1].pageIsActive = true;
+                        } else {
+                            this.pagination[index - 1].pageIsActive = true;
+                        }
+                        break;
+                    }
+                }
+            } else if (num === 'next') {
+                for (let item of this.pagination) {
+                    if (item.pageIsActive == true) {
+                        item.pageIsActive = false;
+                        let index = this.pagination.indexOf(item);
+                        if (index == (this.pagination.length - 1)) {
+                            this.pagination[0].pageIsActive = true;
+                        } else {
+                            this.pagination[index + 1].pageIsActive = true;
+                        }
+                        break;
+                    }
                 }
             }
         }
