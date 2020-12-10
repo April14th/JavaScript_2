@@ -91,29 +91,12 @@
                     <div class="row no-gutters d-flex justify-content-around justify-content-md-between">
                         <div class="no-gutters
                                     col-8 mt-5
-                                    col-sm-6 offset-sm-0 pr-sm-4
-                                    col-md-3 pr-md-0
-                                    mt-lg-0">
-                            <div class="productFeaturesTitle">Trending now</div>
-
-                            <div class="productFeatures row col-12 no-gutters pt-2">
-                                <a href="#" class="col-5 border-right">Bohemian</a>
-                                <a href="#" class="col-4 border-right pl-3">Floral</a>
-                                <a href="#" class="col-3 pl-3">Lace</a>
-                                <a href="#" class="col-3 border-right">Floral </a>
-                                <a href="#" class="col-4 border-right pl-3">Lace</a>
-                                <a href="#" class="col-5 pl-3">Bohemian</a>
-                            </div>
-                        </div>
-
-                        <div class="no-gutters
-                                    col-8 mt-5
                                     col-sm-6
                                     col-md-4 pl-md-3
                                     pl-lg-0 mt-lg-0">
                             <div class="productFeaturesTitle">Size</div>
 
-                            <form class="productSizes row col-12 no-gutters pt-2">
+                            <form class="productSizes row flex-nowrap col-12 no-gutters pt-2">
                                 <div class="col-3 productFeatures">
                                     <input type="checkbox" id="xxs" name="xxs" value="XXS" v-model="selectedSizeOfProducts">
                                     <label for="xxs">xxs</label>
@@ -205,7 +188,6 @@
                                 </li>
                             </ul>
                         </nav>
-                        <button type="button" class="productsButton mt-4 mt-sm-0">View all</button>
                     </div>
 
                 </div>

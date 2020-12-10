@@ -10,7 +10,7 @@
     <template v-if="type == 'productCatalog'">
         <div class="row antirow2" id="catalog">
             <item type="catalog" v-for="item of $parent.filterQuantityProductCatalog" 
-            :key="item.productId" 
+            :key="item.productId"
             :item="item" />
         </div>
     </template>

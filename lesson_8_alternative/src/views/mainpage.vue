@@ -186,7 +186,11 @@
 import catalog from '../components/catalog.vue';
 
 export default {
-    components: { catalog }
+    components: { catalog },
+
+    mounted() {
+        this.$store.dispatch('requestDataCatalog');
+    }
 }
 </script>
 
