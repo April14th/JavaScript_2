@@ -12,8 +12,8 @@
                     <div>${{ grandPrice }}</div>
                 </div>
         
-                <button type="button" class="productsButtonIndex">Checkout</button>
-                <button type="button" class="productsButtonIndex">Go to cart</button>
+                <router-link to="/checkout" class="productsButtonIndex">Checkout</router-link>
+                <router-link to="/shoppingCart" class="productsButtonIndex">Go to cart</router-link>
             </div>
         </div>
     </template>

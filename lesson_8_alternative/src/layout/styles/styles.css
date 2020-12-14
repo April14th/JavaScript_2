@@ -284,15 +284,22 @@
       height: 15px; }
     .headerCart .headerCartWrap .headerCartWrapInAll {
       background-color: #ffffff;
-      padding: 1rem 1rem;
+      padding: 0.8rem 0.8rem;
       border: 1px solid rgba(0, 0, 0, 0.15);
       border-radius: 5px; }
       .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn {
+        position: relative;
         background: #ffffff;
         margin-bottom: 1rem; }
+        .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn .basketDelBtn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background-color: transparent;
+          border: 0;
+          padding: 0; }
       .headerCart .headerCartWrap .headerCartWrapInAll div {
-        justify-content: space-between;
-        align-items: center; }
+        align-items: left; }
         .headerCart .headerCartWrap .headerCartWrapInAll div a:last-child {
           color: #c0c0c0;
           font-size: 16px;
@@ -344,7 +351,6 @@
     color: #4a4a4a;
     font-size: 14px;
     font-weight: 700;
-    text-transform: uppercase;
     border: 1px solid #eaeaea;
     background-color: #ffffff; }
 
@@ -1020,13 +1026,17 @@ details[open] summary .fa-caret-up {
   font-size: 16px;
   font-weight: bold;
   line-height: 26px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
   padding: 0.5rem 3rem; }
   @media (max-width: 768px) {
     .productsButton, .productsButtonIndex {
       font-size: 20px; } }
   .productsButton:hover, .productsButtonIndex:hover {
     background-color: #f16d7f;
-    color: #ffffff; }
+    color: #ffffff;
+    text-decoration: none; }
 
 .productsFeaturesBg {
   background-color: #222224; }
@@ -1495,3 +1505,6 @@ body {
   .antirow2 {
     justify-content: center;
   }
+
+.lastHeaderCartWrapInAll {
+  margin-bottom: 0; }

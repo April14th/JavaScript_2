@@ -303,7 +303,7 @@ export default {
             selectedSizeOfProducts: [],
             selectedSortingTypeOfProducts: 'Price',
             selectedNumberOfProducts: '06',
-            selectedPriceOfProducts: 100,
+            selectedPriceOfProducts: 120,
             pagination: [
                 {
                     pageNumber: 1,

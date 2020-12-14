@@ -56,86 +56,86 @@
         "productId":"prod_7"
     },
     {
-        "productName":"MANGO PEOPLE T-SHIRT",
-        "productPrice":52,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
+        "productName":"BLACK SUGAR ROOT",
+        "productPrice":75,
+        "productImg":"src/assets/imgs/product8.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL"],
         "productId":"prod_8"
     },
     {
-        "productName":"BANANA PEOPLE T-SHIRT",
-        "productPrice":58,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
+        "productName":"SOLT DRUNK SLAKER",
+        "productPrice":90,
+        "productImg":"src/assets/imgs/product9.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_9"
     },
     {
-        "productName":"STRAWBERRY PEOPLE T-SHIRT",
-        "productPrice":60,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem3.jpg",
+        "productName":"STRANGE MACHINE LONG",
+        "productPrice":88,
+        "productImg":"src/assets/imgs/product10.jpg",
         "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_10"
     },
     {
-        "productName":"ORANGE PEOPLE T-SHIRT",
-        "productPrice":65,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem4.jpg",
+        "productName":"YELLOW WOMEN LOOK",
+        "productPrice":74,
+        "productImg":"src/assets/imgs/product11.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_11"
     },
     {
-        "productName":"PUMKIN PEOPLE T-SHIRT",
-        "productPrice":70,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem5.jpg",
+        "productName":"BIO ROBOTS STARTING",
+        "productPrice":72,
+        "productImg":"src/assets/imgs/product12.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_12"
     },
     {
-        "productName":"PINEAPPLE PEOPLE T-SHIRT",
-        "productPrice":95,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem6.jpg",
+        "productName":"TREERS OF ETERNITY",
+        "productPrice":105,
+        "productImg":"src/assets/imgs/product13.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_13"
     },
     {
-        "productName":"CUCUMBER PEOPLE T-SHIRT",
-        "productPrice":130,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productName":"DESTROYER EARTH MADNESS",
+        "productPrice":98,
+        "productImg":"src/assets/imgs/product14.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_14"
     },
     {
-        "productName":"TOMATO PEOPLE T-SHIRT",
-        "productPrice":200,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
+        "productName":"BLUE LESSON UPDATE",
+        "productPrice":125,
+        "productImg":"src/assets/imgs/product15.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_15"
     },
     {
-        "productName":"PINEAPPLE PEOPLE T-SHIRT",
-        "productPrice":95,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem6.jpg",
+        "productName":"WIND SCORPION OUT",
+        "productPrice":150,
+        "productImg":"src/assets/imgs/product16.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_16"
     },
     {
-        "productName":"CUCUMBER PEOPLE T-SHIRT",
-        "productPrice":130,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productName":"NIGHT TURBO SLIM",
+        "productPrice":115,
+        "productImg":"src/assets/imgs/product17.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_17"
     },
     {
-        "productName":"TOMATO PEOPLE T-SHIRT",
-        "productPrice":200,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
+        "productName":"ANDROMEDA BLACK MAN",
+        "productPrice":170,
+        "productImg":"src/assets/imgs/product18.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_18"
     },
     {
-        "productName":"CUCUMBER PEOPLE T-SHIRT",
-        "productPrice":130,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productName":"UNIT RESTART MONOPOLY",
+        "productPrice":185,
+        "productImg":"src/assets/imgs/product19.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "productId":"prod_19"
     }

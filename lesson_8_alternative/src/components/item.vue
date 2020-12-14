@@ -22,10 +22,9 @@
         </div>
 	</template>
     <template v-if="type == 'basket'">
-		<div class="d-flex headerCartWrapIn mb-1 p-2">
+		<div class="d-flex flex-column headerCartWrapIn">
             <img :src="item.productImg" alt="" width="85" height="100">
             <div>
-                <div>{{ item.productName }}</div>
                 <span>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -33,11 +32,12 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </span>
+                <div>{{ item.productName }}</div>
                 <div class="headerCartWrapPrice">{{ item.amount }}
                     <span>x</span> ${{ item.productPrice }}
                 </div>
             </div>
-            <button class="fas fa-times-circle" @click="$store.commit('removeFromBasket', item.productId)"></button>
+            <button class="fas fa-times-circle basketDelBtn" @click="$store.commit('removeFromBasket', item.productId)"></button>
         </div>
 	</template>
     <template v-if="type == 'shoppingCartBasket'">
