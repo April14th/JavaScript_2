@@ -62,7 +62,7 @@
                     <div class="feturedHeadBottom">Shop for items based on what we featured in this week</div>
                 </a>
             </div>
-            <catalog type="mainCatalog" />
+            <catalog type="feturedCatalog" />
             <div class="container px-0 d-flex justify-content-around">
                 <button type="button" class="btn btn-outline-secondary feturedButton">
                     Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
@@ -190,6 +190,12 @@ export default {
 
     mounted() {
         this.$store.dispatch('requestDataCatalog');
+    },
+
+    computed: {
+        filterFeturedCatalog() {
+            return this.$store.state.filteredCatalogItems.filter(item => item.productIsFetured == true);
+        }
     }
 }
 </script>

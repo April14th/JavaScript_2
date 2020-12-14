@@ -1,27 +1,23 @@
-{
- "totalAmount": 3,
- "totalPrice": 203,
- "content": [
-  {
-   "productName": "ORANGE PEOPLE T-SHIRT",
-   "productPrice": 65,
-   "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem4.jpg",
-   "productId": "prod_3",
-   "amount": 2
-  },
-  {
-   "productName": "MANGO PEOPLE T-SHIRT",
-   "productPrice": 52,
-   "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
-   "productId": "prod_0",
-   "amount": 2
-  },
-  {
-   "productName": "BANANA PEOPLE T-SHIRT",
-   "productPrice": 58,
-   "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
-   "productId": "prod_1",
-   "amount": 2
-  }
- ]
-}
+[
+ {
+  "productName": "ORANGE PEOPLE T-SHIRT",
+  "productPrice": 65,
+  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem4.jpg",
+  "productId": "prod_3",
+  "amount": 2
+ },
+ {
+  "productName": "MANGO PEOPLE T-SHIRT",
+  "productPrice": 52,
+  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
+  "productId": "prod_0",
+  "amount": 2
+ },
+ {
+  "productName": "BANANA PEOPLE T-SHIRT",
+  "productPrice": 58,
+  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
+  "productId": "prod_1",
+  "amount": 2
+ }
+]

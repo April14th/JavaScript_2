@@ -105,7 +105,7 @@ export default new Vuex.Store({
         },
 
         requestDataBasket() {
-            get(this.state.urlBasket).then(items => { this.state.basketItems = items.content });
+            get(this.state.urlBasket).then(items => { this.state.basketItems = items });
         },
     },
 

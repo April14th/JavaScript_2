@@ -4,12 +4,12 @@ function _search (arr, id) {
 
 module.exports = {
     add(basket, item) {
-        basket.content.push(item);
+        basket.push(item);
         return basket;
     },
 
     change(basket, id, amount) {
-        let find = _search(basket.content, id)
+        let find = _search(basket, id)
         if (amount == 1 || amount == -1) {
             find.amount += amount;
         } else {
@@ -20,10 +20,10 @@ module.exports = {
 
     delete(basket, id) {
         if (id != 1) {
-            let find = _search(basket.content, id)
-            basket.content.splice(basket.content.indexOf(find), 1);
+            let find = _search(basket, id)
+            basket.splice(basket.indexOf(find), 1);
         } else { 
-            basket.content.splice(0, basket.content.length);
+            basket.splice(0, basket.length);
         }
         return basket;    
     }
