@@ -12,11 +12,7 @@
             </div>
             <div>
                 <div class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start">
-                    <router-link to="/singlePage">
-                        <div @click="$store.commit('getNameOfChoosenProduct', item.productName)" class="feturedItemName">
-                            {{ item.productName }}
-                        </div>
-                    </router-link>
+                    <div class="feturedItemName">{{ item.productName }}</div>
                     <div class="feturedItemPrice">${{ item.productPrice }}</div>
                     <button class="d-md-none">
                         <i class="fas fa-shopping-cart"></i> Add to Cart

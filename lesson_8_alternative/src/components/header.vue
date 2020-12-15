@@ -444,9 +444,6 @@
             </div>
         </div>
         <div class="navAll">
-            <router-link class="nav-link" to="/singlePage" style="color: blue">Single Page</router-link>
-        </div>
-        <div class="navAll">
             <router-link class="nav-link" to="/shoppingCart" style="color: blue">Shopping Cart</router-link>
         </div>
         <div class="navAll">
