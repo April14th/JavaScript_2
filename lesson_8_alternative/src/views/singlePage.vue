@@ -33,7 +33,7 @@
                                 <div></div>
                             </div>
                         </div>
-                        <div class="womenCollectionTextTitle">Moschino Cheap And Chic</div>
+                        <div class="womenCollectionTextTitle">Moschino Cheap And Chic {{ $store.state.nameOfChoosenProduct }}</div>
                         <div class="womenCollectionText">
                             Compellingly actualize fully researched processes before proactive outsourcing.
                             Progressively syndicate collaborative architectures before cutting-edge services.
@@ -141,9 +141,10 @@
 
 <script>
 import catalog from '../components/catalog.vue';
+import item from '../components/item.vue';
 
 export default {
-    components: { catalog },
+    components: { catalog, item },
 
     mounted() {
         this.$store.dispatch('requestDataCatalog');

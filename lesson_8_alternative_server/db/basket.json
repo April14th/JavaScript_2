@@ -1,23 +1,52 @@
 [
  {
-  "productName": "ORANGE PEOPLE T-SHIRT",
-  "productPrice": 65,
-  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem4.jpg",
-  "productId": "prod_3",
+  "productName": "BANANA PEOPLE T-SHIRT",
+  "productPrice": 58,
+  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
+  "productSizes": [
+   "XXS",
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "productIsFetured": false,
+  "productId": "prod_1",
   "amount": 2
+ },
+ {
+  "productName": "BIO ROBOTS STARTING",
+  "productPrice": 72,
+  "productImg": "src/assets/imgs/product12.jpg",
+  "productSizes": [
+   "XXS",
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "productIsFetured": false,
+  "productId": "prod_12",
+  "amount": 3
  },
  {
   "productName": "MANGO PEOPLE T-SHIRT",
   "productPrice": 52,
   "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
+  "productSizes": [
+   "XXS",
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "productIsFetured": true,
   "productId": "prod_0",
-  "amount": 2
- },
- {
-  "productName": "BANANA PEOPLE T-SHIRT",
-  "productPrice": 58,
-  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
-  "productId": "prod_1",
-  "amount": 2
+  "amount": 1
  }
 ]

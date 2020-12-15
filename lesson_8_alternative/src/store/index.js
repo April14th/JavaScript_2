@@ -11,6 +11,7 @@ export default new Vuex.Store({
         basketItems: [],
         catalogItems: [],
         filteredCatalogItems: [],
+        nameOfChoosenProduct: '',
         urlCatalog: '/api/catalog',
         urlBasket: '/api/basket',
     },
@@ -86,6 +87,12 @@ export default new Vuex.Store({
                             find.amount;
                         }
                     })
+        },
+
+        getNameOfChoosenProduct(state, productName) {
+            state.nameOfChoosenProduct = productName;
+            console.log(productName);
+            return productName;
         }
     },
 

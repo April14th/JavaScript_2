@@ -64,9 +64,9 @@
             </div>
             <catalog type="feturedCatalog" />
             <div class="container px-0 d-flex justify-content-around">
-                <button type="button" class="btn btn-outline-secondary feturedButton">
+                <router-link to="/product" class="btn btn-outline-secondary feturedButton">
                     Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
-                </button>
+                </router-link>
             </div>
             <div class="container mt-5">
                 <div class="row">
