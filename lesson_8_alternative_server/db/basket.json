@@ -32,21 +32,5 @@
   "productIsFetured": false,
   "productId": "prod_12",
   "amount": 3
- },
- {
-  "productName": "MANGO PEOPLE T-SHIRT",
-  "productPrice": 52,
-  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
-  "productSizes": [
-   "XXS",
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL"
-  ],
-  "productIsFetured": true,
-  "productId": "prod_0",
-  "amount": 1
  }
 ]
