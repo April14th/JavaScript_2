@@ -11,7 +11,7 @@ export default new Vuex.Store({
         basketItems: [],
         catalogItems: [],
         filteredCatalogItems: [],
-        nameOfChoosenProduct: '',
+        choosenProduct: [],
         urlCatalog: '/api/catalog',
         urlBasket: '/api/basket',
     },
@@ -22,16 +22,16 @@ export default new Vuex.Store({
         },
 
         addToBasket(state, item) {
-            let find = state.basketItems.find(el => el.productId == item.productId);
+            let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
             if (find) {
-                put(`${state.urlBasket}/${item.productId}`, { amount: 1 })
+                put(`${state.urlBasket}/${item.productId}`, { amount: +find.amount + +item.amount})
                     .then(s => {
                         if (s) {
-                            find.amount++;
+                            find.amount = +find.amount + +item.amount;
                         }
                     })
             } else {
-                let newItem = Object.assign({}, item, { amount: 1 });
+                let newItem = Object.assign({}, item)
                 post(state.urlBasket, newItem)
                     .then(s => {
                         if (s) {
@@ -89,10 +89,9 @@ export default new Vuex.Store({
                     })
         },
 
-        getNameOfChoosenProduct(state, productName) {
-            state.nameOfChoosenProduct = productName;
-            console.log(productName);
-            return productName;
+        getChoosenProduct(state, product) {
+            state.choosenProduct = Object.assign({}, product, { amount: 1, choosenSize: '' });
+            return state.choosenProduct;
         }
     },
 

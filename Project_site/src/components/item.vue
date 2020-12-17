@@ -4,19 +4,19 @@
 		<div class="feturedItem">
             <div class="feturedImgWrap">
                  <div class="feturedBuy">
-                    <button @click="$store.commit('addToBasket', item)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
+                    <router-link to="/singlePage">
+                        <button @click="$store.commit('getChoosenProduct', item)">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </router-link>
                 </div>
                 <img class="feturedProduct" :src="item.productImg" alt="product1">
             </div>
             <div>
                 <div class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start">
-                    <router-link to="/singlePage">
-                        <div @click="$store.commit('getNameOfChoosenProduct', item.productName)" class="feturedItemName">
-                            {{ item.productName }}
-                        </div>
-                    </router-link>
+                    <div class="feturedItemName">
+                        {{ item.productName }}
+                    </div>
                     <div class="feturedItemPrice">${{ item.productPrice }}</div>
                     <button class="d-md-none">
                         <i class="fas fa-shopping-cart"></i> Add to Cart
@@ -27,7 +27,7 @@
 	</template>
     <template v-if="type == 'basket'">
 		<div class="d-flex flex-column headerCartWrapIn">
-            <img :src="item.productImg" alt="" width="85" height="100">
+            <img :src="item.productImg" alt="" width="94" height="100">
             <div>
                 <span>
                     <i class="fas fa-star"></i>
@@ -37,6 +37,9 @@
                     <i class="fas fa-star-half-alt"></i>
                 </span>
                 <div>{{ item.productName }}</div>
+                <div class="headerCartWrapSize">
+                    Size: <span>{{ item.choosenSize }}</span>
+                </div>
                 <div class="headerCartWrapPrice">{{ item.amount }}
                     <span>x</span> ${{ item.productPrice }}
                 </div>
@@ -51,8 +54,7 @@
                 <div class="productDescription">
                     <div class="productDescriptionTitle">{{ item.productName }}</div>
                     <div>
-                        <div class="productDescriptionFeature">Color: <span>Red</span></div>
-                        <div class="productDescriptionFeature">Size: <span>Xll</span></div>
+                        <div class="productDescriptionFeature">Size: <span>{{ item.choosenSize }}</span></div>
                     </div>
                 </div>
             </div>

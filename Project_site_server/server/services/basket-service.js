@@ -4,6 +4,7 @@ function _search (arr, id) {
 
 module.exports = {
     add(basket, item) {
+        delete item.productSizes;
         basket.push(item);
         return basket;
     },

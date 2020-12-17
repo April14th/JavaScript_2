@@ -33,7 +33,7 @@
                                 <div></div>
                             </div>
                         </div>
-                        <div class="womenCollectionTextTitle">Moschino Cheap And Chic {{ $store.state.nameOfChoosenProduct }}</div>
+                        <div class="womenCollectionTextTitle">{{ $store.state.choosenProduct.productName }}</div>
                         <div class="womenCollectionText">
                             Compellingly actualize fully researched processes before proactive outsourcing.
                             Progressively syndicate collaborative architectures before cutting-edge services.
@@ -45,34 +45,22 @@
                             <div>DESIGNER: <span>BINBURHAN</span></div>
                         </div>
 
-                        <div class="womenCollectionPrice">$561</div>
+                        <div class="womenCollectionPrice">${{ $store.state.choosenProduct.productPrice }}</div>
                     </div>
                     <div class="womanCollectionBottom">
                         <form class="womanCollectionBottomChoose">
                             <div class="womenCollectionChoose">
-                                <div>CHOOSE COLOR</div>
-                                <select>
-                                    <option selected>Red</option>
-                                    <option value="1">Green</option>
-                                    <option value="2">Blue</option>
-                                    <option value="3">Orange</option>
-                                </select>
-                            </div>
-                            <div class="womenCollectionChoose">
                                 <div>CHOOSE SIZE</div>
-                                <select>
-                                    <option selected>XXL</option>
-                                    <option value="1">XL</option>
-                                    <option value="2">L</option>
-                                    <option value="3">M</option>
+                                <select v-model="selectedSizeOfProduct" @change="getChoosenSize">
+                                    <option v-for="size of $store.state.choosenProduct.productSizes" :key="size">{{ size }}</option>
                                 </select>
                             </div>
                             <div class="womenCollectionChoose">
                                 <div>QUANTITY</div>
-                                <input type="text">
+                                <input type="number" min="1" max="99" v-model="$store.state.choosenProduct.amount">
                             </div>
                         </form>
-                        <button type="button" class="btn btn-outline-secondary feturedButton">
+                        <button type="button" class="btn btn-outline-secondary feturedButton" @click="$store.commit('addToBasket', $store.state.choosenProduct)">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
                         </button>
                     </div>
@@ -141,13 +129,24 @@
 
 <script>
 import catalog from '../components/catalog.vue';
-import item from '../components/item.vue';
 
 export default {
-    components: { catalog, item },
+    components: { catalog },
+
+    data() {
+        return {
+           selectedSizeOfProduct: ''
+        }
+    },
 
     mounted() {
         this.$store.dispatch('requestDataCatalog');
+    },
+
+    methods: {
+        getChoosenSize() {
+            this.$store.state.choosenProduct.choosenSize = this.selectedSizeOfProduct;
+        }
     },
 
     computed: {
@@ -172,8 +171,6 @@ export default {
             }
         }
     }
-
-    
 }
 </script>
 

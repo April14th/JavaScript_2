@@ -334,6 +334,11 @@
                 text-transform: lowercase;
                 font-size: 10px;
                 padding: 0 0.3rem; }
+            .headerCartWrapSize {
+              font-size: 14px;
+              font-weight: 700; }
+              .headerCartWrapSize span {
+                font-weight: 300; }
           .headerCart .headerCartWrap .headerCartWrapInAll div a img {
             padding-right: 0.5rem; }
       .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapTotalPrice {
@@ -955,8 +960,6 @@ details[open] summary .fa-caret-up {
   font-weight: 700;
   text-transform: uppercase;
   overflow: hidden; }
-  .feturedItem .feturedItemName:hover {
-    color: #f16d7f; }
   @media (max-width: 768px) {
     .feturedItem .feturedItemName {
       font-size: 16px;
@@ -985,8 +988,6 @@ details[open] summary .fa-caret-up {
     align-items: center; } }
 .feturedBuySm {
   padding: 0.8rem 0.8rem 0.5rem 0.8rem; }
-  .feturedBuySm a {
-    text-decoration: none; }
   .feturedBuySm button {
     border-radius: 3px;
     border: 1px solid #ef5b70;
@@ -1125,7 +1126,7 @@ details[open] summary .fa-caret-up {
   text-transform: uppercase; }
 
 .productDescriptionFeature {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 20px;
   color: #575757;
   font-weight: 700; }
