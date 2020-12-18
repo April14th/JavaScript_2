@@ -24,7 +24,7 @@ export default new Vuex.Store({
         addToBasket(state, item) {
             let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
             if (find) {
-                put(`${state.urlBasket}/${item.productId}`, { amount: +find.amount + +item.amount})
+                put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: +find.amount + +item.amount})
                     .then(s => {
                         if (s) {
                             find.amount = +find.amount + +item.amount;
@@ -41,17 +41,17 @@ export default new Vuex.Store({
             }
         },
 
-        removeFromBasket(state, id) {
-            let find = state.basketItems.find(el => el.productId == id);
+        removeFromBasket(state, item) {
+            let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
             if (find.amount > 1) {
-                put(`${state.urlBasket}/${id}`, { amount: -1 })
+                put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: -1 })
                     .then(s => {
                         if (s) {
                             find.amount--;
                         }
                     })
             } else {
-                del(`${state.urlBasket}/${id}`)
+                del(`${state.urlBasket}/${item.productId}/${item.choosenSize}`)
                     .then(s => {
                         if (s) {
                             state.basketItems.splice(state.basketItems.indexOf(find), 1);
@@ -60,8 +60,8 @@ export default new Vuex.Store({
             }
         },
 
-        clearShoppingCartBasket(state, id) {
-                del(`${state.urlBasket}/${id}`)
+        clearShoppingCartBasket(state) {
+                del(`${state.urlBasket}`)
                     .then(s => {
                         if (s) {
                             state.basketItems.splice(0, state.basketItems.length);
@@ -69,9 +69,9 @@ export default new Vuex.Store({
                     })
         },
 
-        removeFromShoppingCartBasket(state, id) {
-            let find = state.basketItems.find(el => el.productId == id);
-                del(`${state.urlBasket}/${id}`)
+        removeFromShoppingCartBasket(state, item) {
+            let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
+                del(`${state.urlBasket}/${item.productId}/${item.choosenSize}`)
                     .then(s => {
                         if (s) {
                             state.basketItems.splice(state.basketItems.indexOf(find), 1);
@@ -80,13 +80,8 @@ export default new Vuex.Store({
         },
 
         changeShoppingCartBasket(state, item) {
-            let find = state.basketItems.find(el => el.productId == item.productId);
-                put(`${state.urlBasket}/${item.productId}`, { amount: +item.amount })
-                    .then(s => {
-                        if (s) {
-                            find.amount;
-                        }
-                    })
+            put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: +item.amount })
+
         },
 
         getChoosenProduct(state, product) {

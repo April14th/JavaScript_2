@@ -44,11 +44,11 @@ server.post('/basket', (req, res) => {
     })
 })
 
-server.put('/basket/:id', (req, res) => {
+server.put('/basket/:id/:choosenSize', (req, res) => {
     fs.readFile('./db/basket.json', 'utf-8', (error, data) => {
         if (!error) {
             let oldB = JSON.parse(data);
-            let newB = Basket.change(oldB, req.params.id, req.body.amount);
+            let newB = Basket.change(oldB, req.params.id, req.params.choosenSize, req.body.amount);
             writer('./db/basket.json', newB)
                 .then(ans => {
                     if (ans) {
@@ -61,11 +61,28 @@ server.put('/basket/:id', (req, res) => {
     })
 })
 
-server.delete('/basket/:id', (req, res) => {
+server.delete('/basket/:id/:choosenSize', (req, res) => {
     fs.readFile('./db/basket.json', 'utf-8', (error, data) => {
         if (!error) {
             let oldB = JSON.parse(data);
-            let newB = Basket.delete(oldB, req.params.id);
+            let newB = Basket.delete(oldB, req.params.id, req.params.choosenSize);
+            writer('./db/basket.json', newB)
+                .then(ans => {
+                    if (ans) {
+                        res.json({ status: true })
+                    } else {
+                        res.sendStatus(500);
+                    }
+                }) 
+        }
+    })
+})
+
+server.delete('/basket', (req, res) => {
+    fs.readFile('./db/basket.json', 'utf-8', (error, data) => {
+        if (!error) {
+            let oldB = JSON.parse(data);
+            let newB = Basket.delete(oldB);
             writer('./db/basket.json', newB)
                 .then(ans => {
                     if (ans) {

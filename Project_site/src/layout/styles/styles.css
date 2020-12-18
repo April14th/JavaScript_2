@@ -297,7 +297,8 @@
           right: 10px;
           background-color: transparent;
           border: 0;
-          padding: 0; }
+          padding: 0;
+          outline: none; }
       .headerCart .headerCartWrap .headerCartWrapInAll div {
         align-items: left; }
         .headerCart .headerCartWrap .headerCartWrapInAll div a:last-child {

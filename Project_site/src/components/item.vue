@@ -44,7 +44,7 @@
                     <span>x</span> ${{ item.productPrice }}
                 </div>
             </div>
-            <button class="fas fa-times-circle basketDelBtn" @click="$store.commit('removeFromBasket', item.productId)"></button>
+            <button class="fas fa-times-circle basketDelBtn" @click="$store.commit('removeFromBasket', item)"></button>
         </div>
 	</template>
     <template v-if="type == 'shoppingCartBasket'">
@@ -62,12 +62,12 @@
                 <div class="productDetailsPrice">${{ item.productPrice }}</div>
                 <div class="productDetailsQuantity">
                     <form>
-                        <input ref="input" type="number" min="1" max="99" v-model="item.amount" @input="$store.commit('changeShoppingCartBasket', item)">
+                        <input ref="input" type="number" min="1" max="99" v-model="item.amount" value="1" @input="$store.commit('changeShoppingCartBasket', item)">
                     </form>
                 </div>
                 <div class="productDetailsShipping">Free</div>
                 <div class="productDetailsSubtotal">${{ item.productPrice * item.amount }}</div>
-                <div class="productDetailsAction"><i class="fas fa-times-circle" @click="$store.commit('removeFromShoppingCartBasket', item.productId)"></i></div>
+                <div class="productDetailsAction"><i class="fas fa-times-circle" @click="$store.commit('removeFromShoppingCartBasket', item)"></i></div>
             </div>
         </div>
 	</template>

@@ -41,8 +41,8 @@
                         </div>
 
                         <div class="womenCollectionFeatures">
-                            <div>MATERIAL: <span>COTTON</span></div>
-                            <div>DESIGNER: <span>BINBURHAN</span></div>
+                            <div>MATERIAL: <span>{{ $store.state.choosenProduct.material }}</span></div>
+                            <div>DESIGNER: <span>{{ $store.state.choosenProduct.designer }}</span></div>
                         </div>
 
                         <div class="womenCollectionPrice">${{ $store.state.choosenProduct.productPrice }}</div>

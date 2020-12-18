@@ -33,7 +33,7 @@
             <item type="shoppingCartBasket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" />
 
             <div class="productDetailsButtons">
-                <button @click="clearShoppingCartBasket()">cLEAR SHOPPING CART</button>
+                <button @click="$store.commit('clearShoppingCartBasket')">cLEAR SHOPPING CART</button>
                 <router-link to="/">cONTINUE sHOPPING</router-link>
             </div>
         </div>
@@ -55,13 +55,13 @@ export default {
 		}
     },
 
-    methods: {
-        clearShoppingCartBasket() {
-            this.$store.state.basketItems.forEach(basketItem => {
-                this.$store.commit('clearShoppingCartBasket', 1)
-            });
-        }
-    },
+    // methods: {
+    //     clearShoppingCartBasket() {
+    //         this.$store.state.basketItems.forEach(basketItem => {
+    //             this.$store.commit('clearShoppingCartBasket', 'deleteProducts')
+    //         });
+    //     }
+    // },
 
     mounted() {
         this.$store.dispatch('requestDataBasket');

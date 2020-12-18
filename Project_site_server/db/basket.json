@@ -1,20 +1,24 @@
 [
  {
-  "productName": "TOMATO PEOPLE T-SHIRT",
-  "productPrice": 200,
-  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
+  "productName": "UNIT RESTART MONOPOLY",
+  "productPrice": 185,
+  "productImg": "src/assets/imgs/product19.jpg",
+  "material": "silk",
+  "designer": "floral",
   "productIsFetured": false,
-  "productId": "prod_7",
-  "amount": 2,
-  "choosenSize": "XS"
+  "productId": "prod_19",
+  "amount": 3,
+  "choosenSize": "XXS"
  },
  {
-  "productName": "TREERS OF ETERNITY",
-  "productPrice": 105,
-  "productImg": "src/assets/imgs/product13.jpg",
-  "productIsFetured": true,
-  "productId": "prod_13",
-  "amount": "2",
-  "choosenSize": "XL"
+  "productName": "BANANA PEOPLE T-SHIRT",
+  "productPrice": 58,
+  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
+  "material": "cotton",
+  "designer": "bohemian",
+  "productIsFetured": false,
+  "productId": "prod_1",
+  "amount": 2,
+  "choosenSize": "XXS"
  }
 ]
