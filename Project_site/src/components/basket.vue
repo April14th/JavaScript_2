@@ -55,14 +55,6 @@ export default {
 		}
     },
 
-    // methods: {
-    //     clearShoppingCartBasket() {
-    //         this.$store.state.basketItems.forEach(basketItem => {
-    //             this.$store.commit('clearShoppingCartBasket', 'deleteProducts')
-    //         });
-    //     }
-    // },
-
     mounted() {
         this.$store.dispatch('requestDataBasket');
     },

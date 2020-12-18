@@ -6,7 +6,7 @@
                  <div class="feturedBuy">
                     <router-link to="/singlePage">
                         <button @click="$store.commit('getChoosenProduct', item)">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            <i class="fas fa-shopping-cart"></i> View Product
                         </button>
                     </router-link>
                 </div>
@@ -19,7 +19,7 @@
                     </div>
                     <div class="feturedItemPrice">${{ item.productPrice }}</div>
                     <button class="d-md-none">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <i class="fas fa-shopping-cart"></i> View Product
                     </button>
                 </div>
             </div>

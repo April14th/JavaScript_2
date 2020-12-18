@@ -162,34 +162,34 @@
             <div class="dropNav">
                 <div class="dropNavIn">
                     <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
-                    <a href="#" class="dropNavItem" type="button">Accessories</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Blazers</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Denim</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Leggings/Pants</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Skirts/Shorts</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Accessories</router-link>
                 </div>
                 <div class="dropNavIn">
                     <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Blazers</router-link>
                     <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Denim</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Leggings/Pants</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Skirts/Shorts</router-link>
                 </div>
                 <div class="dropNavIn">
                     <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
                     <a href="">
                         <div>Super sale!</div>
                         <img src="../assets/imgs/navDrop.jpg" alt="nav img">
@@ -203,34 +203,34 @@
             <div class="dropNav">
                 <div class="dropNavIn">
                     <div class="dropNavItem">Man</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
-                    <a href="#" class="dropNavItem" type="button">Accessories</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Blazers</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Denim</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Leggings/Pants</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Skirts/Shorts</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Accessories</router-link>
                 </div>
                 <div class="dropNavIn">
                     <div class="dropNavItem">Man</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Blazers</router-link>
                     <div class="dropNavItem">Man</div>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Denim</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Leggings/Pants</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Skirts/Shorts</router-link>
                 </div>
                 <div class="dropNavIn">
                     <div class="dropNavItem">Man</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
                     <a href="">
                         <div>Super sale!</div>
                         <img src="../assets/imgs/navDrop.jpg" alt="nav img">
@@ -244,34 +244,34 @@
             <div class="dropNav">
                 <div class="dropNavIn">
                     <div class="dropNavItem">woman</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
-                    <a href="#" class="dropNavItem" type="button">Accessories</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Blazers</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Denim</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Leggings/Pants</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Skirts/Shorts</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Accessories</router-link>
                 </div>
                 <div class="dropNavIn">
                     <div class="dropNavItem">woman</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Blazers</router-link>
                     <div class="dropNavItem">woman</div>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Denim</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Leggings/Pants</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Skirts/Shorts</router-link>
                 </div>
                 <div class="dropNavIn">
                     <div class="dropNavItem">woman</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
+                    <router-link to="/product" class="dropNavItem" type="button">Dresses</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Tops</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Sweaters/Knits</router-link>
+                    <router-link to="/product" class="dropNavItem" type="button">Jackets/Coats</router-link>
                     <a href="">
                         <div>Super sale!</div>
                         <img src="../assets/imgs/navDrop.jpg" alt="nav img">
@@ -442,19 +442,7 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="navAll">
-            <router-link class="nav-link" to="/singlePage" style="color: blue">Single Page</router-link>
-        </div>
-        <div class="navAll">
-            <router-link class="nav-link" to="/shoppingCart" style="color: blue">Shopping Cart</router-link>
-        </div>
-        <div class="navAll">
-            <router-link class="nav-link" to="/checkout" style="color: blue">Checkout</router-link>
-        </div>
-        <div class="navAll">
-            <router-link class="nav-link" to="/product" style="color: blue">Product</router-link>
-        </div>          
+        </div>         
     </nav>
     <div class="newArrivalsBg pb-5 pt-5">
         <div class="px-md-0 container d-flex flex-column flex-sm-row justify-content-between align-items-center ">

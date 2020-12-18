@@ -160,13 +160,10 @@
   border-bottom: 1px solid #ececec; }
 
 .nav {
-  padding-left: 15px; }
-  .nav .navAll:nth-child(3) .dropNav {
-    right: 1px; }
-  .nav .navAll:nth-child(4) .dropNav {
-    right: 1px; }
-  .nav .navAll:nth-child(5) .dropNav {
-    right: 1px; }
+  padding-left: 15px;
+  position: relative; }
+
+
   .nav .navAll:nth-child(6) .dropNav {
     right: 1px; }
   .nav .navAll:nth-child(7) .dropNav {
@@ -180,7 +177,8 @@
       flex-direction: column;
       z-index: 5;
       background-color: #ffffff;
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      width: 303px; }
       .nav .navAll .dropNav .dropNavIn div {
         color: #232323;
         font-size: 14px;
@@ -190,9 +188,8 @@
         letter-spacing: 0.35px;
         margin-left: 1.5rem;
         border-bottom: 1px solid #ececec;
-        width: auto;
         padding-top: 1rem;
-        padding-right: 180px;
+        padding-right: 140px;
         margin-right: 1.5rem; }
       .nav .navAll .dropNav .dropNavIn:last-child {
         padding-right: 0;
@@ -231,7 +228,8 @@
         padding-top: 0.3rem; }
   .nav .navAll:hover .dropNav {
     display: flex;
-    position: absolute; }
+    position: absolute;
+    right: 110px; }
   .nav a {
     color: #222222;
     font-size: 14px;
@@ -298,7 +296,12 @@
           background-color: transparent;
           border: 0;
           padding: 0;
+          border-radius: 50%;
           outline: none; }
+          .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn .basketDelBtn:hover {
+            box-shadow: 0px 2px 5px 0px #212529; }
+          .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn .basketDelBtn:active {
+            box-shadow: none; }
       .headerCart .headerCartWrap .headerCartWrapInAll div {
         align-items: left; }
         .headerCart .headerCartWrap .headerCartWrapInAll div a:last-child {
@@ -950,7 +953,12 @@ details[open] summary .fa-caret-up {
       display: flex;
       justify-content: center;
       align-items: center;
+      outline: none;
       cursor: pointer; }
+      .feturedItem .feturedImgWrap .feturedBuy button:hover {
+        box-shadow: 0px 2px 5px 0px #ffffff; }
+      .feturedItem .feturedImgWrap .feturedBuy button:active {
+        box-shadow: none; }
       .feturedItem .feturedImgWrap .feturedBuy button div {
         margin-right: 10px; }
       .feturedItem .feturedImgWrap .feturedBuy button i {

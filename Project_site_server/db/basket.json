@@ -1,16 +1,5 @@
 [
  {
-  "productName": "UNIT RESTART MONOPOLY",
-  "productPrice": 185,
-  "productImg": "src/assets/imgs/product19.jpg",
-  "material": "silk",
-  "designer": "floral",
-  "productIsFetured": false,
-  "productId": "prod_19",
-  "amount": 3,
-  "choosenSize": "XXS"
- },
- {
   "productName": "BANANA PEOPLE T-SHIRT",
   "productPrice": 58,
   "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
@@ -20,5 +9,16 @@
   "productId": "prod_1",
   "amount": 2,
   "choosenSize": "XXS"
+ },
+ {
+  "productName": "BLUE LESSON UPDATE",
+  "productPrice": 125,
+  "productImg": "src/assets/imgs/product15.jpg",
+  "material": "viscose",
+  "designer": "lace",
+  "productIsFetured": true,
+  "productId": "prod_15",
+  "amount": 1,
+  "choosenSize": "M"
  }
 ]
