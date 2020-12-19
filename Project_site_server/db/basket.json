@@ -1,25 +1,25 @@
 [
  {
-  "productName": "MANGO PEOPLE T-SHIRT",
-  "productPrice": 52,
-  "productImg": "https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
-  "productSlideImg": "src/assets/imgs/slideDefault.jpg",
+  "productName": "BANANA PEOPLE T-SHIRT",
+  "productPrice": 58,
+  "productImg": "src/assets/imgs/product_1.jpg",
+  "productSlideImg": "src/assets/imgs/slideProduct_1.jpg",
   "material": "cotton",
   "designer": "bohemian",
-  "productIsFetured": true,
-  "productId": "prod_0",
+  "productIsFetured": false,
+  "productId": "prod_1",
   "amount": 3,
-  "choosenSize": "L"
+  "choosenSize": "XS"
  },
  {
-  "productName": "YELLOW WOMEN LOOK",
-  "productPrice": 74,
-  "productImg": "src/assets/imgs/product11.jpg",
-  "productSlideImg": "src/assets/imgs/slideProduct11.jpg",
-  "material": "wool",
+  "productName": "UNIT RESTART MONOPOLY",
+  "productPrice": 185,
+  "productImg": "src/assets/imgs/product_19.jpg",
+  "productSlideImg": "src/assets/imgs/slideProduct_19.jpg",
+  "material": "silk",
   "designer": "floral",
   "productIsFetured": false,
-  "productId": "prod_11",
+  "productId": "prod_19",
   "amount": 2,
   "choosenSize": "S"
  }
