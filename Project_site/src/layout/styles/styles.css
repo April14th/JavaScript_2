@@ -44,6 +44,8 @@
   background-repeat: no-repeat;
   background-position: center;
   outline: none;
+  border: none;
+  background-color: transparent;
 }
 .dropdown .btn-lg {
   position: relative;
@@ -162,12 +164,6 @@
 .nav {
   padding-left: 15px;
   position: relative; }
-
-
-  .nav .navAll:nth-child(6) .dropNav {
-    right: 1px; }
-  .nav .navAll:nth-child(7) .dropNav {
-    right: 1px; }
   .nav .navAll .dropNav {
     display: none;
     position: relative;

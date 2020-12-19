@@ -48,18 +48,18 @@
                 </div>
                 <div class="footerColumn pt-5 pt-sm-0">
                     <h2>SHOP CATEGORY</h2>
-                    <a href="#">Men</a>
-                    <a href="#">Women</a>
-                    <a href="#">Child</a>
-                    <a href="#">Apparel</a>
-                    <a href="#">Browse All</a>
+                    <router-link to="/product">Men</router-link>
+                    <router-link to="/product">Women</router-link>
+                    <router-link to="/product">Child</router-link>
+                    <router-link to="/product">Apparel</router-link>
+                    <router-link to="/product">Browse All</router-link>
                 </div>
             </div>
 
             <div class="bottomNavXS col-12 d-flex flex-column d-sm-none">
                 <h2 class="d-flex justify-content-around">COMPANY</h2>
                 <div class="footerColumn d-flex justify-content-around px-5">
-                    <a href="#">Home</a>
+                    <router-link to="/">Home</router-link>
                     <a href="#">Shop</a>
                     <a href="#">About</a>
                     <a href="#">How It Works</a>
@@ -76,11 +76,11 @@
 
                 <h2 class="d-flex justify-content-around pt-5">SHOP CATEGORY</h2>
                 <div class="footerColumn d-flex justify-content-around px-5 pt-sm-0">
-                    <a href="#">Men</a>
-                    <a href="#">Women</a>
-                    <a href="#">Child</a>
-                    <a href="#">Apparel</a>
-                    <a href="#">Browse All</a>
+                    <router-link to="/product">Men</router-link>
+                    <router-link to="/product">Women</router-link>
+                    <router-link to="/product">Child</router-link>
+                    <router-link to="/product">Apparel</router-link>
+                    <router-link to="/product">Browse All</router-link>
                 </div>
             </div>
 

@@ -2,7 +2,8 @@
     {
         "productName":"MANGO PEOPLE T-SHIRT",
         "productPrice":52,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg",
+        "productImg":"src/assets/imgs/product_0.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_0.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL"],
         "material": "cotton",
         "designer": "bohemian",
@@ -12,7 +13,8 @@
     {
         "productName":"BANANA PEOPLE T-SHIRT",
         "productPrice":58,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg",
+        "productImg":"src/assets/imgs/product_1.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_1.jpg",
         "productSizes":["XXS", "XS", "M", "L", "XL", "XXL"],
         "material": "cotton",
         "designer": "bohemian",
@@ -22,7 +24,8 @@
     {
         "productName":"STRAWBERRY PEOPLE T-SHIRT",
         "productPrice":60,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem3.jpg",
+        "productImg":"src/assets/imgs/product_2.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_2.jpg",
         "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
         "material": "cotton",
         "designer": "bohemian",
@@ -32,7 +35,8 @@
     {
         "productName":"ORANGE PEOPLE T-SHIRT",
         "productPrice":65,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem4.jpg",
+        "productImg":"src/assets/imgs/product_3.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_3.jpg",
         "productSizes":["XXS", "XS", "S"],
         "material": "cotton",
         "designer": "bohemian",
@@ -42,7 +46,8 @@
     {
         "productName":"PUMKIN PEOPLE T-SHIRT",
         "productPrice":70,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem5.jpg",
+        "productImg":"src/assets/imgs/product_4.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_4.jpg",
         "productSizes":["XXS", "XS", "S", "XL", "XXL"],
         "material": "cotton",
         "designer": "bohemian",
@@ -52,7 +57,8 @@
     {
         "productName":"PINEAPPLE PEOPLE T-SHIRT",
         "productPrice":95,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem6.jpg",
+        "productImg":"src/assets/imgs/product_5.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_5.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "cotton",
         "designer": "bohemian",
@@ -62,7 +68,8 @@
     {
         "productName":"CUCUMBER PEOPLE T-SHIRT",
         "productPrice":130,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem7.jpg",
+        "productImg":"src/assets/imgs/product_6.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_6.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "cotton",
         "designer": "floral",
@@ -72,7 +79,8 @@
     {
         "productName":"TOMATO PEOPLE T-SHIRT",
         "productPrice":200,
-        "productImg":"https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem8.jpg",
+        "productImg":"src/assets/imgs/product_7.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_7.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L"],
         "material": "polyester",
         "designer": "floral",
@@ -82,7 +90,8 @@
     {
         "productName":"BLACK SUGAR ROOT",
         "productPrice":75,
-        "productImg":"src/assets/imgs/product8.jpg",
+        "productImg":"src/assets/imgs/product_8.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_8.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL"],
         "material": "polyester",
         "designer": "floral",
@@ -92,7 +101,8 @@
     {
         "productName":"SOLT DRUNK SLAKER",
         "productPrice":90,
-        "productImg":"src/assets/imgs/product9.jpg",
+        "productImg":"src/assets/imgs/product_9.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_9.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "polyester",
         "designer": "floral",
@@ -102,7 +112,8 @@
     {
         "productName":"STRANGE MACHINE LONG",
         "productPrice":88,
-        "productImg":"src/assets/imgs/product10.jpg",
+        "productImg":"src/assets/imgs/product_10.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_10.jpg",
         "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
         "material": "polyester",
         "designer": "floral",
@@ -112,7 +123,8 @@
     {
         "productName":"YELLOW WOMEN LOOK",
         "productPrice":74,
-        "productImg":"src/assets/imgs/product11.jpg",
+        "productImg":"src/assets/imgs/product_11.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_11.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "wool",
         "designer": "floral",
@@ -122,7 +134,8 @@
     {
         "productName":"BIO ROBOTS STARTING",
         "productPrice":72,
-        "productImg":"src/assets/imgs/product12.jpg",
+        "productImg":"src/assets/imgs/product_12.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_12.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "wool",
         "designer": "lace",
@@ -132,7 +145,8 @@
     {
         "productName":"TREERS OF ETERNITY",
         "productPrice":105,
-        "productImg":"src/assets/imgs/product13.jpg",
+        "productImg":"src/assets/imgs/product_13.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_13.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "wool",
         "designer": "lace",
@@ -142,7 +156,8 @@
     {
         "productName":"DESTROYER EARTH MADNESS",
         "productPrice":98,
-        "productImg":"src/assets/imgs/product14.jpg",
+        "productImg":"src/assets/imgs/product_14.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_14.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "wool",
         "designer": "lace",
@@ -152,7 +167,8 @@
     {
         "productName":"BLUE LESSON UPDATE",
         "productPrice":125,
-        "productImg":"src/assets/imgs/product15.jpg",
+        "productImg":"src/assets/imgs/product_15.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_15.jpg",
         "productSizes":["XXS", "M", "L", "XL", "XXL"],
         "material": "viscose",
         "designer": "lace",
@@ -162,7 +178,8 @@
     {
         "productName":"WIND SCORPION OUT",
         "productPrice":150,
-        "productImg":"src/assets/imgs/product16.jpg",
+        "productImg":"src/assets/imgs/product_16.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_16.jpg",
         "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
         "material": "viscose",
         "designer": "lace",
@@ -172,7 +189,8 @@
     {
         "productName":"NIGHT TURBO SLIM",
         "productPrice":115,
-        "productImg":"src/assets/imgs/product17.jpg",
+        "productImg":"src/assets/imgs/product_17.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_17.jpg",
         "productSizes":["XXS", "XS", "S", "M", "XXL"],
         "material": "viscose",
         "designer": "lace",
@@ -182,7 +200,8 @@
     {
         "productName":"ANDROMEDA BLACK MAN",
         "productPrice":170,
-        "productImg":"src/assets/imgs/product18.jpg",
+        "productImg":"src/assets/imgs/product_18.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_18.jpg",
         "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
         "material": "silk",
         "designer": "bohemian",
@@ -192,7 +211,8 @@
     {
         "productName":"UNIT RESTART MONOPOLY",
         "productPrice":185,
-        "productImg":"src/assets/imgs/product19.jpg",
+        "productImg":"src/assets/imgs/product_19.jpg",
+        "productSlideImg":"src/assets/imgs/slideProduct_19.jpg",
         "productSizes":["XXS", "XS", "S", "L", "XL", "XXL"],
         "material": "silk",
         "designer": "floral",
