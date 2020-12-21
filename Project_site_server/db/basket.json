@@ -22,5 +22,17 @@
   "productId": "prod_19",
   "amount": 2,
   "choosenSize": "S"
+ },
+ {
+  "productName": "PUMKIN PEOPLE T-SHIRT",
+  "productPrice": 70,
+  "productImg": "src/assets/imgs/product_4.jpg",
+  "productSlideImg": "src/assets/imgs/slideProduct_4.jpg",
+  "material": "cotton",
+  "designer": "bohemian",
+  "productIsFetured": true,
+  "productId": "prod_4",
+  "amount": 4,
+  "choosenSize": "XXS"
  }
 ]
