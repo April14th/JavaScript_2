@@ -22,22 +22,24 @@ export default new Vuex.Store({
         },
 
         addToBasket(state, item) {
-            let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
-            if (find) {
-                put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: +find.amount + +item.amount})
-                    .then(s => {
-                        if (s) {
-                            find.amount = +find.amount + +item.amount;
-                        }
-                    })
-            } else {
-                let newItem = Object.assign({}, item)
-                post(state.urlBasket, newItem)
-                    .then(s => {
-                        if (s) {
-                            state.basketItems.push(newItem);
-                        }
-                    })
+            if (state.choosenProduct.length != 0) {
+                let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
+                if (find) {
+                    put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: +find.amount + +item.amount})
+                        .then(s => {
+                            if (s) {
+                                find.amount = +find.amount + +item.amount;
+                            }
+                        })
+                } else {
+                    let newItem = Object.assign({}, item)
+                    post(state.urlBasket, newItem)
+                        .then(s => {
+                            if (s) {
+                                state.basketItems.push(newItem);
+                            }
+                        })
+                }
             }
         },
 
@@ -85,7 +87,7 @@ export default new Vuex.Store({
         },
 
         getChoosenProduct(state, product) {
-            state.choosenProduct = Object.assign({}, product, { amount: 1, choosenSize: '' });
+            state.choosenProduct = Object.assign({}, product, { amount: 1, choosenSize: product.productSizes[0] });
             return state.choosenProduct;
         }
     },

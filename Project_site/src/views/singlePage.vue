@@ -51,10 +51,8 @@
                         <form class="womanCollectionBottomChoose">
                             <div class="womenCollectionChoose">
                                 <div>CHOOSE SIZE</div>
-                                <select required v-model="selectedSizeOfProduct" @change="getChoosenSize">
-                                    <option v-for="size of $store.state.choosenProduct.productSizes" 
-                                    :key="size" 
-                                    :selected="selectedSizeOfProduct = $store.state.choosenProduct.productSizes[0]">{{ size }}</option>
+                                <select v-model="selectedSizeOfProduct" @change="getChoosenSize">
+                                    <option v-for="size of $store.state.choosenProduct.productSizes" :key="size">{{ size }}</option>
                                 </select>
                             </div>
                             <div class="womenCollectionChoose">
@@ -137,12 +135,18 @@ export default {
 
     data() {
         return {
-           selectedSizeOfProduct: ''
+           selectedSizeOfProduct: this.$store.state.choosenProduct.choosenSize
         }
     },
 
     mounted() {
         this.$store.dispatch('requestDataCatalog');
+    },
+
+    methods: {
+        getChoosenSize() {
+            this.$store.state.choosenProduct.choosenSize = this.selectedSizeOfProduct;
+        }
     },
 
     computed: {
@@ -165,10 +169,6 @@ export default {
                     return a.productPrice - b.productPrice;
                 })
             }
-        },
-
-        getChoosenSize() {
-            this.$store.state.choosenProduct.choosenSize = this.selectedSizeOfProduct;
         }
     }
 }
