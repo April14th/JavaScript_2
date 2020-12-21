@@ -62,7 +62,7 @@
                 <div class="productDetailsPrice">${{ item.productPrice }}</div>
                 <div class="productDetailsQuantity">
                     <form>
-                        <input ref="input" type="number" min="1" max="99" v-model="item.amount" value="1" @input="$store.commit('changeShoppingCartBasket', item)">
+                        <input ref="input" type="number" min="1" max="99" v-model="item.amount" @input="$store.commit('changeShoppingCartBasket', { item, $event })">
                     </form>
                 </div>
                 <div class="productDetailsShipping">Free</div>

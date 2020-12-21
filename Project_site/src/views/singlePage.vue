@@ -57,7 +57,8 @@
                             </div>
                             <div class="womenCollectionChoose">
                                 <div>QUANTITY</div>
-                                <input type="number" min="1" max="99" v-model="$store.state.choosenProduct.amount">
+                                <input type="number" min="1" max="99" v-model="$store.state.choosenProduct.amount" 
+                                @input="limitSizeQuantity($event.target.min, $event.target.max)">
                             </div>
                         </form>
                         <button type="button" class="btn btn-outline-secondary feturedButton" @click="$store.commit('addToBasket', $store.state.choosenProduct)">
@@ -146,6 +147,14 @@ export default {
     methods: {
         getChoosenSize() {
             this.$store.state.choosenProduct.choosenSize = this.selectedSizeOfProduct;
+        },
+
+        limitSizeQuantity(minQuantity, maxQuantity) {
+            if (+minQuantity > this.$store.state.choosenProduct.amount) {
+                this.$store.state.choosenProduct.amount = 1;
+            } else if (+maxQuantity < this.$store.state.choosenProduct.amount) {
+                this.$store.state.choosenProduct.amount = 99;
+            }
         }
     },
 

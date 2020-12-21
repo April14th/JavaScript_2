@@ -22,7 +22,7 @@ export default new Vuex.Store({
         },
 
         addToBasket(state, item) {
-            if (state.choosenProduct.length != 0) {
+            if (state.choosenProduct.length != 0 && state.choosenProduct.amount > 0) {
                 let find = state.basketItems.find(el => el.productId == item.productId && el.choosenSize == item.choosenSize);
                 if (find) {
                     put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: +find.amount + +item.amount})
@@ -81,8 +81,13 @@ export default new Vuex.Store({
                     })
         },
 
-        changeShoppingCartBasket(state, item) {
-            put(`${state.urlBasket}/${item.productId}/${item.choosenSize}`, { amount: +item.amount })
+        changeShoppingCartBasket(state, shoppingCartProduct) {
+            if (+shoppingCartProduct.$event.target.min > +shoppingCartProduct.item.amount) {
+                shoppingCartProduct.item.amount = 1;
+            } else if (+shoppingCartProduct.$event.target.max < +shoppingCartProduct.item.amount) {
+                shoppingCartProduct.item.amount = 99;
+            }
+            put(`${state.urlBasket}/${shoppingCartProduct.item.productId}/${shoppingCartProduct.item.choosenSize}`, { amount: +shoppingCartProduct.item.amount })
 
         },
 
