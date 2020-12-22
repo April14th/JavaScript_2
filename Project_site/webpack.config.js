@@ -10,6 +10,7 @@ module.exports = {
         maxEntrypointSize: 512000,
         maxAssetSize: 512000
     },
+    entry: './src/index.js',
     output: {
         filename: 'js/bundle.js',
         publicPath: '/'
