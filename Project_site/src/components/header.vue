@@ -57,8 +57,8 @@
     
     
                 <div class="headerCart pr-4" >
-                    <button id="basket-toggler" @click="showbasket = !showbasket" type="button"></button>
-                    <basket type="headerBasket" v-show="showbasket" />
+                    <button id="basket-toggler" v-click-outside="hideBasket" @click="showbasket = !showbasket" type="button"></button>
+                    <basket type="headerBasket" ref="headerBasket" v-show="showbasket" />
                 </div>
     
     
@@ -460,6 +460,7 @@
 <script>
 import basket from './basket.vue';
 import search from './search.vue';
+import ClickOutside from 'vue-click-outside';
 
 export default {
     components: { basket, search },
@@ -468,6 +469,20 @@ export default {
         return {
             showbasket: false,
         }
+    },
+
+    methods: {
+        hideBasket() {
+            this.showbasket = false;
+        }
+    },
+
+    mounted () {
+        this.popupItem = this.$refs.headerBasket.$refs.headerCartWrap;
+    },
+
+    directives: {
+        ClickOutside
     }
 }
 </script>

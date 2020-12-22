@@ -18,19 +18,19 @@
                             <i class="fas fa-caret-up"></i>
                         </summary>
                         <div class="d-flex flex-column">
-                            <a href="#">Accessories</a>
-                            <a href="#">Bags</a>
-                            <a href="#">Denim</a>
-                            <a href="#">Hoodies &amp; Sweatshirts</a>
-                            <a href="#">Jackets &amp; Coats</a>
-                            <a href="#">Pants</a>
-                            <a href="#">Polos</a>
-                            <a href="#">Shirts</a>
-                            <a href="#">Shoes</a>
-                            <a href="#">Shorts</a>
-                            <a href="#">Sweaters &amp; Knits</a>
-                            <a href="#">T-Shirts</a>
-                            <a href="#">Tanks</a>
+                            <router-link to="/product">Accessories</router-link>
+                            <router-link to="/product">Bags</router-link>
+                            <router-link to="/product">Denim</router-link>
+                            <router-link to="/product">Hoodies &amp; Sweatshirts</router-link>
+                            <router-link to="/product">Jackets &amp; Coats</router-link>
+                            <router-link to="/product">Pants</router-link>
+                            <router-link to="/product">Polos</router-link>
+                            <router-link to="/product">Shirts</router-link>
+                            <router-link to="/product">Shoes</router-link>
+                            <router-link to="/product">Shorts</router-link>
+                            <router-link to="/product">Sweaters &amp; Knits</router-link>
+                            <router-link to="/product">T-Shirts</router-link>
+                            <router-link to="/product">Tanks</router-link>
                         </div>
                     </details>
 
@@ -43,19 +43,19 @@
                             <i class="fas fa-caret-up"></i>
                         </summary>
                         <div class="d-flex flex-column">
-                            <a href="#">Accessories</a>
-                            <a href="#">Bags</a>
-                            <a href="#">Denim</a>
-                            <a href="#">Hoodies &amp; Sweatshirts</a>
-                            <a href="#">Jackets &amp; Coats</a>
-                            <a href="#">Pants</a>
-                            <a href="#">Polos</a>
-                            <a href="#">Shirts</a>
-                            <a href="#">Shoes</a>
-                            <a href="#">Shorts</a>
-                            <a href="#">Sweaters &amp; Knits</a>
-                            <a href="#">T-Shirts</a>
-                            <a href="#">Tanks</a>
+                            <router-link to="/product">Accessories</router-link>
+                            <router-link to="/product">Bags</router-link>
+                            <router-link to="/product">Denim</router-link>
+                            <router-link to="/product">Hoodies &amp; Sweatshirts</router-link>
+                            <router-link to="/product">Jackets &amp; Coats</router-link>
+                            <router-link to="/product">Pants</router-link>
+                            <router-link to="/product">Polos</router-link>
+                            <router-link to="/product">Shirts</router-link>
+                            <router-link to="/product">Shoes</router-link>
+                            <router-link to="/product">Shorts</router-link>
+                            <router-link to="/product">Sweaters &amp; Knits</router-link>
+                            <router-link to="/product">T-Shirts</router-link>
+                            <router-link to="/product">Tanks</router-link>
                         </div>
                     </details>
 
@@ -68,19 +68,19 @@
                             <i class="fas fa-caret-up"></i>
                         </summary>
                         <div class="d-flex flex-column">
-                            <a href="#">Accessories</a>
-                            <a href="#">Bags</a>
-                            <a href="#">Denim</a>
-                            <a href="#">Hoodies &amp; Sweatshirts</a>
-                            <a href="#">Jackets &amp; Coats</a>
-                            <a href="#">Pants</a>
-                            <a href="#">Polos</a>
-                            <a href="#">Shirts</a>
-                            <a href="#">Shoes</a>
-                            <a href="#">Shorts</a>
-                            <a href="#">Sweaters &amp; Knits</a>
-                            <a href="#">T-Shirts</a>
-                            <a href="#">Tanks</a>
+                            <router-link to="/product">Accessories</router-link>
+                            <router-link to="/product">Bags</router-link>
+                            <router-link to="/product">Denim</router-link>
+                            <router-link to="/product">Hoodies &amp; Sweatshirts</router-link>
+                            <router-link to="/product">Jackets &amp; Coats</router-link>
+                            <router-link to="/product">Pants</router-link>
+                            <router-link to="/product">Polos</router-link>
+                            <router-link to="/product">Shirts</router-link>
+                            <router-link to="/product">Shoes</router-link>
+                            <router-link to="/product">Shorts</router-link>
+                            <router-link to="/product">Sweaters &amp; Knits</router-link>
+                            <router-link to="/product">T-Shirts</router-link>
+                            <router-link to="/product">Tanks</router-link>
                         </div>
                     </details>
                 </div>
@@ -254,16 +254,6 @@
                         </div>
                         <div class="reviewsTextFrom">
                             Dhaka, Bd
-                        </div>
-                        <div class="reviewsTextSwitch  mt-5 px-0
-                                    col-5
-                                    col-xl-4
-                                    col-lg-5
-                                    col-md-3
-                                    col-sm-4">
-                            <div></div>
-                            <div></div>
-                            <div></div>
                         </div>
                     </div>
                 </div>

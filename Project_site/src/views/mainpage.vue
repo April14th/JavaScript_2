@@ -143,16 +143,6 @@
                         <div class="reviewsTextFrom">
                             Dhaka, Bd
                         </div>
-                        <div class="reviewsTextSwitch  mt-5 px-0
-                                    col-5
-                                    col-xl-4
-                                    col-lg-5
-                                    col-md-3
-                                    col-sm-4">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                 </div>
 

@@ -1,7 +1,7 @@
 <template>
 <div>
     <template v-if="type == 'headerBasket'">
-        <div class="headerCartWrap" id="basket">
+        <div ref="headerCartWrap" class="headerCartWrap" id="basket">
             <div class="headerCartWrapBlock"></div>
             <div class="headerCartWrapInAll">
                 <div id="basket-items" class="headerCartWrapInAll">
