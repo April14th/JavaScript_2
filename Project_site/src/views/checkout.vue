@@ -108,12 +108,12 @@
 
                     <form class="pt-3">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address<span> *</span></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label for="exampleInputEmail2">Email address<span> *</span></label>
+                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password<span> *</span></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label for="exampleInputPassword2">Password<span> *</span></label>
+                            <input type="password" class="form-control" id="exampleInputPassword2" required>
                         </div>
                         <div class="requiredText">* Required Fileds</div>
                         <div class="detailsButton row-cols-3 pt-4 d-flex align-items-center">
@@ -170,12 +170,12 @@
 
                     <form class="pt-3">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address<span> *</span></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label for="exampleInputEmail3">Email address<span> *</span></label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password<span> *</span></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label for="exampleInputPassword3">Password<span> *</span></label>
+                            <input type="password" class="form-control" id="exampleInputPassword3" required>
                         </div>
                         <div class="requiredText">* Required Fileds</div>
                         <div class="detailsButton row-cols-3 pt-4 d-flex align-items-center">
@@ -232,12 +232,12 @@
 
                     <form class="pt-3">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address<span> *</span></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label for="exampleInputEmail4">Email address<span> *</span></label>
+                            <input type="email" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password<span> *</span></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label for="exampleInputPassword4">Password<span> *</span></label>
+                            <input type="password" class="form-control" id="exampleInputPassword4" required>
                         </div>
                         <div class="requiredText">* Required Fileds</div>
                         <div class="detailsButton row-cols-3 pt-4 d-flex align-items-center">
@@ -294,12 +294,12 @@
 
                     <form class="pt-3">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address<span> *</span></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label for="exampleInputEmail5">Email address<span> *</span></label>
+                            <input type="email" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password<span> *</span></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label for="exampleInputPassword5">Password<span> *</span></label>
+                            <input type="password" class="form-control" id="exampleInputPassword5" required>
                         </div>
                         <div class="requiredText">* Required Fileds</div>
                         <div class="detailsButton row-cols-3 pt-4 d-flex align-items-center">
@@ -356,12 +356,12 @@
 
                     <form class="pt-3">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address<span> *</span></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label for="exampleInputEmail6">Email address<span> *</span></label>
+                            <input type="email" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password<span> *</span></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label for="exampleInputPassword6">Password<span> *</span></label>
+                            <input type="password" class="form-control" id="exampleInputPassword6" required>
                         </div>
                         <div class="requiredText">* Required Fileds</div>
                         <div class="detailsButton row-cols-3 pt-4 d-flex align-items-center">
