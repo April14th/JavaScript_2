@@ -1341,7 +1341,7 @@ details[open] summary .fa-caret-up {
   background-color: #ffffff;
   color: #f16d7f;
   border-color: #f16d7f;
-  width: -webkit-fill-available; }
+  width: 200px; }
   .womanCollection button:hover {
     background-color: #f16d7f;
     color: #ffffff; }
