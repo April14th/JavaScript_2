@@ -2,7 +2,7 @@
 
 <div>
     <header class="container px-0 my-4">
-        <div class="row col-12 d-flex px-0 mx-0">
+        <div class="row col-12 d-flex px-0 mx-0 header">
     
             <div class="logo d-flex justify-content-center px-0
                                         col-7
@@ -21,10 +21,10 @@
                                         col-md-7 px-md-0
                                         pt-sm-3 ">
                 <div class="dropdown">
-                    <button class=" btn-lg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class=" btn-lg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Browse
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu">
                         <div class="dropdown-item">woman</div>
                         <router-link to="/product" class="dropdown-item" type="button">Dresses</router-link>
                         <router-link to="/product" class="dropdown-item" type="button">Tops</router-link>
@@ -47,110 +47,45 @@
                 </div>
                 <search />
             </div>
+
+            <div class="burger-menu justify-content-between align-items-center
+                                    col-2 pt-1
+                                    col-sm-6">
+                <div class="dropdown">
+                    <button class="btn btn-secondary px-4 pt-2" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="burgerMenu fas fa-bars"></i></button>
+                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu">
+                        <router-link to="/" class="dropdown-item" type="button">Home</router-link>
+                        <router-link to="/product" class="dropdown-item" type="button">Man</router-link>
+                        <router-link to="/product" class="dropdown-item" type="button">Women</router-link>
+                        <router-link to="/product" class="dropdown-item" type="button">Kids</router-link>
+                        <router-link to="/product" class="dropdown-item" type="button">Accessories</router-link>
+                        <router-link to="/product" class="dropdown-item" type="button">Featured</router-link>
+                        <router-link to="/product" class="dropdown-item" type="button">Hot deals</router-link>
+                    </div>
+                </div>
+            </div>
     
-            <div class="row headerAccountAndCart d-none  align-items-center
+            <div class="row headerAccountAndCart align-items-center
                                         col-12 offset-0 px-0 pt-3 mx-auto justify-content-center
                                         col-xl-2 offset-xl-3 mt-xl-0
                                         col-lg-3 offset-lg-2 pt-lg-0
                                         col-md-3 offset-md-2 mt-md-0 mr-md-0 d-md-flex
                                         col-sm-4 offset-sm-4 pt-sm-3 justify-content-sm-end ">
-    
-    
                 <div class="headerCart pr-4" >
                     <button id="basket-toggler" v-click-outside="hideBasket" @click="showbasket = !showbasket" type="button"></button>
                     <basket type="headerBasket" ref="headerBasket" v-show="showbasket" />
                 </div>
-    
-    
                 <div class="dropdown">
-                    <button class="btn-lg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn-lg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Account
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu">
                         <button class="dropdown-item" type="button">Action</button>
                         <button class="dropdown-item" type="button">Another action</button>
                         <button class="dropdown-item" type="button">Something else here</button>
                     </div>
                 </div>
             </div>
-    
-        </div>
-    
-        <div class="row mx-0 d-md-none pt-3 justify-content-between">
-    
-            <div class="burgermenu justify-content-between align-items-center
-                                    col-2 pt-1
-                                    col-sm-6">
-                <div class="dropdown">
-                    <button class="btn btn-secondary px-4 pt-2" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="burgerMenu fas fa-bars"></i></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <router-link to="/" class="dropdown-item" type="button">home</router-link>
-                        <router-link to="/product" class="dropdown-item" type="button">man</router-link>
-                        <router-link to="/product" class="dropdown-item" type="button">women</router-link>
-                        <router-link to="/product" class="dropdown-item" type="button">kids</router-link>
-                        <router-link to="/product" class="dropdown-item" type="button">accessories</router-link>
-                        <router-link to="/product" class="dropdown-item" type="button">featured</router-link>
-                        <router-link to="/product" class="dropdown-item" type="button">hot deals</router-link>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="headerAccountAndCart d-flex align-items-center justify-content-end
-                                    col-2 pt-1
-                                    col-sm-6">
-                <div class="headerCart pr-4" >
-                    <a href="#"><img src="../assets/imgs/cart.png" alt="headerCart"></a>
-                    <div class="headerCartWrap">
-                        <div class="headerCartWrapBlock"></div>
-                        <div class="headerCartWrapInAll">
-                            <div class="d-flex headerCartWrapIn">
-                                <a href="#" class="d-flex ">
-                                    <img src="../assets/imgs/myAccount1.jpg" alt="">
-                                    <div>
-                                        <div>Rebox Zane</div>
-                                        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                                        <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
-                                    </div>
-                                </a>
-                                <a href="#"><i class="fas fa-times-circle"></i></a>
-                            </div>
-    
-                            <div class="d-flex">
-                                <a href="#" class="d-flex headerCartWrapIn">
-                                    <img src="../assets/imgs/myAccount2.jpg" alt="">
-                                    <div>
-                                        <div>Rebox Zane</div>
-                                        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                                        <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
-                                    </div>
-                                </a>
-                                <a href="#"><i class="fas fa-times-circle"></i></a>
-                            </div>
-    
-                            <div class="headerCartWrapTotalPrice">
-                                <div>total</div>
-                                <div>$500.00</div>
-                            </div>
-    
-                            <button type="button" class="productsButtonIndex">Checkout</button>
-                            <button type="button" class="productsButtonIndex">Go to cart</button>
-                        </div>
-                    </div>
-    
-                </div>
-    
-                <div class="dropdown">
-                    <button class="btn-lg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        My Account
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
-                </div>
-            </div>
-    
         </div>
     </header>
 
@@ -477,7 +412,7 @@ export default {
         }
     },
 
-    mounted () {
+    mounted() {
         this.popupItem = this.$refs.headerBasket.$refs.headerCartWrap;
     },
 

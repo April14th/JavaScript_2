@@ -2,7 +2,7 @@
 <div>
     <main>
         <div class="container my-5 pb-0 pb-lg-5 px-0">
-            <div class="row">
+            <div class="row mr-0 ml-0">
 
                 <div class="col-10 offset-1
                             col-sm-12 offset-sm-0
@@ -88,8 +88,9 @@
                 <div class="col-10 offset-1 col-sm-12 offset-sm-0
                             col-md-12 offset-md-0
                             col-lg-9">
-                    <div class="row no-gutters d-flex justify-content-around justify-content-md-between">
-                        <div class="no-gutters
+                    <div class="row mr-0 ml-0 no-gutters d-flex justify-content-around justify-content-md-between">
+                        <div class="productSizesWrapper
+                                    no-gutters
                                     col-8 mt-5
                                     col-sm-6
                                     col-md-4 pl-md-3
@@ -198,8 +199,8 @@
             <div class="productsFeaturesBg py-5 ">
                 <div class="container py-3 px-0">
 
-                        <div class="d-flex justify-content-between align-items-center row
-                                        justify-content-lg-around ">
+                        <div class="d-flex justify-content-between align-items-center row mr-0 ml-0
+                                        justify-content-lg-around">
 
                             <div class="productsFeaturesText
                                         col-10 offset-1

@@ -10,9 +10,9 @@
             </summary>
             <div class="row container pl-5">
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-4
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-4">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Check as a guest or register</div>
 
                     <div class="detailsTitleBottom pt-1">Register with us for future convenience</div>
@@ -37,9 +37,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class=" checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Already registed?</div>
 
                     <div class="detailsTitleBottom pt-1">Please log in below</div>
@@ -72,9 +72,9 @@
             </summary>
             <div class="row container pl-5">
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Check as a guest or register</div>
 
                     <div class="detailsTitleBottom pt-1">Register with us for future convenience</div>
@@ -99,9 +99,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Already registed?</div>
 
                     <div class="detailsTitleBottom pt-1">Please log in below</div>
@@ -134,9 +134,9 @@
             </summary>
             <div class="row container pl-5">
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Check as a guest or register</div>
 
                     <div class="detailsTitleBottom pt-1">Register with us for future convenience</div>
@@ -161,9 +161,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Already registed?</div>
 
                     <div class="detailsTitleBottom pt-1">Please log in below</div>
@@ -196,9 +196,9 @@
             </summary>
             <div class="row container pl-5">
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Check as a guest or register</div>
 
                     <div class="detailsTitleBottom pt-1">Register with us for future convenience</div>
@@ -223,9 +223,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Already registed?</div>
 
                     <div class="detailsTitleBottom pt-1">Please log in below</div>
@@ -258,9 +258,9 @@
             </summary>
             <div class="row container pl-5">
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Check as a guest or register</div>
 
                     <div class="detailsTitleBottom pt-1">Register with us for future convenience</div>
@@ -285,9 +285,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Already registed?</div>
 
                     <div class="detailsTitleBottom pt-1">Please log in below</div>
@@ -320,9 +320,9 @@
             </summary>
             <div class="row container pl-5">
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Check as a guest or register</div>
 
                     <div class="detailsTitleBottom pt-1">Register with us for future convenience</div>
@@ -347,9 +347,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
-                            col-md-6 offset-md-4 px-md-0 pt-md-5
-                            col-sm-6 offset-sm-3 px-sm-0 pt-sm-5">
+                <div class="checkout col-lg-6 offset-lg-0 px-lg-0 pt-lg-4
+                            col-md-6 px-md-0 pt-md-4
+                            col-sm-6 px-sm-0 pt-sm-4">
                     <div class="detailsTitle">Already registed?</div>
 
                     <div class="detailsTitleBottom pt-1">Please log in below</div>

@@ -9,18 +9,18 @@
   "productIsFetured": false,
   "productId": "prod_1",
   "amount": 3,
-  "choosenSize": "XS"
+  "choosenSize": "XXS"
  },
  {
-  "productName": "UNIT RESTART MONOPOLY",
-  "productPrice": 185,
-  "productImg": "src/assets/imgs/product_19.jpg",
-  "productSlideImg": "src/assets/imgs/slideProduct_19.jpg",
-  "material": "silk",
-  "designer": "floral",
-  "productIsFetured": false,
-  "productId": "prod_19",
+  "productName": "BLUE LESSON UPDATE",
+  "productPrice": 125,
+  "productImg": "src/assets/imgs/product_15.jpg",
+  "productSlideImg": "src/assets/imgs/slideProduct_15.jpg",
+  "material": "viscose",
+  "designer": "lace",
+  "productIsFetured": true,
+  "productId": "prod_15",
   "amount": 2,
-  "choosenSize": "S"
+  "choosenSize": "L"
  }
 ]

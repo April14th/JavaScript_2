@@ -3,7 +3,7 @@
 	<template v-if="type == 'catalog'">
 		<div class="feturedItem">
             <div class="feturedImgWrap">
-                 <div class="feturedBuy">
+                <div class="feturedBuy">
                     <router-link to="/singlePage">
                         <button @click="$store.commit('getChoosenProduct', item)">
                             <i class="fas fa-shopping-cart"></i> View Product
@@ -18,14 +18,16 @@
                         {{ item.productName }}
                     </div>
                     <div class="feturedItemPrice">${{ item.productPrice }}</div>
-                    <button class="d-md-none">
-                        <i class="fas fa-shopping-cart"></i> View Product
-                    </button>
+                    <router-link to="/singlePage">
+                        <button class="d-md-none" @click="$store.commit('getChoosenProduct', item)">
+                            <i class="fas fa-shopping-cart"></i> View Product
+                        </button>
+                    </router-link>
                 </div>
             </div>
         </div>
 	</template>
-    <template v-if="type == 'basket'">
+    <template v-if="type == 'headerBasket'">
 		<div class="d-flex flex-column headerCartWrapIn">
             <img :src="item.productImg" alt="" width="94" height="100">
             <div>

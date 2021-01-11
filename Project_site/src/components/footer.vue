@@ -60,18 +60,18 @@
                 <h2 class="d-flex justify-content-around">COMPANY</h2>
                 <div class="footerColumn d-flex justify-content-around px-5">
                     <router-link to="/">Home</router-link>
-                    <a href="#">Shop</a>
-                    <a href="#">About</a>
-                    <a href="#">How It Works</a>
-                    <a href="#">Contact</a>
+                    <router-link to="/product">Shop</router-link>
+                    <router-link to="/">About</router-link>
+                    <router-link to="/">How It Works</router-link>
+                    <router-link to="/">Contact</router-link>
                 </div>
                 <h2 class="d-flex justify-content-around pt-5">INFORMATION</h2>
                 <div class="footerColumn d-flex justify-content-around px-5 ">
-                    <a href="#">Tearms&amp;Condition</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">How to Buy</a>
-                    <a href="#">How to Sell</a>
-                    <a href="#">Promotion</a>
+                    <router-link to="/">Tearms&amp;Condition</router-link>
+                    <router-link to="/">Privacy Policy</router-link>
+                    <router-link to="/">How to Buy</router-link>
+                    <router-link to="/">How to Sell</router-link>
+                    <router-link to="/">Promotion</router-link>
                 </div>
 
                 <h2 class="d-flex justify-content-around pt-5">SHOP CATEGORY</h2>

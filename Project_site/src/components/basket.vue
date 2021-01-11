@@ -5,7 +5,7 @@
             <div class="headerCartWrapBlock"></div>
             <div class="headerCartWrapInAll">
                 <div id="basket-items" class="headerCartWrapInAll">
-                    <item type="basket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" />
+                    <item type="headerBasket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" />
                 </div>
                 <div class="headerCartWrapTotalPrice">
                     <div>total</div>
@@ -31,7 +31,7 @@
             </div>
             
             <item type="shoppingCartBasket" v-for="item of $store.state.basketItems" :key="item.productId" :item="item" />
-
+            
             <div class="productDetailsButtons">
                 <button @click="$store.commit('clearShoppingCartBasket')">cLEAR SHOPPING CART</button>
                 <router-link to="/">cONTINUE sHOPPING</router-link>
