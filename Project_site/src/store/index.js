@@ -12,8 +12,8 @@ export default new Vuex.Store({
         catalogItems: [],
         filteredCatalogItems: [],
         choosenProduct: [],
-        urlCatalog: '/api/catalog',
-        urlBasket: '/api/basket',
+        urlCatalog: '/catalog',
+        urlBasket: '/basket',
     },
 
     mutations: {

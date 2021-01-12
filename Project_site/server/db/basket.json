@@ -2,8 +2,8 @@
  {
   "productName": "BANANA PEOPLE T-SHIRT",
   "productPrice": 58,
-  "productImg": "src/assets/imgs/product_1.jpg",
-  "productSlideImg": "src/assets/imgs/slideProduct_1.jpg",
+  "productImg": "img/product_1.jpg",
+  "productSlideImg": "img/slideProduct_1.jpg",
   "material": "cotton",
   "designer": "bohemian",
   "productIsFetured": false,
@@ -14,8 +14,8 @@
  {
   "productName": "BLUE LESSON UPDATE",
   "productPrice": 125,
-  "productImg": "src/assets/imgs/product_15.jpg",
-  "productSlideImg": "src/assets/imgs/slideProduct_15.jpg",
+  "productImg": "img/product_15.jpg",
+  "productSlideImg": "img/slideProduct_15.jpg",
   "material": "viscose",
   "designer": "lace",
   "productIsFetured": true,

@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-    devtool: 'eval',
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
@@ -26,6 +25,8 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
+                        name: '[name].[ext]',
+                        outputPath: './img',
                         esModule: false
                     }
                 },
