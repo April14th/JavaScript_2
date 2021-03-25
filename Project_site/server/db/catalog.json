@@ -1,0 +1,222 @@
+[
+    {
+        "productName":"MANGO PEOPLE T-SHIRT",
+        "productPrice":52,
+        "productImg":"img/product_0.jpg",
+        "productSlideImg":"img/slideProduct_0.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL"],
+        "material": "cotton",
+        "designer": "bohemian",
+        "productIsFetured": true,
+        "productId":"prod_0"
+    },
+    {
+        "productName":"BANANA PEOPLE T-SHIRT",
+        "productPrice":58,
+        "productImg":"img/product_1.jpg",
+        "productSlideImg":"img/slideProduct_1.jpg",
+        "productSizes":["XXS", "XS", "M", "L", "XL", "XXL"],
+        "material": "cotton",
+        "designer": "bohemian",
+        "productIsFetured": false,
+        "productId":"prod_1"
+    },
+    {
+        "productName":"STRAWBERRY PEOPLE T-SHIRT",
+        "productPrice":60,
+        "productImg":"img/product_2.jpg",
+        "productSlideImg":"img/slideProduct_2.jpg",
+        "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
+        "material": "cotton",
+        "designer": "bohemian",
+        "productIsFetured": false,
+        "productId":"prod_2"
+    },
+    {
+        "productName":"ORANGE PEOPLE T-SHIRT",
+        "productPrice":65,
+        "productImg":"img/product_3.jpg",
+        "productSlideImg":"img/slideProduct_3.jpg",
+        "productSizes":["XXS", "XS", "S"],
+        "material": "cotton",
+        "designer": "bohemian",
+        "productIsFetured": true,
+        "productId":"prod_3"
+    },
+    {
+        "productName":"PUMKIN PEOPLE T-SHIRT",
+        "productPrice":70,
+        "productImg":"img/product_4.jpg",
+        "productSlideImg":"img/slideProduct_4.jpg",
+        "productSizes":["XXS", "XS", "S", "XL", "XXL"],
+        "material": "cotton",
+        "designer": "bohemian",
+        "productIsFetured": true,
+        "productId":"prod_4"
+    },
+    {
+        "productName":"PINEAPPLE PEOPLE T-SHIRT",
+        "productPrice":95,
+        "productImg":"img/product_5.jpg",
+        "productSlideImg":"img/slideProduct_5.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "cotton",
+        "designer": "bohemian",
+        "productIsFetured": false,
+        "productId":"prod_5"
+    },
+    {
+        "productName":"CUCUMBER PEOPLE T-SHIRT",
+        "productPrice":130,
+        "productImg":"img/product_6.jpg",
+        "productSlideImg":"img/slideProduct_6.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "cotton",
+        "designer": "floral",
+        "productIsFetured": false,
+        "productId":"prod_6"
+    },
+    {
+        "productName":"TOMATO PEOPLE T-SHIRT",
+        "productPrice":200,
+        "productImg":"img/product_7.jpg",
+        "productSlideImg":"img/slideProduct_7.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L"],
+        "material": "polyester",
+        "designer": "floral",
+        "productIsFetured": false,
+        "productId":"prod_7"
+    },
+    {
+        "productName":"BLACK SUGAR ROOT",
+        "productPrice":75,
+        "productImg":"img/product_8.jpg",
+        "productSlideImg":"img/slideProduct_8.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL"],
+        "material": "polyester",
+        "designer": "floral",
+        "productIsFetured": false,
+        "productId":"prod_8"
+    },
+    {
+        "productName":"SOLT DRUNK SLAKER",
+        "productPrice":90,
+        "productImg":"img/product_9.jpg",
+        "productSlideImg":"img/slideProduct_9.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "polyester",
+        "designer": "floral",
+        "productIsFetured": true,
+        "productId":"prod_9"
+    },
+    {
+        "productName":"STRANGE MACHINE LONG",
+        "productPrice":88,
+        "productImg":"img/product_10.jpg",
+        "productSlideImg":"img/slideProduct_10.jpg",
+        "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
+        "material": "polyester",
+        "designer": "floral",
+        "productIsFetured": true,
+        "productId":"prod_10"
+    },
+    {
+        "productName":"YELLOW WOMEN LOOK",
+        "productPrice":74,
+        "productImg":"img/product_11.jpg",
+        "productSlideImg":"img/slideProduct_11.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "wool",
+        "designer": "floral",
+        "productIsFetured": false,
+        "productId":"prod_11"
+    },
+    {
+        "productName":"BIO ROBOTS STARTING",
+        "productPrice":72,
+        "productImg":"img/product_12.jpg",
+        "productSlideImg":"img/slideProduct_12.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "wool",
+        "designer": "lace",
+        "productIsFetured": false,
+        "productId":"prod_12"
+    },
+    {
+        "productName":"TREERS OF ETERNITY",
+        "productPrice":105,
+        "productImg":"img/product_13.jpg",
+        "productSlideImg":"img/slideProduct_13.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "wool",
+        "designer": "lace",
+        "productIsFetured": true,
+        "productId":"prod_13"
+    },
+    {
+        "productName":"DESTROYER EARTH MADNESS",
+        "productPrice":98,
+        "productImg":"img/product_14.jpg",
+        "productSlideImg":"img/slideProduct_14.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "wool",
+        "designer": "lace",
+        "productIsFetured": false,
+        "productId":"prod_14"
+    },
+    {
+        "productName":"BLUE LESSON UPDATE",
+        "productPrice":125,
+        "productImg":"img/product_15.jpg",
+        "productSlideImg":"img/slideProduct_15.jpg",
+        "productSizes":["XXS", "M", "L", "XL", "XXL"],
+        "material": "viscose",
+        "designer": "lace",
+        "productIsFetured": true,
+        "productId":"prod_15"
+    },
+    {
+        "productName":"WIND SCORPION OUT",
+        "productPrice":150,
+        "productImg":"img/product_16.jpg",
+        "productSlideImg":"img/slideProduct_16.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+        "material": "viscose",
+        "designer": "lace",
+        "productIsFetured": false,
+        "productId":"prod_16"
+    },
+    {
+        "productName":"NIGHT TURBO SLIM",
+        "productPrice":115,
+        "productImg":"img/product_17.jpg",
+        "productSlideImg":"img/slideProduct_17.jpg",
+        "productSizes":["XXS", "XS", "S", "M", "XXL"],
+        "material": "viscose",
+        "designer": "lace",
+        "productIsFetured": false,
+        "productId":"prod_17"
+    },
+    {
+        "productName":"ANDROMEDA BLACK MAN",
+        "productPrice":170,
+        "productImg":"img/product_18.jpg",
+        "productSlideImg":"img/slideProduct_18.jpg",
+        "productSizes":["XS", "S", "M", "L", "XL", "XXL"],
+        "material": "silk",
+        "designer": "bohemian",
+        "productIsFetured": true,
+        "productId":"prod_18"
+    },
+    {
+        "productName":"UNIT RESTART MONOPOLY",
+        "productPrice":185,
+        "productImg":"img/product_19.jpg",
+        "productSlideImg":"img/slideProduct_19.jpg",
+        "productSizes":["XXS", "XS", "S", "L", "XL", "XXL"],
+        "material": "silk",
+        "designer": "floral",
+        "productIsFetured": false,
+        "productId":"prod_19"
+    }
+]
